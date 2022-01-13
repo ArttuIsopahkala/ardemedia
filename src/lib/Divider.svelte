@@ -1,0 +1,1 @@
+<div class="divider before:bg-primary after:bg-primary opacity-50"/>
