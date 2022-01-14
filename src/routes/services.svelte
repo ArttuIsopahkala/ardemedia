@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>Arde Media | Palvelut</title>
+  <title>Palvelut | Arde Media</title>
 </svelte:head>
 
 <article class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md">

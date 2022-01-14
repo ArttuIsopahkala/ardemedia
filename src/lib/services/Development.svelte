@@ -122,7 +122,7 @@
       toistaiseksi yksin niin suurempiin projekteihin kannattaakin sijoittaa minut tiimiin niin
       aikataulut eivät veny.
     </p>
-    <h3 class="mt-5">Mitä <span class="mark">hyötyä</span> saat minusta?</h3>
+    <h3 class="mt-5">Mitä <span class="mark">hyötyjä</span> saat minusta?</h3>
     <p class="mb-5 lg:max-w-lg">
       Saat tiimiisi tehokkaan, luotettavan, selkeän ja jokaista arvostavan hyvän tyypin, joka lupaa
       teknologian avulla kehittää yritystäsi kuin omaansa.

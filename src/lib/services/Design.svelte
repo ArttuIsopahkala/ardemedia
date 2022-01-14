@@ -22,7 +22,9 @@ import Collapse from '$lib/Collapse.svelte';
       <h5 class="mark">Arde suunnittelee</h5>
       <h2 class="pt-5">Älykkäät ja <span class="mark">selkeät</span> järjestelmät</h2>
     </div>
-
+    <p class="p-5">
+      Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut taitoja myös suunnitteluun liittyen.
+    </p>
     <h3 class="p-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
   </div>
   <!-- OSA-ALUEET -->
