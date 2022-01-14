@@ -35,7 +35,7 @@ const analytics = getAnalytics(app); */
     <slot />
   </main>
   <footer
-    class="mt-5 bg-background border-t-2 border-primary p-10 footer text-base-content footer-center"
+    class="pt-5 bg-background border-t-2 border-primary p-10 footer text-base-content footer-center"
   >
     <div class="grid grid-flow-col gap-4">
       <a class="link link-hover">About us</a>

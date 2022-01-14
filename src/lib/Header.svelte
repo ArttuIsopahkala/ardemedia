@@ -6,7 +6,7 @@
   import MdClose from 'svelte-icons/md/MdClose.svelte';
   import clsx from 'clsx';
   import NavItem, { MenuItem } from './NavItem.svelte';
-  import { fly } from 'svelte/transition';
+  import {breakpoints}  from '../theme/breakpoints.js';
 
   // Show mobile icon and display menu
   let showMobileMenu = false;
@@ -17,13 +17,6 @@
     { label: 'Tietoa minusta', href: '/about' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Blogi', href: '/blog' }
-  ];
-
-  const menuItems: MenuItem[] = [
-    { label: 'Web-sovelluskehitys', href: '/services/web' },
-    { label: 'Mobiilisovelluskehitys', href: '/services/mobile' },
-    { label: 'Web-suunnittelu', href: '/services/design' },
-    { label: 'Videoeditointi', href: '/services/video' }
   ];
 
   // Mobile menu click event handler
@@ -39,7 +32,7 @@
 
   // Attach media query listener on mount hook
   onMount(() => {
-    const mediaListener = window.matchMedia('(max-width: 767px)');
+    const mediaListener = window.matchMedia(`max-width: ${breakpoints.lg}px`);
     mediaListener.onchange = (e) => mediaQueryHandler(e);
   });
 </script>
@@ -50,7 +43,7 @@
   <nav
     class={clsx(
       'flex flex-col',
-      'md:container md:mx-auto md:flex-row md:justify-between md:items-center'
+      'lg:container lg:mx-auto lg:flex-row lg:justify-between lg:items-center'
     )}
   >
     <div class="flex justify-between items-center p-3 h-[60px]">
@@ -59,7 +52,7 @@
       </a>
       <button
         on:click={handleMobileIconClick}
-        class="btn btn-md btn-ghost btn-circle cursor-pointer md:hidden"
+        class="btn btn-md btn-ghost btn-circle cursor-pointer lg:hidden"
       >
         {#if showMobileMenu}
           <MdClose />
@@ -70,7 +63,7 @@
     </div>
 
     <div
-      class={clsx('w-full m-0', !showMobileMenu && 'hidden', 'md:flex md:justify-end md:w-auto')}
+      class={clsx('w-full m-0', !showMobileMenu && 'hidden', 'lg:flex lg:justify-end lg:w-auto')}
     >
       {#each navItems as item}
         <NavItem
@@ -81,7 +74,7 @@
         />
       {/each}
       <a
-        class={clsx('flex justify-center items-center w-full ', 'md:w-auto my-5 md:my-0 md:mx-5')}
+        class={clsx('flex justify-center items-center my-5 w-full ', 'lg:w-auto lg:my-0 lg:mx-5')}
         on:click={() => (showMobileMenu = false)}
         href={'/contact'}
       >

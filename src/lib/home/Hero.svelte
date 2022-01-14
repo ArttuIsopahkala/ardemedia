@@ -1,18 +1,16 @@
 <script lang="ts">
-  import { fly, fade } from 'svelte/transition';
   import clsx from 'clsx';
-  import DiCode from 'svelte-icons/di/DiCode.svelte';
-  import FaPaintBrush from 'svelte-icons/fa/FaPaintBrush.svelte';
   import * as animateScroll from 'svelte-scrollto';
-  import {breakpoints}  from '../../theme/breakpoints.js';
-  
+  import { fade, fly, slide } from 'svelte/transition';
+  import { breakpoints } from '../../theme/breakpoints.js';
+
   let toggleCoder: boolean = false;
   let toggleDesigner: boolean = false;
 
   let windowWith: number;
   let image: string = 'miettii.png';
   const handleImage = () => {
-    if(windowWith < breakpoints.lg) {
+    if (windowWith < breakpoints.lg) {
       image = 'miettii.png';
       return;
     }
@@ -46,7 +44,7 @@
   }
 </script>
 
-<svelte:window bind:outerWidth={windowWith} />
+<svelte:window bind:innerWidth={windowWith} />
 
 <div id="hero" class="flex flex-col justify-center items-center pb-[60px] p-5">
   <h1 class="mb-10 text-center">
@@ -85,8 +83,8 @@
       {#if toggleCoder && windowWith > breakpoints.lg}
         <div
           class="mockup-code mt-5 transition-opacity duration-300"
-          in:fly={{ x: 40, duration: 300 }}
-          out:fly={{ x: 40, duration: 300 }}
+          in:slide={{ duration: 300 }}
+          out:slide={{ duration: 300 }}
         >
           <pre data-prefix=">">
             <code in:typewriter={{ delay: 300 }}>console.log("Hello world!");</code>
@@ -118,8 +116,8 @@
       {#if toggleDesigner && windowWith > breakpoints.lg}
         <div
           class="mockup-code mt-5 transition-opacity duration-300"
-          in:fly={{ x: -40, duration: 300 }}
-          out:fly={{ x: -40, duration: 300 }}
+          in:slide={{ duration: 300 }}
+          out:slide={{ duration: 300 }}
         >
           <pre data-prefix="1">
             <code in:typewriter={{ delay: 300 }}>&#123;</code>
@@ -131,7 +129,7 @@
             <code in:typewriter={{ delay: 300 }}>&#125;</code>
           </pre>
           <pre class="text-warning" data-prefix=">">
-            <code class="animate-pulse" in:fade={{ duration: 300, delay: 1000 }}>&#128293; &#128293; &#128293;</code>
+            <code in:typewriter={{ delay: 1000 }}>&#128293; &#128293; &#128293;</code>
           </pre>
         </div>
       {/if}

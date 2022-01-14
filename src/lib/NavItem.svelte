@@ -19,7 +19,7 @@
 <a
   class={clsx(
     'flex justify-center items-center w-full p-4 text-base',
-    'md:px-6 md:w-auto md:inline-flex',
+    'lg:px-6 lg:w-auto lg:inline-flex',
     'hover:text-primary',
     active && 'text-primary'
   )}

@@ -1,0 +1,28 @@
+<script lang="ts">
+  import clsx from 'clsx';
+
+  import FaCode from 'svelte-icons/fa/FaCode.svelte';
+
+  export let title: string = '';
+  export let desc: string = '';
+  export let techTitle: string = '';
+  export let techText: string = '';
+</script>
+
+<div class="flex flex-row lg:max-w-md p-5">
+  <div class="flex flex-col">
+    <div class="flex flex-row justify-between items-center">
+      <h4>{title}</h4>
+      <div class="mx-3 w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+        <slot name="icon">
+          <!-- <FaCode /> -->
+        </slot>
+      </div>
+    </div>
+    <p class="py-3">
+      {desc}
+    </p>
+    <h5 class="text-primary">{techTitle}</h5>
+    <span>{techText}</span>
+  </div>
+</div>

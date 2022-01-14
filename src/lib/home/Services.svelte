@@ -4,6 +4,7 @@
   import ServiceItem from './ServiceItem.svelte';
   import Button from '$lib/Button.svelte';
   import { goto } from '$app/navigation';
+  import { devPrice } from './../../store.js';
 </script>
 
 <div id="services">
@@ -27,9 +28,9 @@
       <div class="card-actions flex justify-between items-center">
         <div class="flex flex-col">
           <h4><span class="text-primary">Arde kehittää</span> hintaan</h4>
-          <div class="stat-value">alk. 70€ / h</div>
+          <div class="stat-value">{$devPrice}</div>
           <div class="stat-desc">+ alv 24%</div>
-          <div class="badge badge-lg mx-2">alk. 70€ / h + alv 24%</div>
+          <div class="badge badge-lg mx-2">{$devPrice}</div>
         </div>
         <Button
           text="Lisätietoa palvelusta →"
