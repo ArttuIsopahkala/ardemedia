@@ -1,44 +1,34 @@
-<div class="overflow-x-auto">
+<script lang="ts">
+  let items = [
+    { label: 'Alustat', value: 'NodeJS, JVM, Android' },
+    { label: 'Ohjelmointikielet', value: 'JavaScript / TypeScript, Java' },
+    {
+      label: 'Viitekehykset & Kirjastot',
+      value: 'React, GWT, Svelte, Java EE, Material-UI, TailwindCSS'
+    },
+    { label: 'Testaus', value: 'Jest, JUnit, AVA, PHPUnit' },
+    { label: 'Tietokannat', value: 'MySQL, DynamoDB' },
+    { label: 'Pilvipalvelut', value: 'AWS (Amazon Web Services), Firebase' },
+    {
+      label: 'Automaatio ja infra',
+      value: 'CircleCI, GitHub, Jboss EAP, Serverless, OpenAPI, Ant / Maven / Gradle'
+    },
+    {
+      label: 'Jonkin verran pyöritellyt',
+      value: 'PWA, PHP, Jenkins, Terraform, Python, Flutter, Dart, ML (SkLearn)'
+    }
+  ];
+</script>
+
+<div class="overflow-x-auto shadow-lg">
   <table class="table w-full table-zebra">
-    <thead>
-      <tr>
-        <th>Ohjelmistokehitys</th>
-        <th>Teknologiat</th>
-      </tr>
-    </thead>
     <tbody>
-      <tr>
-        <th>Alustat</th>
-        <td>NodeJS, JVM, Android</td>
-      </tr>
-      <tr>
-        <th>Ohjelmointikielet</th>
-        <td>JavaScript / TypeScript, Java</td>
-      </tr>
-      <tr>
-        <th>Viitekehykset & Kirjastot</th>
-        <td>React, GWT, Svelte, Java EE, Material UI, TailwindCSS</td>
-      </tr>
-      <tr>
-        <th>Testaus</th>
-        <td>Jest, JUnit, AVA, PHPUnit</td>
-      </tr>
-      <tr>
-        <th>Tietokannat</th>
-        <td>MySQL, DynamoDB</td>
-      </tr>
-      <tr>
-        <th>Pilvipalvelut</th>
-        <td>AWS (Amazon Web Services), Firebase</td>
-      </tr>
-      <tr>
-        <th>Automaatio ja infrastruktuuri</th>
-        <td>CircleCI, GitHub, Jboss EAP, Serverless, OpenAPI, Ant / Maven / Gradle</td>
-      </tr>
-      <tr>
-        <th>Jonkin verran pyöritellyt</th>
-        <td>PWA, PHP, Jenkins, Terraform, Python, Flutter, Dart, ML (SkLearn)</td>
-      </tr>
+      {#each items as item}
+        <tr>
+          <th class="whitespace-pre-wrap">{item.label}</th>
+          <td class="whitespace-pre-wrap">{item.value}</td>
+        </tr>
+      {/each}
     </tbody>
   </table>
 </div>

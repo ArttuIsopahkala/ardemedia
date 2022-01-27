@@ -15,12 +15,12 @@
 <article in:fade={{ duration: 300 }} class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md">
   <section class="container mx-auto max-w-5xl">
     <h2 class="p-5">Olen Arttu Isopahkala, Arde Median <span class="mark">yrittäjä</span></h2>
-    <div class="flex flex-row p-4">
-      <div class="p-6 card shadow-lg bg-base-100 md:w-1/2">
+    <div class="flex flex-row p-5">
+      <div class="p-5 card shadow-lg bg-base-100 md:w-1/2">
         <span class="w-[30px] h-[30px]">
           <MdFormatQuote />
         </span>
-        <p class="mb-4">
+        <p class="">
           Olen koodaillut kaikenlaista kohta jo 10 vuotta. Olen Full Stack koodari, joka käytännössä
           osaa suunnitella erilaisten sovellusten ulkoasun ja teknisen toteutuksen sekä niiden
           kehittämisen ja ylläpidon. Ensisijainen osaamiseni on web-teknologioiden ja
@@ -29,21 +29,23 @@
           tiiviisti alan trendejä ja uutisia. Koodailun vastapainoksi vapaa-aikani kuluu salibandyn
           ja muun pelailun parissa.
         </p>
-      </div>
-      <div class="hidden md:flex justify-center p-6 md:w-1/2">
+      </div> 
+      <div class="hidden md:flex justify-center items-center md:w-1/2">
         <img class="max-h-[300px]" src={'muotokuva.png'} alt="muotokuva" />
       </div>
     </div>
     <h2 class="p-5">Teknologioita ja työkaluja, jotka hallitsen</h2>
-    <p class="p-5">
+    <p class="px-5">
       Lasken osaamiseksi sen, että olen toteuttanut projektin valmiiksi, jossa olen käyttänyt
       kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira ja Github
       Projects kuuluvat työkalujeni piiriin. Käyttöjärjestelmistä Windows (+WSL) on lähellä sydäntä.
       Myös Linuxin käyttö on hanskassa eli voin työskennellä molemmilla kummalla tahansa.
     </p>
-    <TechTable />
+    <div class="p-5">
+      <TechTable />
+    </div>
     <h2 class="p-5">Rooli- ja vastuuosaaminen</h2>
-    <p class="p-5">
+    <p class="px-5">
       Ennen yrittäjyyttä olen toiminut ohjelmistokehittäjänä tehtävänimikkeellä Lead Software
       Developer. Tässä roolissa olen saanut kokemusta verkkopalvelujen teknisestä omistajuudesta.
       Omistajuuteen on kuulunut vastuu verkkopalvelujen kehitystarpeiden teknisestä suunnittelusta,
@@ -51,7 +53,7 @@
       rivikoodarista Leadin rooliin.
     </p>
     <h2 class="p-5">Erityisosaaminen ja muu osaaminen</h2>
-    <p class="p-5">
+    <p class="px-5">
       Erityisosaamiseksi voidaan laskea sellainen osaaminen, joka on erityisen syvää tai harvinaista
       ohjelmistoalalla. Minun erityisosaaminen teknologioiden osalta on GWT (Google Web Toolkit),
       joka on harvinaisempi teknologia nykypäivänä. Vahvuutena koen Full Stack

@@ -1,4 +1,6 @@
 <script context="module">
+  import * as animateScroll from 'svelte-scrollto';
+
   export const prerender = true;
 
   // Import the functions you need from the SDKs you need
@@ -37,11 +39,12 @@ const analytics = getAnalytics(app); */
   <footer
     class="pt-5 bg-background border-t-2 border-primary p-10 footer text-base-content footer-center"
   >
+    <div on:click={() => animateScroll.scrollTo({ y: 0 })}>TAKAISIN YLÖS</div>
     <div class="grid grid-flow-col gap-4">
-      <a class="link link-hover">About us</a>
+      <!-- <a class="link link-hover">About us</a>
       <a class="link link-hover">Contact</a>
       <a class="link link-hover">Jobs</a>
-      <a class="link link-hover">Press kit</a>
+      <a class="link link-hover">Press kit</a> -->
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">

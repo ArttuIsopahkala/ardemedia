@@ -24,6 +24,12 @@
     @apply shadow-md;
     @apply bg-base-100;
   }
+  .portfolio-title {
+    @apply underline;
+    @apply underline-offset-[15px];
+    @apply decoration-2;
+    @apply decoration-primary p-5;
+  }
 }
 
 :root {

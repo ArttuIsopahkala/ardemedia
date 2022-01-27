@@ -1,13 +1,38 @@
 <script lang="ts">
   import clsx from 'clsx';
   import * as animateScroll from 'svelte-scrollto';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { crossfade, fade, fly, slide } from 'svelte/transition';
   import { breakpoints } from '../../theme/breakpoints.js';
 
   let toggleCoder: boolean = false;
   let toggleDesigner: boolean = false;
 
   let windowWith: number;
+
+  let images: string[] = ['raivo.png', 'miettii.png', 'suunnittelee2.png'];
+
+  //type position = 'left' | 'middle' | 'right'
+  
+  let index = 1;
+  const toggleIndex = (newIndex: number) => {
+    index = newIndex;
+    if(newIndex === 0) {
+      // LEFT
+    } else if (newIndex === 2) {
+      // RIGHT
+    } else {
+      // MIDDLE
+
+    }
+    //newIndex = (newIndex + 1) % images.length;
+    console.log('index', newIndex);
+  };
+
+  /* EI TOIMI */
+  const previous = () => {
+    index = (index - 1) % images.length;
+  };
+
   let image: string = 'miettii.png';
   const handleImage = () => {
     if (windowWith < breakpoints.lg) {
@@ -59,15 +84,17 @@
         'lg:px-7 lg:w-1/3 lg:order-2'
       )}
     >
-      <img class="max-h-[500px]" src={image} alt="muotokuva" />
+      {#each [images[index]] as src (index)}
+        <img class="stack max-h-[500px]" {src} alt="muotokuva" />
+      {/each}
       <h3 class="text-primary mt-4">ARTTU ISOPAHKALA</h3>
       <p>Ohjelmistokehittäjä | Web-sovellukset | Android</p>
     </div>
     <!-- VASEN PUOLI -->
     <div
       in:fly={{ x: -200, duration: 500, delay: 300 }}
-      on:mouseenter={() => ((toggleCoder = true), handleImage())}
-      on:mouseleave={() => ((toggleCoder = false), handleImage())}
+      on:mouseenter={() => ((toggleCoder = true), handleImage(), toggleIndex(0))}
+      on:mouseleave={() => ((toggleCoder = false), handleImage(), toggleIndex(1))}
       on:click={() => animateScroll.scrollTo({ element: '#service-web', offset: -60 })}
       class={clsx(
         'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',

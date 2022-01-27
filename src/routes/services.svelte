@@ -1,13 +1,20 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import Design from '$lib/services/Design.svelte';
   import Development from '$lib/services/Development.svelte';
-  import Selector from '$lib/services/Selector.svelte';
+  import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
 
-  export type ServiceType = '#development' | '#design';
-</script>
+  let selectedValue: string;
 
-<script lang="ts">
-  let selectedService: ServiceType;
+  const items: SelectorItem[] = [
+    {
+      label: 'Ohjelmistokehitys',
+      value: 'development'
+    },
+    {
+      label: 'Ohjelmistojen suunnittelu',
+      value: 'design'
+    }
+  ];
 </script>
 
 <svelte:head>
@@ -16,10 +23,10 @@
 
 <article class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md">
   <section class="container mx-auto max-w-5xl">
-    <Selector bind:selectedService />
-    {#if selectedService === '#development'}
+    <Selector bind:selectedValue {items} defaultValue="development" />
+    {#if selectedValue === 'development'}
       <Development />
-    {:else if selectedService === '#design'}
+    {:else if selectedValue === 'design'}
       <Design />
     {:else}
       Valitse palvelu!

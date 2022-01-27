@@ -8,7 +8,7 @@
 </script>
 
 <div id="company">
-  <h2 class="p-5">Arde Media on yhden miehen ohjelmistotalo</h2>
+  <h2 class="p-5">Arde Media tarjoaa auttavan käden</h2>
   <div class="flex flex-row p-4">
     <div class="p-6 card shadow-lg bg-base-100 md:w-1/2">
       <p class="mb-4">

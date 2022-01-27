@@ -98,7 +98,7 @@ import Collapse from '$lib/Collapse.svelte';
       enemmän rautalankamallilla liikaa hiomatta, jolloin tiedetään mitä tulee mihinkin kohtaan.
       Toki suunnitelmani voi olla kauniita, mutta kauneus on katsojan silmässä.
     </p>
-    <h3 class="mt-5">Mitä <span class="mark">hyötyä</span> saat minusta?</h3>
+    <h3 class="mt-5">Mitä <span class="mark">hyötyjä</span> saat minusta?</h3>
     <p class="mb-5 lg:max-w-lg">
       Saat tiimiisi tehokkaan, luotettavan, selkeän ja jokaista arvostavan hyvän tyypin, joka lupaa
       teknologian avulla kehittää yritystäsi kuin omaansa.

@@ -3,8 +3,8 @@
   import Divider from '$lib/Divider.svelte';
   import { fade } from 'svelte/transition';
 
-  type Arvo = 'tehokkuus' | 'luotettavuus' | 'selkeys' | 'kunnioitus';
-  let selectedValue: Arvo = 'tehokkuus';
+  type Arvo = 'auttaminen' | 'vastuullisuus' | 'selkeys' | 'kunnioitus';
+  let selectedValue: Arvo = 'vastuullisuus';
 </script>
 
 <div id="values">
@@ -12,16 +12,16 @@
   <div class="flex flex-row justify-center p-5">
     <div class="flex flex-col gap-4">
       <Button
-        text="Tehokkuus"
-        outlined={selectedValue !== 'tehokkuus'}
+        text="Vastuullisuus"
+        outlined={selectedValue !== 'vastuullisuus'}
         secondary={true}
-        onClick={() => (selectedValue = 'tehokkuus')}
+        onClick={() => (selectedValue = 'vastuullisuus')}
       />
       <Button
-        text="Luotettavuus"
-        outlined={selectedValue !== 'luotettavuus'}
+        text="Auttaminen"
+        outlined={selectedValue !== 'auttaminen'}
         secondary={true}
-        onClick={() => (selectedValue = 'luotettavuus')}
+        onClick={() => (selectedValue = 'auttaminen')}
       />
       <Button
         text="Selkeys"
@@ -38,15 +38,15 @@
     </div>
     <Divider vertical={true} />
     <div class="flex flex-col md:max-w-lg">
-      {#if selectedValue === 'tehokkuus'}
+      {#if selectedValue === 'auttaminen'}
         <p in:fade={{ duration: 300 }}>
-          Olen urani aikana saanut paljon kiitosta tehokkuudestani ja nopeasta reagoinnista
+          KEKSI UUS ! Olen urani aikana saanut paljon kiitosta tehokkuudestani ja nopeasta reagoinnista
           erilaisissa ohjelmistokehityksen tilanteissa. Oli kyse sitten ohjelmistosta löydetystä
           virheestä tai uudesta ominaisuudesta, olen reagoinut näihin nopeasti. Järjestelmällisyyden
           avulla onnistun tuottamaan vaikeammankin tehtävän tiukassa aikataulussa. Tästä
           tehokkuudesta haluan pitää kiinni.
         </p>
-      {:else if selectedValue === 'luotettavuus'}
+      {:else if selectedValue === 'vastuullisuus'}
         <p in:fade={{ duration: 300 }}>
           Ohjelmistokehityksessä olen aina toimittanut lupaamani asiat. Vaati se sitten
           tuntemattoman teknologian opettelua tai uuteen rooliin hyppäämistä, olen onnistunut
