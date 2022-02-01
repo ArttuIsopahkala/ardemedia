@@ -1,4 +1,4 @@
-const NAV_ITEMS = [
+const ROUTES = [
   { label: 'Etusivu', url: '/' },
   { label: 'Palvelut', url: '/services' },
   { label: 'Tietoa minusta', url: '/about' },
@@ -7,7 +7,7 @@ const NAV_ITEMS = [
 ];
 
 const DATA = {
-  NAV_ITEMS
+  ROUTES
 }
 
 export default DATA;

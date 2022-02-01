@@ -3,7 +3,7 @@
   import Story from '$lib/about/Story.svelte';
   import TechTable from '$lib/about/TechTable.svelte';
   import Values from '$lib/about/Values.svelte';
-  import Divider from '$lib/Divider.svelte';
+  import Divider from '$lib/common/Divider.svelte';
   import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
   import { fade } from 'svelte/transition';
 </script>

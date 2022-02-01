@@ -29,6 +29,8 @@
       "$theme/*": ["src/theme/*"],
       "$src": ["src"],
       "$src/*": ["src/*"],
+      "$firebase": ["firebase"],
+      "$firebase/*": ["firebase/*"],
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/store.js"]

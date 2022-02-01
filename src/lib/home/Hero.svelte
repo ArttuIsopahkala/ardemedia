@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { breakpoints } from '$lib/static/breakpoints';
   import clsx from 'clsx';
   import * as animateScroll from 'svelte-scrollto';
-  import { crossfade, fade, fly, slide } from 'svelte/transition';
-  import { breakpoints } from '../../theme/breakpoints.js';
+  import { fade, fly, slide } from 'svelte/transition';
 
   let toggleCoder: boolean = false;
   let toggleDesigner: boolean = false;
@@ -12,17 +12,16 @@
   let images: string[] = ['raivo.png', 'miettii.png', 'suunnittelee2.png'];
 
   //type position = 'left' | 'middle' | 'right'
-  
+
   let index = 1;
   const toggleIndex = (newIndex: number) => {
     index = newIndex;
-    if(newIndex === 0) {
+    if (newIndex === 0) {
       // LEFT
     } else if (newIndex === 2) {
       // RIGHT
     } else {
       // MIDDLE
-
     }
     //newIndex = (newIndex + 1) % images.length;
     console.log('index', newIndex);
@@ -102,7 +101,7 @@
         toggleDesigner ? 'lg:opacity-30' : ''
       )}
     >
-      <h3>Full Stack -ohjelmointi</h3>
+      <h3>Web -ja mobiilikehitys</h3>
       <p>
         Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
         käyttöliittymät, että älykkäät ja nykyaikaiset taustapalvelut.

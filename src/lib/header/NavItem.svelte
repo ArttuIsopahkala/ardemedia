@@ -6,12 +6,10 @@
 </script>
 
 <script lang="ts">
-  import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte';
   import clsx from 'clsx';
 
   export let label: string = '';
   export let href: string = '/';
-  export let menuItems: MenuItem[] = [];
   export let active: boolean = false;
   export let onClick = null;
 </script>
@@ -27,9 +25,4 @@
   {href}
 >
   {label}
-  {#if menuItems.length > 0}
-    <div class="w-[20px] h-[20px]">
-      <MdKeyboardArrowDown />
-    </div>
-  {/if}
 </a>

@@ -35,7 +35,7 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "daisyui": "^1.21.0",
-    "firebase": "^9.6.1",
+    "firebase": "^9.6.5",
     "svelte-class-transition": "^1.0.4",
     "svelte-icons": "^2.1.0"
   }

@@ -1,8 +1,5 @@
 <script lang="ts">
-  import clsx from 'clsx';
-
-  import FaCode from 'svelte-icons/fa/FaCode.svelte';
-
+  
   export let title: string = '';
   export let desc: string = '';
   export let techTitle: string = '';

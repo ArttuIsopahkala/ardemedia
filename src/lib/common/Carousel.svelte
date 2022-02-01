@@ -1,12 +1,11 @@
 <script lang="ts">
-  import Button from '$lib/Button.svelte';
-  import Phone from '$lib/Phone.svelte';
+  import Button from '$lib/common/Button.svelte';
+  import Phone from '$lib/common/Phone.svelte';
   import clsx from 'clsx';
   import { blur, fade, fly, scale, slide } from 'svelte/transition';
 
   export let phoneImages: string[] = [];
   export let showPhone: boolean = true;
-  export let width: number = 250;
   export let height: number = 450;
 
   let index = 0;
@@ -32,7 +31,7 @@
         <Phone>
           {#each [phoneImages[index]] as src (index)}
             <img
-              class={`h-[${height}px] w-[${width}px]`}
+              class={`h-[450px] w-[250px]`}
               in:fade={{ duration: 100 }}
               {src}
               alt="preview"

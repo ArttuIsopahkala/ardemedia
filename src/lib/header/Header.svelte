@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Button from './Button.svelte';
+  import Button from '$lib/common/Button.svelte';
   import { page } from '$app/stores';
   import MdMenu from 'svelte-icons/md/MdMenu.svelte';
   import MdClose from 'svelte-icons/md/MdClose.svelte';
   import clsx from 'clsx';
-  import NavItem, { MenuItem } from './NavItem.svelte';
-  import {breakpoints}  from '../theme/breakpoints.js';
+  import NavItem, { MenuItem } from '$lib/header/NavItem.svelte';
+  import { breakpoints } from '$lib/static/breakpoints';
 
   // Show mobile icon and display menu
   let showMobileMenu = false;

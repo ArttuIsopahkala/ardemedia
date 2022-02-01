@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
+  import Icon from '$lib/common/Icon.svelte';
 </script>
 
 <div id="company" class="flex flex-col">
@@ -11,7 +11,7 @@
         <h5 class="ml-4">IGL-Tehnologies Oy</h5>
       </div>
       <span class="w-[60px] h-[60px] self-end">
-        <MdFormatQuote />
+        <Icon type="quote" />
       </span>
     </div>
     <p class="italic mb-4">

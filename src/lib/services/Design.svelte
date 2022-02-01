@@ -6,11 +6,12 @@
   import ServiceSection from './ServiceSection.svelte';
   import { fade } from 'svelte/transition';
   import { designPrice, designPriceHigh } from './../../store.js';
-  import Divider from '$lib/Divider.svelte';
-  import Button from '$lib/Button.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import Button from '$lib/common/Button.svelte';
   import { goto } from '$app/navigation';
   import clsx from 'clsx';
-import Collapse from '$lib/Collapse.svelte';
+  import Collapse from '$lib/common/Collapse.svelte';
+  import PriceItem from './PriceItem.svelte';
 
   let exampleTrello: boolean = false;
   let exampleUI: boolean = false;
@@ -23,7 +24,8 @@ import Collapse from '$lib/Collapse.svelte';
       <h2 class="pt-5">Älykkäät ja <span class="mark">selkeät</span> järjestelmät</h2>
     </div>
     <p class="p-5">
-      Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut taitoja myös suunnitteluun liittyen.
+      Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut
+      taitoja myös suunnitteluun liittyen.
     </p>
     <h3 class="p-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
   </div>
@@ -54,16 +56,8 @@ import Collapse from '$lib/Collapse.svelte';
   <div class="p-5">
     <h3 class="mark mb-3">Hinta</h3>
     <div class="flex flex-row gap-5">
-      <div class="p-5 bg-card">
-        <h4 class="">{$designPrice}</h4>
-        <p>+ alv 24%</p>
-        <p class="mt-2">&#8226; Tuntihinnalla</p>
-      </div>
-      <div class="p-5 bg-card">
-        <h4 class="">{$designPriceHigh}</h4>
-        <p>+ alv 24%</p>
-        <p class="mt-2">&#8226; + 80e UI-kuvan kanssa</p>
-      </div>
+      <PriceItem price={$designPrice} list={['Tuntihinnalla']} />
+      <PriceItem price={$designPriceHigh} list={['+ 80e UI-kuvan kanssa']} />
     </div>
   </div>
   <div id="design-example" class="px-5">
@@ -109,7 +103,7 @@ import Collapse from '$lib/Collapse.svelte';
       secondary={false}
       onClick={() => goto('/about#values')}
     />
-    <Divider/>
+    <Divider />
     <h3 class="mb-5">Kysy lisätietoja tai katso milloin olen vapaana!</h3>
     <Button text="Ota yhteyttä →" outlined={false} onClick={() => goto('/contact')} />
   </div>

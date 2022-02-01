@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Button from '$lib/Button.svelte';
-  import Divider from '$lib/Divider.svelte';
+  import Button from '$lib/common/Button.svelte';
+  import Divider from '$lib/common/Divider.svelte';
   import { fade } from 'svelte/transition';
 
   type Arvo = 'auttaminen' | 'vastuullisuus' | 'selkeys' | 'kunnioitus';

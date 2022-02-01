@@ -3,9 +3,9 @@
   import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
   import PortfolioItem from '$lib/portfolio/PortfolioItem.svelte';
   import TechItem from '$lib/portfolio/TechItem.svelte';
-  import Icon from '$lib/Icon.svelte';
-  import Divider from '$lib/Divider.svelte';
-  import Carousel from '$lib/Carousel.svelte';
+  import Icon from '$lib/common/Icon.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import Carousel from '$lib/common/Carousel.svelte';
   import { fade } from 'svelte/transition';
 
   let selectedValue: string;
@@ -113,7 +113,7 @@
         />
         <TechItem
           title="Amazon Web Services"
-          desc={'Cognito, Cloudfront, DynamoDB, Lambda, S3, IAM, API Gateway'}
+          desc={'Cognito, API Gateway, Route 53, Cloudfront, DynamoDB, Lambda, S3, IAM, CloudFormation, Certificate Manager'}
         >
           <Icon type="aws" />
         </TechItem>
@@ -132,6 +132,12 @@
       Näistä toteutin itse muutaman kokonaan itse (mm. asiakashallintajärjestelmä). 
       Valitettavasti näistä ei ole tarkempia kuvia, mutta tässä <a class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-201705026047' target='_blank'>linkki</a> opinnäytetyöhöni, jossa toteutin yhden järjestelmän uudistuksen."
       >
+        <TechItem
+          title="Amazon Web Services"
+          desc={'API Gateway, KMS, Route 53, Cloudfront, DynamoDB, Lambda, EC2, S3, IAM, CloudFormation, CloudWatch'}
+        >
+          <Icon type="aws" />
+        </TechItem>
         <TechItem title="React + NodeJS" desc="3 sovellusta">
           <Icon type="react" />
         </TechItem>

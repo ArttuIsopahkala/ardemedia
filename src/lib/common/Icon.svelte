@@ -9,6 +9,14 @@
   import FaJava from 'svelte-icons/fa/FaJava.svelte';
   import MdOpenInNew from 'svelte-icons/md/MdOpenInNew.svelte';
   import FaGoogle from 'svelte-icons/fa/FaGoogle.svelte';
+  import FaRegCalendarAlt from 'svelte-icons/fa/FaRegCalendarAlt.svelte';
+  import FaMapMarkerAlt from 'svelte-icons/fa/FaMapMarkerAlt.svelte';
+  import MdSpeakerNotes from 'svelte-icons/md/MdSpeakerNotes.svelte';
+  import FaRegClock from 'svelte-icons/fa/FaRegClock.svelte';
+  import MdEmail from 'svelte-icons/md/MdEmail.svelte';
+  import MdDone from 'svelte-icons/md/MdDone.svelte';
+  import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
+  import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
 
   type IconType =
     | ''
@@ -23,12 +31,21 @@
     | 'android'
     | 'facebook'
     | 'google'
-    | 'open-in-new';
+    | 'open-in-new'
+    | 'calendar'
+    | 'marker'
+    | 'language'
+    | 'clock'
+    | 'email'
+    | 'done'
+    | 'linkedin'
+    | 'quote';
   export let type: IconType = '';
   export let size: number = 30;
+  export let color: string = '';
 </script>
 
-<div class="w-[{size}px] h-[{size}px] text-black flex justify-center items-center">
+<div class="w-[{size}px] h-[{size}px] text-black flex justify-center items-center {color}">
   {#if type === 'aws'}
     <FaAws />
   {:else if type === 'firebase'}
@@ -53,5 +70,21 @@
     <FaFacebook />
   {:else if type === 'google'}
     <FaGoogle />
+  {:else if type === 'calendar'}
+    <FaRegCalendarAlt />
+  {:else if type === 'marker'}
+    <FaMapMarkerAlt />
+  {:else if type === 'language'}
+    <MdSpeakerNotes />
+  {:else if type === 'clock'}
+    <FaRegClock />
+  {:else if type === 'email'}
+    <MdEmail />
+  {:else if type === 'done'}
+    <MdDone />
+  {:else if type === 'linkedin'}
+    <FaLinkedin />
+  {:else if type === 'quote'}
+    <MdFormatQuote />
   {/if}
 </div>

@@ -1,10 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-
-  import clsx from 'clsx';
-  import { text } from 'svelte/internal';
-  import Button from '$lib/Button.svelte';
-
+  import Button from '$lib/common/Button.svelte';
 </script>
 
 <div id="company">

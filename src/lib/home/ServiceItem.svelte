@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from '$lib/Button.svelte';
+  import Button from '$lib/common/Button.svelte';
   import { goto } from '$app/navigation';
 
   export let serviceName: string = '';

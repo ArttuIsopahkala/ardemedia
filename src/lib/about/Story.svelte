@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import Button from '$lib/Button.svelte';
+  import Button from '$lib/common/Button.svelte';
 </script>
 
 <div id="story">

@@ -1,9 +1,6 @@
 <script lang="ts">
-  import { fly, fade } from 'svelte/transition';
-  import clsx from 'clsx';
-  import ServiceItem from './ServiceItem.svelte';
-  import Button from '$lib/Button.svelte';
   import { goto } from '$app/navigation';
+  import Button from '$lib/common/Button.svelte';
   import { devPrice } from './../../store.js';
 </script>
 

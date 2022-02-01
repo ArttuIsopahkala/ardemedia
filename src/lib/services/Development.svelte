@@ -9,9 +9,10 @@
   import ServiceSection from './ServiceSection.svelte';
   import { fade } from 'svelte/transition';
   import { devPrice, devPriceHigh } from './../../store.js';
-  import Divider from '$lib/Divider.svelte';
-  import Button from '$lib/Button.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import Button from '$lib/common/Button.svelte';
   import { goto } from '$app/navigation';
+  import PriceItem from './PriceItem.svelte';
 </script>
 
 <div id="development" class="" in:fade={{ duration: 300 }}>
@@ -43,18 +44,15 @@
     <div class="p-5">
       <h3 class="mark mb-3">Hinta</h3>
       <div class="flex flex-row gap-5">
-        <div class="p-5 bg-card">
-          <h4 class="">{$devPrice}</h4>
-          <p>+ alv 24%</p>
-          <p class="mt-2">&#8226; Yli kuukauden kestävät projektit</p>
-        </div>
-        <div class="p-5 bg-card">
-          <h4 class="">{$devPriceHigh}</h4>
-          <p>+ alv 24%</p>
-          <p class="mt-2">&#8226; Alle kuukauden kestävät projektit</p>
-          <p>&#8226; GWT projektit</p>
-          <p>&#8226; Normaalia vastuullisempi tehtävä (esim. Leadin rooli)</p>
-        </div>
+        <PriceItem price={$devPrice} list={['Yli kuukauden kestävät projektit']} />
+        <PriceItem
+          price={$devPriceHigh}
+          list={[
+            'Alle kuukauden kestävät projektit',
+            'GWT projektit',
+            'Normaalia vastuullisempi tehtävä (esim. Leadin rooli)'
+          ]}
+        />
       </div>
     </div>
     <Divider />
@@ -133,7 +131,7 @@
       secondary={false}
       onClick={() => goto('/about#values')}
     />
-    <Divider/>
+    <Divider />
     <h3 class="mb-5">Kysy lisätietoja tai katso milloin olen vapaana!</h3>
     <Button text="Ota yhteyttä →" outlined={false} onClick={() => goto('/contact')} />
   </div>
