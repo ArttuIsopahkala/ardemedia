@@ -28,7 +28,7 @@
     @apply underline;
     @apply underline-offset-[15px];
     @apply decoration-2;
-    @apply decoration-primary p-5;
+    @apply decoration-primary py-5;
   }
 }
 

@@ -17,10 +17,8 @@
 
 <div id="development" class="" in:fade={{ duration: 300 }}>
   <div>
-    <div class="px-5">
-      <h5 class="mark">Arde kehittää</h5>
-      <h2 class="pt-5">Timanttista <span class="mark">koodia</span> yritykseesi</h2>
-    </div>
+    <h5 class="mark">Arde kehittää</h5>
+    <h2 class="pt-5">Timanttista <span class="mark">koodia</span> yritykseesi</h2>
     <div class="flex flex-wrap justify-between">
       <ServiceSection
         title="Web-sovellukset"
@@ -41,7 +39,7 @@
       </ServiceSection>
     </div>
     <!-- HINNASTO -->
-    <div class="p-5">
+    <div class="py-5">
       <h3 class="mark mb-3">Hinta</h3>
       <div class="flex flex-row gap-5">
         <PriceItem price={$devPrice} list={['Yli kuukauden kestävät projektit']} />
@@ -56,7 +54,7 @@
       </div>
     </div>
     <Divider />
-    <h3 class="p-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
+    <h3 class="py-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
   </div>
   <!-- OSA-ALUEET -->
   <div id="service-container" class="flex flex-wrap justify-between">
@@ -98,7 +96,7 @@
     </ServiceSection>
   </div>
   <Divider />
-  <div id="service-info" class="flex flex-col p-5">
+  <div id="service-info" class="flex flex-col py-5">
     <h3 class=""><span class="mark">100%</span> Tyytyväisyystakuu</h3>
     <p class="lg:max-w-lg">
       Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Jos et ole

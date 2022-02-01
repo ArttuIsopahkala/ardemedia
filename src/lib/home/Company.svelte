@@ -4,8 +4,8 @@
 </script>
 
 <div id="company">
-  <h2 class="p-5">Arde Media tarjoaa auttavan käden</h2>
-  <div class="flex flex-row p-4">
+  <h2 class="py-5">Arde Media tarjoaa auttavan käden</h2>
+  <div class="flex flex-row py-5">
     <div class="p-6 card shadow-lg bg-base-100 md:w-1/2">
       <p class="mb-4">
         Moro, Arttu Isopahkala tässä! Autan yrityksiä kehittämään ohjelmistotuotantoaan,

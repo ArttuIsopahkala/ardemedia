@@ -6,7 +6,7 @@
 
 <div class="w-full bg-background">
   <Header />
-  <main class="flex flex-col mt-[60px]">
+  <main class="bg-success flex flex-col mt-[60px] px-5 xl:px-0">
     <slot />
   </main>
   <Footer />

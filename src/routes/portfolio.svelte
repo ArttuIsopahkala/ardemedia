@@ -50,7 +50,7 @@
   <title>Portfolio | Arde Media</title>
 </svelte:head>
 
-<article class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md">
+<article class="bg-base-100 bg-[url('/bg-pattern.svg')] pb-10">
   <section class="container mx-auto max-w-5xl">
     <Selector bind:selectedValue {items} defaultValue="web" />
     <div in:fade={{ duration: 300 }}>

@@ -1,33 +1,41 @@
-<script context="module">
-  import * as animateScroll from 'svelte-scrollto';
+<script lang="ts">
   import Icon from '$lib/common/Icon.svelte';
   import data from '$lib/static/data';
+  import * as animateScroll from 'svelte-scrollto';
+  import FooterLink from './FooterLink.svelte';
+
+  let showCV: boolean = false;
 </script>
 
-<footer class="bg-success border-t-2 border-primary flex justify-center">
-  <div class="p-10 footer text-base-content max-w-5xl">
-    <div on:click={() => animateScroll.scrollTo({ y: 0 })}>TAKAISIN YLÖS</div>
-    <div>
-      <img src="favicon.png" alt="logo" />
-      <p>
-        ACME Industries Ltd.
-        <br />Providing reliable tech since 1992
-      </p>
+<footer
+  class="bg-base-content border-t-2 border-primary flex flex-col items-center text-base-300"
+>
+  <div class="w-16 h-16 btn btn-circle -mt-6 bg-base-content" on:click={() => animateScroll.scrollTo({ y: 0 })}>
+    <Icon type="up" style="text-base-300"/>
+  </div>
+  <div class="max-w-5xl w-full flex flex-row justify-around">
+    <div class="flex flex-col">
+      <h4 class="text-base-300">Arde Media</h4>
+      <span>Y-tunnus: 2945862-1</span>
+      <a
+        on:mouseenter={() => (showCV = true)}
+        on:mouseleave={() => (showCV = false)}
+        href="https://www.linkedin.com/in/arttu-isopahkala-865557ba"
+        target="_blank"
+        class="mt-4 hover:text-textLight"
+      >
+        <Icon type="linkedin" style={'text-base-300 hover:text-textLight'} />
+      </a>
     </div>
-    <div>
+    <div class="flex flex-col gap-2 justify-start">
       {#each data.ROUTES as route}
-        <a href={route.url} class="link link-hover">{route.label}</a>
+        <FooterLink label={route.label} href={route.url} />
       {/each}
     </div>
-    <div>
-      <div class="grid grid-flow-col gap-4">
-        <a href="https://www.linkedin.com/in/arttu-isopahkala-865557ba" target="_blank">
-          <Icon type="linkedin" />
-        </a>
-      </div>
-    </div>
-    <div>
-      <p class="text-sm">Copyright © {new Date().getFullYear()}<br />Arde Media</p>
-    </div>
+  </div>
+  <div>
+    <p class="text-sm text-textGray m-4 text-center">
+      © Arde Media {new Date().getFullYear()}<br />
+    </p>
   </div>
 </footer>

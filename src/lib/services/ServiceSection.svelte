@@ -6,7 +6,7 @@
   export let techText: string = '';
 </script>
 
-<div class="flex flex-row lg:max-w-md p-5">
+<div class="flex flex-row lg:max-w-md py-5">
   <div class="flex flex-col">
     <div class="flex flex-row justify-between items-center">
       <h4>{title}</h4>

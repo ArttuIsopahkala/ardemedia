@@ -18,10 +18,7 @@
   <title>Ota yhteyttä! | Arde Media</title>
 </svelte:head>
 
-<article
-  in:fade={{ duration: 300 }}
-  class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md px-5 xl:p-0"
->
+<article in:fade={{ duration: 300 }} class="bg-base-100 bg-[url('/bg-pattern.svg')] pb-10">
   <section class="container mx-auto max-w-5xl">
     <h2 class="py-5">Ennen kuin otat yhteyttä...</h2>
     <h4 class="pb-5">sinun on hyvä tietää nämä jutut:</h4>
@@ -58,7 +55,7 @@
     <div class="bg-card p-5 my-5">
       <div class="flex items-center">
         <h4 class="py-5 mr-5">Lähetä minulle viesti</h4>
-        <Icon type="email" color="text-primary" />
+        <Icon type="email" style="text-primary" />
       </div>
       <p class="">Vastaan heti kun se on inhimillisesti mahdollista!</p>
       <Form />

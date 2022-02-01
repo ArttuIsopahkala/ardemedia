@@ -17,6 +17,7 @@
   import MdDone from 'svelte-icons/md/MdDone.svelte';
   import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
   import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
+  import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte';
 
   type IconType =
     | ''
@@ -39,13 +40,14 @@
     | 'email'
     | 'done'
     | 'linkedin'
-    | 'quote';
+    | 'quote'
+    | 'up';
   export let type: IconType = '';
   export let size: number = 30;
-  export let color: string = '';
+  export let style: string = '';
 </script>
 
-<div class="w-[{size}px] h-[{size}px] text-black flex justify-center items-center {color}">
+<div class="w-[{size}px] h-[{size}px] text-black flex justify-center items-center {style}">
   {#if type === 'aws'}
     <FaAws />
   {:else if type === 'firebase'}
@@ -86,5 +88,7 @@
     <FaLinkedin />
   {:else if type === 'quote'}
     <MdFormatQuote />
+  {:else if type === 'up'}
+    <MdKeyboardArrowUp />
   {/if}
 </div>

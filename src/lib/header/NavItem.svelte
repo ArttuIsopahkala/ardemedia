@@ -16,7 +16,7 @@
 
 <a
   class={clsx(
-    'flex justify-center items-center w-full p-4 text-base',
+    'flex justify-center items-center w-full p-4 text-base transition-all',
     'lg:px-6 lg:w-auto lg:inline-flex',
     'hover:text-primary',
     active && 'text-primary'

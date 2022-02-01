@@ -48,7 +48,7 @@
   >
     <div class="flex justify-between items-center p-3 h-[60px]">
       <a on:click={() => (showMobileMenu = false)} href={'/'}>
-        <img class="h-[40px] p-1" src="/logo.png" alt="logo" />
+        <img class="h-[40px] p-1" src="/logo_white.png" alt="logo" />
       </a>
       <button
         on:click={handleMobileIconClick}

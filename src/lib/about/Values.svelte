@@ -8,8 +8,8 @@
 </script>
 
 <div id="values">
-  <h2 class="text-center p-5">Arvot</h2>
-  <div class="flex flex-row justify-center p-5">
+  <h2 class="text-center">Arvot</h2>
+  <div class="flex flex-row justify-center">
     <div class="flex flex-col gap-4">
       <Button
         text="Vastuullisuus"
@@ -37,7 +37,7 @@
       />
     </div>
     <Divider vertical={true} />
-    <div class="flex flex-col md:max-w-lg">
+    <div class="flex flex-col md:max-w-md">
       {#if selectedValue === 'auttaminen'}
         <p in:fade={{ duration: 300 }}>
           KEKSI UUS ! Olen urani aikana saanut paljon kiitosta tehokkuudestani ja nopeasta reagoinnista

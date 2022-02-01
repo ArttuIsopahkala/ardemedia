@@ -14,7 +14,7 @@
   export let selectedValue: string = defaultValue;
 </script>
 
-<div class="flex gap-4 pl-5 pt-7 flex-wrap">
+<div class="flex gap-4 flex-wrap pt-5">
   {#each items as item}
     <Button
       text={item.label}

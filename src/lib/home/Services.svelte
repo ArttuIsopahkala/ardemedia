@@ -5,7 +5,7 @@
 </script>
 
 <div id="services">
-  <h2 class="p-5">Palvelut</h2>
+  <h2 class="py-5">Palvelut</h2>
   <div class="card lg:card-side shadow-md mb-5 bg-base-100">
     <figure>
       <img class="max-h-[400px] p-5" src="laptop.jpg" alt="läppäri" />

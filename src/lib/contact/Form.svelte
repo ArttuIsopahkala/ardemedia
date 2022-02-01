@@ -225,7 +225,7 @@
         )}
       >
         {#if state === 'success'}
-          <Icon type="done" color={'text-white'} />
+          <Icon type="done" style={'text-white'} />
         {:else}
           Lähetä viesti
         {/if}

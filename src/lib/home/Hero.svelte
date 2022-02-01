@@ -70,7 +70,7 @@
 
 <svelte:window bind:innerWidth={windowWith} />
 
-<div id="hero" class="flex flex-col justify-center items-center pb-[60px] p-5">
+<div id="hero" class="flex flex-col justify-center items-center pb-[50px]">
   <h1 class="mb-10 text-center">
     Vuokraa<br /><span class="mark gradient">Full Stack</span> -koodari projektiisi!
   </h1>

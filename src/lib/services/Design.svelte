@@ -19,15 +19,13 @@
 
 <div id="development" class="" in:fade={{ duration: 300 }}>
   <div>
-    <div class="px-5">
-      <h5 class="mark">Arde suunnittelee</h5>
-      <h2 class="pt-5">Älykkäät ja <span class="mark">selkeät</span> järjestelmät</h2>
-    </div>
-    <p class="p-5">
+    <h5 class="mark">Arde suunnittelee</h5>
+    <h2 class="pt-5">Älykkäät ja <span class="mark">selkeät</span> järjestelmät</h2>
+    <p class="py-5">
       Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut
       taitoja myös suunnitteluun liittyen.
     </p>
-    <h3 class="p-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
+    <h3 class="py-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
   </div>
   <!-- OSA-ALUEET -->
   <div id="service-container" class="flex flex-wrap justify-between">
@@ -53,14 +51,14 @@
     </ServiceSection>
   </div>
   <!-- HINNASTO -->
-  <div class="p-5">
+  <div class="py-5">
     <h3 class="mark mb-3">Hinta</h3>
     <div class="flex flex-row gap-5">
       <PriceItem price={$designPrice} list={['Tuntihinnalla']} />
       <PriceItem price={$designPriceHigh} list={['+ 80e UI-kuvan kanssa']} />
     </div>
   </div>
-  <div id="design-example" class="px-5">
+  <div id="design-example">
     <Collapse title="Esimerkki vaatimusmäärittelystä (Trello)">
       <img class="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittely" />
     </Collapse>
@@ -69,7 +67,7 @@
     </Collapse>
   </div>
   <Divider />
-  <div id="service-info" class="flex flex-col p-5">
+  <div id="service-info" class="flex flex-col py-5">
     <h3 class=""><span class="mark">100%</span> Tyytyväisyystakuu</h3>
     <p class="lg:max-w-lg">
       Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Laskutan
