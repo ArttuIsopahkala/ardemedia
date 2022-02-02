@@ -3,8 +3,8 @@
 </script>
 
 <div id="company" class="flex flex-col">
-  <h2 class="py-5">Asiakkaiden suusta</h2>
-  <div class="self-center p-5 card shadow-md max-w-xl bg-base-100">
+  <h2 class="py-5">ASIAKKAAN SUUSTA</h2>
+  <div class="p-5 card shadow-md max-w-2xl bg-base-100">
     <div class="flex flex-row justify-between mb-4">
       <div class="flex items-center flex-row">
         <img class="h-[60px] w-[60px]" src={'igl-logo.png'} alt="IGL logo" />

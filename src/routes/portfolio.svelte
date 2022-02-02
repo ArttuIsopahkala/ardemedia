@@ -51,7 +51,7 @@ import Container from '$lib/common/Container.svelte';
   <title>Portfolio | Arde Media</title>
 </svelte:head>
 
-<Container style="bg-base-100 bg-[url('/bg-pattern.svg')]">
+<Container>
   <Selector bind:selectedValue {items} defaultValue="web" />
   <div in:fade={{ duration: 300 }}>
     <h2 id="web" class="portfolio-title">Web-sovellukset</h2>
@@ -89,7 +89,7 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Flappi"
-      year="Kehityksessä 2020-2021, ei julkaistu"
+      year="Kehityksessä 2020-2021, ei aktiivinen"
       description="Digitaalinen fläppitaulu ja salibandyjoukkueen hallintajärjestelmä. Opin tämän projektin aikana hurjasti Reactia, TypeScriptiä ja AWS:n palveluja. 
       Työstin sovellusta ystävieni kanssa, jotka auttoivat <a class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
       Itse hoidin ohjelmoinnin ja projektinhallinnan. Sovellus jäi julkaisematta keskeneräisenä (liikaa koodaamista yhdelle).
@@ -363,7 +363,6 @@ import Container from '$lib/common/Container.svelte';
         <Icon type="googlemaps" />
       </TechItem>
     </PortfolioItem>
-    <Divider />
     <h2 id="design" class="portfolio-title">Ohjelmistojen suunnittelu</h2>
     <h2 id="video" class="portfolio-title">Videoeditointi</h2>
     <p class="px-5">

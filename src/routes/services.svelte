@@ -27,7 +27,7 @@
   <title>Palvelut | Arde Media</title>
 </svelte:head>
 
-<Container style="bg-base-100 bg-[url('/bg-pattern.svg')]">
+<Container>
   <Selector bind:selectedValue {items} />
   {#if selectedValue === 'development'}
     <Development />

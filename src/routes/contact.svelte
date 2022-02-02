@@ -17,7 +17,7 @@
   <title>Ota yhteyttä! | Arde Media</title>
 </svelte:head>
 
-<Container style="bg-base-100 bg-[url('/bg-pattern.svg')]">
+<Container>
   <h2 class="py-5">Ennen kuin otat yhteyttä...</h2>
   <h4 class="pb-5">sinun on hyvä tietää nämä jutut:</h4>
   <div class="flex flex-row flex-wrap justify-between">

@@ -5,7 +5,7 @@
   export let outlined: boolean = true;
   export let onClick: svelte.JSX.MouseEventHandler<HTMLButtonElement> = null;
   export let secondary: boolean = false;
-  export let small:boolean = false;
+  export let size: string = '';
 </script>
 
 <button
@@ -14,7 +14,7 @@
     'btn text-base',
     outlined && 'btn-outline bg-base-100',
     secondary ? 'btn-neutral no-animation' : 'w-fit btn-primary',
-    small && 'btn-sm'
+    size
   )}
 >
   {text}

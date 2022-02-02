@@ -34,9 +34,9 @@
     <h5 class="text-primary mb-2 mark">{serviceName}</h5>
     <h2 class="card-title">{label}</h2>
     <p>
-      {description}
+      {@html description}
     </p>
-    <h5 class="mt-4 text-primary">{techTitle}</h5>
+    <h5 class="mt-5 mb-2 text-primary">{techTitle}</h5>
     {#each techs as tech}
       <h6>{tech.title}</h6>
       <span class="mb-3">{tech.techs}</span>
@@ -45,7 +45,7 @@
       >Huom! Myös teidän työkalut ja teknologiat ovat opeteltavissa &#9996; &#128640;</span
     >
     <div class="card-actions flex">
-      <Button text="Lue lisää palvelusta →" onClick={handleReadMore} />
+      <Button text="Lisätietoa palvelusta →" onClick={handleReadMore} />
     </div>
   </div>
 </div>

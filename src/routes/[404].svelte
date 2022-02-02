@@ -1,3 +1,3 @@
 <div class="p-5 h-full">
-  <h2>Etsimääsi sivua ei löytynyt &#128531;</h2>
+  <h3>404 - Eli etsimääsi sivua ei löytynyt &#128531;</h3>
 </div>

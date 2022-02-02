@@ -8,8 +8,8 @@
 </script>
 
 <div id="values">
-  <h2 class="text-center">Arvot</h2>
-  <div class="flex flex-row justify-center">
+  <h2 class="py-5">Arvot</h2>
+  <div class="flex flex-row">
     <div class="flex flex-col gap-4">
       <Button
         text="Vastuullisuus"

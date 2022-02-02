@@ -8,7 +8,8 @@
     <ServiceItem
       serviceName="Arde kehittää"
       label="Tarvitsetko ohjelmistokehittäjää?"
-      description="Voit sijoita minut tiimiisi tekemään samoja hommia kuin muutkin. "
+      description="Minulla on lähes 10 vuotta kokemusta ohjelmoinnista. Voit sijoittaa minut tiimiisi tekemään samoja hommia kuin muutkin. 
+      Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita itsenäisestikin."
       href="/services"
       id="development"
       techTitle="Käyttämiäni teknologioita"

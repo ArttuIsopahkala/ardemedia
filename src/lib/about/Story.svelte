@@ -4,7 +4,7 @@
 </script>
 
 <div id="story">
-  <h2 class="text-center py-5 mt-5">Tarinani koodarina</h2>
+  <h2 class="text-center py-5">Tarinani koodarina</h2>
   <div class="flex flex-row justify-center">
     <div class="md:max-w-md">
       <p class="mb-4">

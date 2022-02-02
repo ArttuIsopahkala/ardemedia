@@ -138,7 +138,7 @@
       text="Yrityksen arvot →"
       outlined={true}
       secondary={false}
-      onClick={() => goto('/about#values')}
+      onClick={() => goto('/#values')}
     />
     <Divider />
     <h3 class="mb-5">Kysy lisätietoja tai katso milloin olen vapaana!</h3>

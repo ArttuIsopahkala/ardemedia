@@ -26,7 +26,7 @@
       {#each items as item}
         <tr>
           <th class="whitespace-pre-wrap">{item.label}</th>
-          <td class="whitespace-pre-wrap">{item.value}</td>
+          <td class="whitespace-pre-wrap">{@html item.value}</td>
         </tr>
       {/each}
     </tbody>

@@ -87,7 +87,7 @@
         <img class="stack max-h-[500px]" {src} alt="muotokuva" />
       {/each}
       <h3 class="text-primary mt-4">ARTTU ISOPAHKALA</h3>
-      <p>Ohjelmistokehittäjä | Web-sovellukset | Android</p>
+      <p class="text-base">Ohjelmistokehittäjä | Web-sovellukset | Android</p>
     </div>
     <!-- VASEN PUOLI -->
     <div
@@ -101,7 +101,7 @@
         toggleDesigner ? 'lg:opacity-30' : ''
       )}
     >
-      <h3>Web -ja mobiilikehitys</h3>
+      <h3>Web- ja mobiilikehitys</h3>
       <p>
         Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
         käyttöliittymät, että älykkäät ja nykyaikaiset taustapalvelut.

@@ -42,20 +42,24 @@ module.exports = {
         'html, body': {
           color: theme('colors.textGray'),
           fontSize: '16px',
-          fontFamily: 'Lato',
+          fontFamily: 'Open Sans, sans-serif',
           margin: 0,
           height: '100%'
         },
         'p': {
           lineHeight: 1.75,
           [`@media (min-width: ${theme('screens.xl')})`]: {
-            fontSize: '16px',
+            fontSize: '18px',
           }
+        },
+        'h1, h2, h3, h4, h5, h6': {
+          fontFamily: 'Barlow Condensed, sans-serif',
+          fontWeight: '600',
+          textTransform: 'uppercase'
         },
         'h1': {
           fontSize: theme('fontSize.3xl'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
           [`@media (min-width: ${theme('screens.md')})`]: {
             fontSize: theme('fontSize.4xl'),
           },
@@ -66,7 +70,6 @@ module.exports = {
         'h2': {
           fontSize: theme('fontSize.xl'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
           [`@media (min-width: ${theme('screens.md')})`]: {
             fontSize: theme('fontSize.2xl'),
           },
@@ -77,7 +80,6 @@ module.exports = {
         'h3': {
           fontSize: theme('fontSize.lg'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
           [`@media (min-width: ${theme('screens.md')})`]: {
             fontSize: theme('fontSize.xl'),
           },
@@ -88,7 +90,6 @@ module.exports = {
         'h4': {
           fontSize: theme('fontSize.base'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
           [`@media (min-width: ${theme('screens.md')})`]: {
             fontSize: theme('fontSize.lg'),
           },
@@ -99,12 +100,10 @@ module.exports = {
         'h5': {
           fontSize: theme('fontSize.base'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
         },
         'h6': {
           fontSize: theme('fontSize.sm'),
           color: theme('colors.textDark'),
-          fontWeight: 'bold',
         }
       })
     })
