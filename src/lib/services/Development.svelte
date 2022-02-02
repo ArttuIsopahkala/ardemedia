@@ -15,7 +15,7 @@
   import PriceItem from './PriceItem.svelte';
 </script>
 
-<div id="development" class="" in:fade={{ duration: 300 }}>
+<div class="" in:fade={{ duration: 300 }}>
   <div>
     <h5 class="mark">Arde kehittää</h5>
     <h2 class="pt-5">Timanttista <span class="mark">koodia</span> yritykseesi</h2>
@@ -25,9 +25,10 @@
         desc="Full Stack-ohjelmistokehittäjänä osaan toteuttaa käyttöliittymät, taustapalvelut,
     tietokannat ja siihen päälle Devsit ja Opsit."
         techTitle="Teknologioita"
-        techText="React / TypeScript / GWT / Svelte / NodeJS"
+        techText="React / TypeScript / AWS / GWT / Svelte / NodeJS"
       >
-        <MdDesktopWindows slot="icon" />
+        <!-- <MdDesktopWindows slot="icon" /> -->
+        <span class="text-xl" slot="icon">&#128187;</span>
       </ServiceSection>
       <ServiceSection
         title="Mobiilisovellukset"
@@ -35,7 +36,8 @@
         techTitle="Teknologioita"
         techText="Java / Android"
       >
-        <FaMobileAlt slot="icon" />
+        <!-- <FaMobileAlt slot="icon" /> -->
+        <span class="text-xl" slot="icon">&#128241;</span>
       </ServiceSection>
     </div>
     <!-- HINNASTO -->
@@ -54,7 +56,7 @@
       </div>
     </div>
     <Divider />
-    <h3 class="py-5"><span class="mark">Osa-alueita</span>, joissa voin sinua auttaa...</h3>
+    <h3 class="py-5"><span class="mark">Osa-alueita</span>, joista minulla on kokemusta...</h3>
   </div>
   <!-- OSA-ALUEET -->
   <div id="service-container" class="flex flex-wrap justify-between">
@@ -111,13 +113,22 @@
       keskisuuriin kehitystä haluaviin yrityksiin. Voin toimia esimerkiksi lisäkäsinä projektin ajan
       tai pienempiä sovelluksia toteuttaa täysin itsenäisestikin.
     </p>
-    <h3 class="mt-5">Kenelle palvelu <span class="mark">ei sovi?</span></h3>
-    <p class="lg:max-w-lg">
-      Perus nettisivujen toteutus kannattaa hankkia muualta, koska en ole Wordpress tms taikuri. En
-      toteuta myöskään suuria web-sovelluksia yksin, koska se ei ole järkevää. Koska toimin
-      toistaiseksi yksin niin suurempiin projekteihin kannattaakin sijoittaa minut tiimiin niin
-      aikataulut eivät veny.
-    </p>
+    <h3 class="my-5">Kenelle palvelu <span class="mark">ei sovi?</span></h3>
+    <ul class="flex flex-col gap-4 lg:max-w-lg">
+      <li>
+        &#8226; <b>Jos haluat perinteiset nettisivut</b><br />Sisällönhallintajärjestelmät kuten
+        Wordpress eivät ole vahvinta osaamistani, joten saat nettisivut muualta edullisemmin.
+      </li>
+      <li>
+        &#8226; <b>Jos haluat kokonaisen tiimin</b><br /> Koska toimin yksin, suurempiin projekteihin
+        minut kannattaa sijoittaa jo olemassa olevaan tiimiin.
+      </li>
+    </ul>
+    <!-- <p class="lg:max-w-lg">
+      Perinteiset nettisivut saat edullisemmin muualta, koska sisällönhallintajärjestelmät (esim.
+      Wordpress) eivät ole vahvinta osaamistani. Lisäksi koska toimin yksin, suurempiin projekteihin
+      minut kannattaa sijoittaa jo olemassa olevaan tiimiin.
+    </p> -->
     <h3 class="mt-5">Mitä <span class="mark">hyötyjä</span> saat minusta?</h3>
     <p class="mb-5 lg:max-w-lg">
       Saat tiimiisi tehokkaan, luotettavan, selkeän ja jokaista arvostavan hyvän tyypin, joka lupaa

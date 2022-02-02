@@ -5,19 +5,12 @@
   import MdMenu from 'svelte-icons/md/MdMenu.svelte';
   import MdClose from 'svelte-icons/md/MdClose.svelte';
   import clsx from 'clsx';
-  import NavItem, { MenuItem } from '$lib/header/NavItem.svelte';
+  import NavItem from '$lib/header/NavItem.svelte';
   import { breakpoints } from '$lib/static/breakpoints';
+  import data from '$lib/static/data';
 
   // Show mobile icon and display menu
   let showMobileMenu = false;
-
-  const navItems: MenuItem[] = [
-    { label: 'Etusivu', href: '/' },
-    { label: 'Palvelut', href: '/services' },
-    { label: 'Tietoa minusta', href: '/about' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Blogi', href: '/blog' }
-  ];
 
   // Mobile menu click event handler
   const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
@@ -65,21 +58,25 @@
     <div
       class={clsx('w-full m-0', !showMobileMenu && 'hidden', 'lg:flex lg:justify-end lg:w-auto')}
     >
-      {#each navItems as item}
-        <NavItem
-          label={item.label}
-          href={item.href}
-          active={$page.url.pathname === item.href}
-          onClick={() => (showMobileMenu = false)}
-        />
+      {#each data.ROUTES as route}
+        {#if route.url !== '/contact'}
+          <NavItem
+            label={route.label}
+            href={route.url}
+            active={$page.url.pathname === route.url}
+            onClick={() => (showMobileMenu = false)}
+          />
+        {/if}
       {/each}
-      <a
-        class={clsx('flex justify-center items-center my-5 w-full ', 'lg:w-auto lg:my-0 lg:mx-5')}
-        on:click={() => (showMobileMenu = false)}
-        href={'/contact'}
-      >
-        <Button text={'Ota yhteyttä!'} outlined={false} />
-      </a>
+      {#if data.ROUTES.some((route) => route.url === '/contact')}
+        <a
+          class={clsx('flex justify-center items-center my-5 w-full ', 'lg:w-auto lg:my-0 lg:mx-5')}
+          on:click={() => (showMobileMenu = false)}
+          href={'/contact'}
+        >
+          <Button text={'Ota yhteyttä!'} outlined={false} />
+        </a>
+      {/if}
     </div>
   </nav>
 </header>

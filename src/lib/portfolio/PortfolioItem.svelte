@@ -6,8 +6,8 @@
   export let logo: string = '';
 </script>
 
-<div class="flex flex-row flex-wrap justify-center">
-  <div class="flex flex-col md:w-1/2 py-5 justify-between">
+<div class="flex flex-row flex-wrap">
+  <div class="flex flex-col w-full md:w-1/2 py-5 justify-between">
     <div>
       <div class="flex flex-row items-center">
         {#if logo}
@@ -30,7 +30,7 @@
       {/if}
     </div>
   </div>
-  <div class="md:w-1/2 flex flex-wrap flex-row justify-center items-center">
+  <div class="w-full md:w-1/2 flex flex-wrap flex-row justify-center items-center">
     <slot name="carousel"/>
     
 

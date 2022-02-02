@@ -44,6 +44,7 @@ module.exports = {
           fontSize: '16px',
           fontFamily: 'Lato',
           margin: 0,
+          height: '100%'
         },
         'p': {
           lineHeight: 1.75,

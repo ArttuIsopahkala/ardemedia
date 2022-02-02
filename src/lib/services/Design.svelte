@@ -1,26 +1,21 @@
 <script lang="ts">
-  import MdBrush from 'svelte-icons/md/MdBrush.svelte';
-  import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
-  import FaDraftingCompass from 'svelte-icons/fa/FaDraftingCompass.svelte';
-  import MdViewQuilt from 'svelte-icons/md/MdViewQuilt.svelte';
-  import ServiceSection from './ServiceSection.svelte';
-  import { fade } from 'svelte/transition';
-  import { designPrice, designPriceHigh } from './../../store.js';
-  import Divider from '$lib/common/Divider.svelte';
-  import Button from '$lib/common/Button.svelte';
   import { goto } from '$app/navigation';
-  import clsx from 'clsx';
+  import Button from '$lib/common/Button.svelte';
   import Collapse from '$lib/common/Collapse.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import FaDraftingCompass from 'svelte-icons/fa/FaDraftingCompass.svelte';
+  import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
+  import MdBrush from 'svelte-icons/md/MdBrush.svelte';
+  import { fade } from 'svelte/transition';
+  import { designPriceFeature, designPriceHour, designPriceWithUI } from './../../store.js';
   import PriceItem from './PriceItem.svelte';
-
-  let exampleTrello: boolean = false;
-  let exampleUI: boolean = false;
+  import ServiceSection from './ServiceSection.svelte';
 </script>
 
-<div id="development" class="" in:fade={{ duration: 300 }}>
+<div class="" in:fade={{ duration: 300 }}>
   <div>
     <h5 class="mark">Arde suunnittelee</h5>
-    <h2 class="pt-5">Älykkäät ja <span class="mark">selkeät</span> järjestelmät</h2>
+    <h2 class="pt-5"><span class="mark">Älykkäät</span> ja selkeät järjestelmät</h2>
     <p class="py-5">
       Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut
       taitoja myös suunnitteluun liittyen.
@@ -54,8 +49,8 @@
   <div class="py-5">
     <h3 class="mark mb-3">Hinta</h3>
     <div class="flex flex-row gap-5">
-      <PriceItem price={$designPrice} list={['Tuntihinnalla']} />
-      <PriceItem price={$designPriceHigh} list={['+ 80e UI-kuvan kanssa']} />
+      <PriceItem price={$designPriceHour} list={['Tuntihinnalla']} />
+      <!-- <PriceItem price={$designPriceFeature} list={[$designPriceWithUI]} /> -->
     </div>
   </div>
   <div id="design-example">
@@ -70,17 +65,16 @@
   <div id="service-info" class="flex flex-col py-5">
     <h3 class=""><span class="mark">100%</span> Tyytyväisyystakuu</h3>
     <p class="lg:max-w-lg">
-      Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Laskutan
-      suunnittelupalvelua projektin päättyessä, kuitenkin korkeintaan kuukausittain. Jos et ole
-      tyytyväinen vaatimusmäärittelyyn tai UI-kuvaan eli en ole saanut yhtään selkoa mitä oikein
-      haluat, en laskuta siitä.
+      Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Jos et ole
+      tyytyväinen työhöni tai huomaat parannettavaa, kerro siitä minulle. Takuu edellyttää reilua
+      avoimuutta minua kohtaan jo yhteistyön aikana. Jos et kirjallisen kritiikkisikään jälkeen ole
+      tyytyväinen työni tulokseen, en lähetä laskua.
     </p>
     <h3 class="mt-5">Kenelle suunnittelupalveluni <span class="mark">sopii?</span></h3>
     <p class="lg:max-w-lg">
-      Suunnittelupalveluni sopii sovelluksille, josta sinulla on jo hyvä käsitys mitä haluat. Eniten
-      hyötyä saat palvelusta siinä vaiheessa kun sovellus on idean tasolla, jolloin voin luoda MVP
-      version ja suunnitelmasta tulee kerralla laaja. Voin osallistua kuitenkin sprintteihin, jollon
-      luodaan vain muutama vaatimus ja UI-kuva.
+      Suunnittelupalveluni sopii sinulle, jolla on jo hyvä käsitys siitä mitä sovellukselta haluat. Eniten
+      hyötyä saat palvelusta suurempiin projekteihin, jolloin voin suunnitella isompia
+      kokonaisuuksia kerralla.
     </p>
     <h3 class="mt-5">Kenelle suunnittelupalveluni <span class="mark">ei sovi?</span></h3>
     <p class="lg:max-w-lg">

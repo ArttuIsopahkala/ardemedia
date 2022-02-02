@@ -4,9 +4,9 @@
   import Footer from '$lib/footer/Footer.svelte';
 </script>
 
-<div class="w-full bg-background">
+<div class="w-full bg-background relative min-h-full h-auto">
   <Header />
-  <main class="bg-success flex flex-col mt-[60px] px-5 xl:px-0">
+  <main class="flex flex-col pt-[60px] pb-[400px]"> <!-- padding for footer -->
     <slot />
   </main>
   <Footer />

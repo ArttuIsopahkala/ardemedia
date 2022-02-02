@@ -1,10 +1,3 @@
-<script context="module" lang="ts">
-  export interface MenuItem {
-    label: string;
-    href: string;
-  }
-</script>
-
 <script lang="ts">
   import clsx from 'clsx';
 

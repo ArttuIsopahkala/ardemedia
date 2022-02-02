@@ -1,9 +1,15 @@
 <script lang="ts">
+  import Container from '$lib/common/Container.svelte';
   import Design from '$lib/services/Design.svelte';
   import Development from '$lib/services/Development.svelte';
   import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
+  import { selectedService } from './../store.js';
 
-  let selectedValue: string;
+  let selectedValue: string = $selectedService;
+
+  $: if (selectedValue) {
+    selectedService.set(selectedValue);
+  }
 
   const items: SelectorItem[] = [
     {
@@ -21,16 +27,13 @@
   <title>Palvelut | Arde Media</title>
 </svelte:head>
 
-<article class="bg-base-100 bg-[url('/bg-pattern.svg')] pb-10">
-  <section class="container mx-auto max-w-5xl">
-    <Selector bind:selectedValue {items} defaultValue="development" />
-    {#if selectedValue === 'development'}
-      <Development />
-    {:else if selectedValue === 'design'}
-      <Design />
-    {:else}
-      Valitse palvelu!
-    {/if}
-    <slot />
-  </section>
-</article>
+<Container style="bg-base-100 bg-[url('/bg-pattern.svg')]">
+  <Selector bind:selectedValue {items} />
+  {#if selectedValue === 'development'}
+    <Development />
+  {:else if selectedValue === 'design'}
+    <Design />
+  {:else}
+    Valitse palvelu!
+  {/if}
+</Container>

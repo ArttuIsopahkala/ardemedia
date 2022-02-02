@@ -94,7 +94,7 @@
       in:fly={{ x: -200, duration: 500, delay: 300 }}
       on:mouseenter={() => ((toggleCoder = true), handleImage(), toggleIndex(0))}
       on:mouseleave={() => ((toggleCoder = false), handleImage(), toggleIndex(1))}
-      on:click={() => animateScroll.scrollTo({ element: '#service-web', offset: -60 })}
+      on:click={() => animateScroll.scrollTo({ element: '#development', offset: -60 })}
       class={clsx(
         'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',
         'lg:min-h-[350px] lg:w-1/3 lg:order-1',
@@ -126,7 +126,7 @@
       in:fly={{ x: 200, duration: 500, delay: 300 }}
       on:mouseenter={() => ((toggleDesigner = true), handleImage())}
       on:mouseleave={() => ((toggleDesigner = false), handleImage())}
-      on:click={() => animateScroll.scrollTo({ element: '#service-design', offset: -60 })}
+      on:click={() => animateScroll.scrollTo({ element: '#design', offset: -60 })}
       class={clsx(
         'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
         'lg:min-h-[350px] lg:w-1/3 lg:order-3',
