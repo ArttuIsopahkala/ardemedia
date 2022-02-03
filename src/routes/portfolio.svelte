@@ -92,7 +92,7 @@ import Container from '$lib/common/Container.svelte';
       year="Kehityksessä 2020-2021, ei aktiivinen"
       description="Digitaalinen fläppitaulu ja salibandyjoukkueen hallintajärjestelmä. Opin tämän projektin aikana hurjasti Reactia, TypeScriptiä ja AWS:n palveluja. 
       Työstin sovellusta ystävieni kanssa, jotka auttoivat <a class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
-      Itse hoidin ohjelmoinnin ja projektinhallinnan. Sovellus jäi julkaisematta keskeneräisenä (liikaa koodaamista yhdelle).
+      Itse hoidin ohjelmoinnin ja projektinhallinnan.
       <br/><br/>
       Valmiit ominaisuudet:
       <br/>&bull; PÄIVITÄ!
@@ -117,7 +117,7 @@ import Container from '$lib/common/Container.svelte';
       >
         <Icon type="aws" />
       </TechItem>
-      <TechItem title="React" desc="Material-UI">
+      <TechItem title="React" desc="Material-UI, PWA">
         <Icon type="react" />
       </TechItem>
       <TechItem title="NodeJS">

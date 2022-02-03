@@ -13,7 +13,7 @@
     class="w-16 h-16 btn btn-circle -mt-6 bg-base-content"
     on:click={() => animateScroll.scrollTo({ y: 0 })}
   >
-    <Icon type="up" style="text-base-300" />
+    <Icon type="up" color="text-base-300" />
   </div>
   <div class="max-w-5xl w-full flex flex-row justify-around">
     <div class="flex flex-col">

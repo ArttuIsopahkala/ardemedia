@@ -7,8 +7,6 @@ import config from '$lib/static/firebaseConfig.js';
 // Initialize Firebase
 const app = (getApps().length === 0 ? initializeApp(config) : getApp())
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const functions = getFunctions(app);

@@ -32,7 +32,7 @@
   <div class="card-body">
     <div class="flex flex-col justify-between" />
     <h5 class="text-primary mb-2 mark">{serviceName}</h5>
-    <h2 class="card-title">{label}</h2>
+    <h3 class="mb-4">{label}</h3>
     <p>
       {@html description}
     </p>

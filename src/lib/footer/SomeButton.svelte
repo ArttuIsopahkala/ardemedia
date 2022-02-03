@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Icon,{ IconType } from '$lib/common/Icon.svelte';
+  import Icon, { IconType } from '$lib/common/Icon.svelte';
 
   export let url: string;
   export let icon: IconType = '';
@@ -8,7 +8,7 @@
 
 <a href={url} target="_blank">
   <div class="flex flex-col items-center gap-1">
-    <Icon type={icon} style={'text-base-300 hover:text-textLight'} />
+    <Icon type={icon} color="text-base-300" style="hover:text-textLight" />
     <span class="text-xs">{label}</span>
   </div>
 </a>

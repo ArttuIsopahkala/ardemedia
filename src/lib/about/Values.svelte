@@ -30,7 +30,7 @@
         onClick={() => (selectedValue = 'selkeys')}
       />
       <Button
-        text="Toisten kunnioitus"
+        text="Yhdenvertaisuus"
         outlined={selectedValue !== 'kunnioitus'}
         secondary={true}
         onClick={() => (selectedValue = 'kunnioitus')}
@@ -40,30 +40,25 @@
     <div class="flex flex-col md:max-w-md">
       {#if selectedValue === 'auttaminen'}
         <p in:fade={{ duration: 300 }}>
-          KEKSI UUS ! Olen urani aikana saanut paljon kiitosta tehokkuudestani ja nopeasta reagoinnista
-          erilaisissa ohjelmistokehityksen tilanteissa. Oli kyse sitten ohjelmistosta löydetystä
-          virheestä tai uudesta ominaisuudesta, olen reagoinut näihin nopeasti. Järjestelmällisyyden
-          avulla onnistun tuottamaan vaikeammankin tehtävän tiukassa aikataulussa. Tästä
-          tehokkuudesta haluan pitää kiinni.
+          Joka apua pyytää, se apua saa. Se merkitsee paljon, jos voin olla avuksi muille. Olen työelämässä
+          saanut kiitosta auttamisesta, liittyen järjestelmien toiminnallisuuksien auki
+          selittämiseen, virhetilanteiden korjaamiseen tai muuhun nopeaan reagointiin. &#9889;
         </p>
       {:else if selectedValue === 'vastuullisuus'}
         <p in:fade={{ duration: 300 }}>
-          Ohjelmistokehityksessä olen aina toimittanut lupaamani asiat. Vaati se sitten
-          tuntemattoman teknologian opettelua tai uuteen rooliin hyppäämistä, olen onnistunut
-          muuntautumaan uuteen tilanteeseen kovalla työllä tai muiden avustamana.
+          Jokainen on lopulta vastuussa omasta työstään ja itsestään. Tämän takia tehdään hommat
+          tosissaan ja huolella, mutta ei liian vakavalla naamalla. &#127774;
         </p>
       {:else if selectedValue === 'selkeys'}
         <p in:fade={{ duration: 300 }}>
-          Oli kyse sitten asiakasrajapinnan kommunikaatiosta tai käyttöliittymäsuunnittelusta,
-          kaikessa voidaan havaita insinöörimäinen loogisuus ja selkeys. Kommunikointi ei-tekniselle
-          ihmiselle onnistuu ilman vaikeaa ammattisanastoa. Lisäksi yrityksen toimintamallit ovat
-          selkeitä, jolloin palveluja on helppo ostaa eikä asiakkaan tarvitse huolehtia ylimääräistä
+          Oli kyse sitten kommunikaatiosta asiakasrajapinnassa tai käyttöliittymäsuunnittelusta,
+          tekemisessäni voidaan havaita insinöörimäinen loogisuus ja selkeys. Koodiasioiden selittäminen 
+          ei-tekniselle ihmiselle luonnistuu ilman vaikeaa ammattisanastoa. &#128172;
         </p>
       {:else if selectedValue === 'kunnioitus'}
         <p in:fade={{ duration: 300 }}>
-          Jokainen ihminen ansaitsee tulla kuuluksi, eikä toiveita tai mielipiteitä saa sivuuttaa.
-          Huumori ja kaikkien huomioonottaminen tuo työympäristöön rentoutta, jolloin kaikilla on
-          mukavampaa työskennellä.
+          Jokainen ihminen ansaitsee tulla kuuluksi, eikä kenenkään toiveita tai mielipiteitä saa sivuuttaa.
+          Huomioonottaminen ja huumori luovat ympäristön, jossa kaikilla on hyvä olla. &#128106;
         </p>
       {/if}
     </div>

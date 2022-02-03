@@ -1,18 +1,12 @@
 <script lang="ts">
-  import MdSecurity from 'svelte-icons/md/MdSecurity.svelte';
-  import MdCloud from 'svelte-icons/md/MdCloud.svelte';
-  import FaRecycle from 'svelte-icons/fa/FaRecycle.svelte';
-  import FaMobileAlt from 'svelte-icons/fa/FaMobileAlt.svelte';
-  import FaTasks from 'svelte-icons/fa/FaTasks.svelte';
-  import MdSettings from 'svelte-icons/md/MdSettings.svelte';
-  import MdDesktopWindows from 'svelte-icons/md/MdDesktopWindows.svelte';
-  import ServiceSection from './ServiceSection.svelte';
+  import { goto } from '$app/navigation';
+  import Button from '$lib/common/Button.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import Icon from '$lib/common/Icon.svelte';
   import { fade } from 'svelte/transition';
   import { devPrice, devPriceHigh } from './../../store.js';
-  import Divider from '$lib/common/Divider.svelte';
-  import Button from '$lib/common/Button.svelte';
-  import { goto } from '$app/navigation';
   import PriceItem from './PriceItem.svelte';
+  import ServiceSection from './ServiceSection.svelte';
 </script>
 
 <div class="" in:fade={{ duration: 300 }}>
@@ -32,7 +26,7 @@
       </ServiceSection>
       <ServiceSection
         title="Mobiilisovellukset"
-        desc="Mobiilisovelluksia olen työstänyt lähinnä Javalla, mutta myös React Nativesta ja Flutter projektit kiinnostavat."
+        desc="Mobiilisovelluksia olen työstänyt lähinnä Javalla, mutta myös React Native ja Flutter -projektit kiinnostavat."
         techTitle="Teknologioita"
         techText="Java / Android"
       >
@@ -50,7 +44,7 @@
           list={[
             'Alle kuukauden kestävät projektit',
             'GWT projektit',
-            'Normaalia vastuullisempi tehtävä (esim. Leadin rooli)'
+            'Normaalia vastuullisempi rooli (esim. Lead)'
           ]}
         />
       </div>
@@ -64,7 +58,7 @@
       title="Pilvipalvelut"
       desc="Etsitään sovelluksellesi koti. Olen toteuttanut Firebasen päälle useita mobiilisovelluksia sekä web-sovelluksen, käyttäen Firebasen tietokantoja, analytiikkaa ja tallennustiloja. Firebase on helppo oppia ja sen päälle voidaan rakentaa keskitetysti monimutkainenkin järjestelmä. Amazon Web Services (AWS) olen käyttänyt rajapinnan ja web-sovelluksen alustana. AWS palveluja mm. EC2, S3, Cognito, API Gateway, DynamoDB. Alustat: Firebase, AWS"
     >
-      <MdCloud slot="icon" />
+      <Icon type="cloud" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
@@ -73,28 +67,28 @@
       techTitle="Teknologioita"
       techText="Jest, JUnit, PHPUnit, AVA"
     >
-      <FaTasks slot="icon" />
+      <Icon type="tasks" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
       title="Tietoturva"
       desc="Olen käynyt kurssin Tietoturvan riskien hallinta ja yksityisyyden suoja  sekä Tietoturvan perusteet. Minulla on Tietoturvan ABC -sertifikaatti. Erityisesti web-sovellusten tietoturva ja riskit ovat hyvin hallussa! Voin tulla tarkastamaan teidänkin sovellusten tietoturvan sekä kirjoittaa tietosuojakäytännön."
     >
-      <MdSecurity slot="icon" />
+      <Icon type="security" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
       title="Automatisointi"
       desc="Voin automatisoida ohjelmistokehityksen manuaalisia töitä (CI/CD), kuten testien ajon, automaattisen julkaisun ja arkkitehtuurien pystytyksen. Näissä käyttämiäni työkaluja ovat mm. CircleCI, Serverless ja Github Actions. Mikä on CI/CD? Kerro lisää."
     >
-      <MdSettings slot="icon" />
+      <Icon type="settings" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
       title="Ohjelmiston uudistaminen"
       desc="Onko koodin &#34;parasta ennen&#34; -päiväys mennyt? Voin toteuttaa vanhan järjestelmän nykyaikaisilla teknologioilla.  Uudistin opinnäytetyönä Flash-pohjaisen järjestelmän GWT:n päälle ja myöhemmin GWT pohjaisen järjestelmän Reactin päälle."
     >
-      <FaRecycle slot="icon" />
+      <Icon type="recycle" slot="icon" />
     </ServiceSection>
   </div>
   <Divider />

@@ -22,9 +22,10 @@
 <section class="container mx-auto max-w-5xl pb-10 px-5 xl:px-0 flex flex-col mt-14 gap-14">
   <Services />
   <Reasons />
-  <Values />
-  <Company />
   <References />
+  <Divider />
+  <Company />
+  <Values />
   <Divider />
   <div class="flex flex-col justify-center items-center mb-14">
     <h3 class="mb-10">Lähetä minulle viesti ja laitetaan rattaat pyörimään!</h3>

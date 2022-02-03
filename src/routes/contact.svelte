@@ -1,16 +1,18 @@
 <script lang="ts">
-  import NoteItem from '$lib/contact/NoteItem.svelte';
-  import Form from '$lib/contact/Form.svelte';
-  import Icon from '$lib/common/Icon.svelte';
-  import { availableDate } from './../store.js';
   import Container from '$lib/common/Container.svelte';
-  import clsx from 'clsx';
+  import Icon from '$lib/common/Icon.svelte';
+  import Form from '$lib/contact/Form.svelte';
+  import NoteItem from '$lib/contact/NoteItem.svelte';
+  import { availableDate } from './../store.js';
 
-  const isFutureDate = (dateString: string) => {
+  // Future feature
+/*   const isFutureDate = (dateString: string) => {
     const today = new Date();
     const compare = new Date(dateString);
+    console.log("dateString",compare)
+    console.log("dateString today",today)
     return today.valueOf() < compare.valueOf();
-  };
+  }; */
 </script>
 
 <svelte:head>
@@ -23,12 +25,13 @@
   <div class="flex flex-row flex-wrap justify-between">
     <NoteItem description="Voin aloittaa seuraavan projektin">
       <Icon slot="icon" type="calendar" />
-      <h3 slot="extra" class={clsx(isFutureDate($availableDate) ? 'text-primary' : 'text-success')}>
-        {#if isFutureDate($availableDate)}
+      <h3 slot="extra" class='text-primary'>
+        {$availableDate}
+        <!-- {#if isFutureDate($availableDate)}
           {$availableDate}
         {:else}
           Vaikka heti!
-        {/if}
+        {/if} -->
       </h3>
     </NoteItem>
     <NoteItem
@@ -42,7 +45,7 @@
       <Icon slot="icon" type="language" />
     </NoteItem>
     <NoteItem
-      description="Teen pääsääntöisesti 6 tunnin työpäiviä. Tällöin olen koko työajan virkeä ja tuottava. Samalla saat asiakkaana pienemmän laskun. Win-win?"
+      description="Pyrin tekemään 6 tunnin työpäiviä, jolloin vireystilani pysyy koko työajan tuottavana. Tällöin myös asiakkaana saat pienemmän laskun. Win-win?"
     >
       <Icon slot="icon" type="clock" />
     </NoteItem>
@@ -50,7 +53,7 @@
   <div class="bg-card p-5 my-5">
     <div class="flex items-center">
       <h4 class="py-5 mr-5">Lähetä minulle viesti</h4>
-      <Icon type="email" style="text-primary" />
+      <Icon type="email" color="text-primary" />
     </div>
     <p class="">Vastaan heti kun se on inhimillisesti mahdollista!</p>
     <Form />

@@ -24,7 +24,15 @@
     | 'up'
     | 'google-play'
     | 'github'
-    | 'youtube';
+    | 'youtube'
+    | 'recycle'
+    | 'tasks'
+    | 'cloud'
+    | 'security'
+    | 'settings'
+    | 'compass'
+    | 'warehouse'
+    | 'brush';
 </script>
 
 <script lang="ts">
@@ -50,13 +58,23 @@
   import FaGooglePlay from 'svelte-icons/fa/FaGooglePlay.svelte';
   import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte';
   import FaYoutube from 'svelte-icons/fa/FaYoutube.svelte';
+  import FaRecycle from 'svelte-icons/fa/FaRecycle.svelte';
+  import FaTasks from 'svelte-icons/fa/FaTasks.svelte';
+  import MdCloud from 'svelte-icons/md/MdCloud.svelte';
+  import MdSecurity from 'svelte-icons/md/MdSecurity.svelte';
+  import MdSettings from 'svelte-icons/md/MdSettings.svelte';
+  import FaDraftingCompass from 'svelte-icons/fa/FaDraftingCompass.svelte';
+  import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
+  import MdBrush from 'svelte-icons/md/MdBrush.svelte';
+  import clsx from 'clsx';
 
   export let type: IconType = '';
   export let size: number = 30;
+  export let color: string = 'text-black';
   export let style: string = '';
 </script>
 
-<div class="w-[{size}px] h-[{size}px] text-black flex justify-center items-center {style}">
+<div class={clsx(`w-[${size}px] h-[${size}px] flex justify-center items-center ${style} ${color}`)}>
   {#if type === 'aws'}
     <FaAws />
   {:else if type === 'firebase'}
@@ -105,5 +123,21 @@
     <FaGithubSquare />
   {:else if type === 'youtube'}
     <FaYoutube />
+  {:else if type === 'recycle'}
+    <FaRecycle />
+  {:else if type === 'tasks'}
+    <FaTasks />
+  {:else if type === 'cloud'}
+    <MdCloud />
+  {:else if type === 'security'}
+    <MdSecurity />
+  {:else if type === 'settings'}
+    <MdSettings />
+  {:else if type === 'compass'}
+    <FaDraftingCompass />
+  {:else if type === 'warehouse'}
+    <FaWarehouse />
+  {:else if type === 'brush'}
+    <MdBrush />
   {/if}
 </div>

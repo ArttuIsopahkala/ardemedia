@@ -3,11 +3,9 @@
   import Button from '$lib/common/Button.svelte';
   import Collapse from '$lib/common/Collapse.svelte';
   import Divider from '$lib/common/Divider.svelte';
-  import FaDraftingCompass from 'svelte-icons/fa/FaDraftingCompass.svelte';
-  import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
-  import MdBrush from 'svelte-icons/md/MdBrush.svelte';
+  import Icon from '$lib/common/Icon.svelte';
   import { fade } from 'svelte/transition';
-  import { designPriceFeature, designPriceHour, designPriceWithUI } from './../../store.js';
+  import { designPriceHour } from './../../store.js';
   import PriceItem from './PriceItem.svelte';
   import ServiceSection from './ServiceSection.svelte';
 </script>
@@ -15,7 +13,7 @@
 <div class="" in:fade={{ duration: 300 }}>
   <div>
     <h5 class="mark">Arde suunnittelee</h5>
-    <h2 class="pt-5"><span class="mark">Älykkäät</span> ja selkeät järjestelmät</h2>
+    <h2 class="pt-5">Älykkäät ja selkeät järjestelmät</h2>
     <p class="py-5">
       Ydinosaamiseni on ohjelmistokehityksen puolella, mutta ohjelmoinnin sivussa olen saanut
       taitoja myös suunnitteluun liittyen.
@@ -28,21 +26,21 @@
       title="UI/UX suunnitelmat"
       desc="Olen suunnitellut käyttöliittymät 10 Android sovellukselle sekä useille nettisivuille. Voin luoda perus käyttöliittymäsuunnitelmat wireframe tasolla. En siis toteuta viimeisteltyjä suunnitelmia, joista voi suoraa kopioida CSS arvot. Marvel, AdobeXD, draw.io, NinjaMock"
     >
-      <MdBrush slot="icon" />
+      <Icon type="brush" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
       title="Vaatimusmäärittelyt"
       desc="Voin luoda vaatimusmäärittelyt sovelluksellesi. Vaatimusmäärittelyn avulla ohjelmistokehittäjä osaa toteuttaa kehitystarpeen teknisesti. Vaatimusmäärittelyyn voi kuulua eri osia kuten UI kuvat, ominaisuuden mahdolliset poikkeustilanteet yms. Voin toteuttaa vaatimsumäärittelyn esim. Trello-tauluun tai Jiraan."
     >
-      <FaDraftingCompass slot="icon" />
+      <Icon type="compass" slot="icon" />
     </ServiceSection>
 
     <ServiceSection
       title="Arkkitehtuuriratkaisut"
       desc="Suunnittelen ja dokumentoin teknologiaratkaisuja, jotka sopivat juuri sinun ideaasi. Osaan katsoa päätökissäni teknologiatrendejä, koska pidän itseäni ajan tasalla."
     >
-      <FaWarehouse slot="icon" />
+      <Icon type="warehouse" slot="icon" />
     </ServiceSection>
   </div>
   <!-- HINNASTO -->
@@ -50,7 +48,7 @@
     <h3 class="mark mb-3">Hinta</h3>
     <div class="flex flex-row gap-5">
       <PriceItem price={$designPriceHour} list={['Tuntihinnalla']} />
-      <!-- <PriceItem price={$designPriceFeature} list={[$designPriceWithUI]} /> -->
+      <!-- <PriceItem price={$designPricePerFeature} list={[$designPriceWithUI]} /> -->
     </div>
   </div>
   <div id="design-example">
@@ -72,8 +70,8 @@
     </p>
     <h3 class="mt-5">Kenelle suunnittelupalveluni <span class="mark">sopii?</span></h3>
     <p class="lg:max-w-lg">
-      Suunnittelupalveluni sopii sinulle, jolla on jo hyvä käsitys siitä mitä sovellukselta haluat. Eniten
-      hyötyä saat palvelusta suurempiin projekteihin, jolloin voin suunnitella isompia
+      Suunnittelupalveluni sopii sinulle, jolla on jo hyvä käsitys siitä mitä sovellukselta haluat.
+      Eniten hyötyä saat palvelusta suurempiin projekteihin, jolloin voin suunnitella isompia
       kokonaisuuksia kerralla.
     </p>
     <h3 class="mt-5">Kenelle suunnittelupalveluni <span class="mark">ei sovi?</span></h3>

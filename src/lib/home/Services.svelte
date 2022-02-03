@@ -3,13 +3,14 @@
 </script>
 
 <div id="services">
-  <h2 class="py-5">Palvelut</h2>
+  <h4 class="py-5 text-primary">Palvelut</h4>
+  <h2 class="pb-5">Mitä saisi olla?</h2>
   <div class="flex flex-row flex-wrap gap-5">
     <ServiceItem
       serviceName="Arde kehittää"
-      label="Tarvitsetko ohjelmistokehittäjää?"
-      description="Minulla on lähes 10 vuotta kokemusta ohjelmoinnista. Voit sijoittaa minut tiimiisi tekemään samoja hommia kuin muutkin. 
-      Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita itsenäisestikin."
+      label="Web- ja mobiilikehitys"
+      description="Lähes 10 vuoden ohjelmointikokemuksen turvin voit sijoittaa minut tiimiisi lisäkäsiksi tai erillistä projektia kehittämään. 
+      Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita täysin itsenäisestikin."
       href="/services"
       id="development"
       techTitle="Käyttämiäni teknologioita"
@@ -23,18 +24,17 @@
     </ServiceItem>
     <ServiceItem
       serviceName="Arde suunnittelee"
-      label="Tarvitsetko teknistä suunnitelmaa?"
+      label="Ohjelmistojen suunnittelu"
       description="Teen teknisen suunnitelman sovelluksesi ominaisuuksista, jonka ohjelmistokehittäjä osaa
   toteuttaa. Suunnitelma voi olla esim. MVP-versio tuotteestasi, jatkokehityssuunnitelma tai
   nykyisen työn tekninen dokumentaatio. Suunnitelma voidaan toteuttaa
-  vaatimusmäärittelyillä suosimaasi projektinhallintajärjestelmään. Suunnitelma sisältää
-  ominaisuuksien yleiset ja tekniset kuvaukset sekä mahdolliset käyttöliittymäkuvat."
+  vaatimusmäärittelyillä suosimaasi projektinhallintajärjestelmään. Suunnitelma voi sisältää
+  ominaisuuksien yleiset ja tekniset kuvaukset, arkkitehtuurikaaviot sekä mahdolliset käyttöliittymäkuvat."
       href="/services"
       id="design"
       techTitle="Käyttämiäni työkaluja"
       techs={[
-        { title: 'Projektinhallinta', techs: 'Jira / Trello / GitHub Projects' },
-        { title: 'UI/UX', techs: 'Photoshop / AdobeDX / draw.io / Marvel' }
+        { title: 'UI/UX ja kaaviot', techs: 'Photoshop / AdobeDX / draw.io / Marvel' }
       ]}
     >
       <img slot="image" src="design.jpg" alt="design" />

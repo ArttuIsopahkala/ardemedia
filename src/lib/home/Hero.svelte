@@ -3,49 +3,31 @@
   import clsx from 'clsx';
   import * as animateScroll from 'svelte-scrollto';
   import { fade, fly, slide } from 'svelte/transition';
+  import { onMount } from 'svelte';
 
-  let toggleCoder: boolean = false;
-  let toggleDesigner: boolean = false;
+  let pageLoaded = false;
+  onMount(() => (pageLoaded = true));
 
   let windowWith: number;
 
-  let images: string[] = ['raivo.png', 'miettii.png', 'suunnittelee2.png'];
-
-  //type position = 'left' | 'middle' | 'right'
-
-  let index = 1;
-  const toggleIndex = (newIndex: number) => {
-    index = newIndex;
-    if (newIndex === 0) {
-      // LEFT
-    } else if (newIndex === 2) {
-      // RIGHT
-    } else {
-      // MIDDLE
+  type ToggleType = 'left' | 'right' | null;
+  let toggle: ToggleType = null;
+  /*   const setToggle = (newToggle: ToggleType) => {
+    toggle = newToggle;
+    if (windowWith > breakpoints.lg) {
+      if (newToggle === 'left') {
+        image = 'raivo.png';
+        return;
+      }
+      if (newToggle === 'right') {
+        image = 'suunnittelee2.png';
+        return;
+      }
     }
-    //newIndex = (newIndex + 1) % images.length;
-    console.log('index', newIndex);
-  };
-
-  /* EI TOIMI */
-  const previous = () => {
-    index = (index - 1) % images.length;
-  };
+    image = 'miettii.png';
+  }; */
 
   let image: string = 'miettii.png';
-  const handleImage = () => {
-    if (windowWith < breakpoints.lg) {
-      image = 'miettii.png';
-      return;
-    }
-    if (toggleCoder) {
-      image = 'raivo.png';
-    } else if (toggleDesigner) {
-      image = 'suunnittelee2.png';
-    } else {
-      image = 'miettii.png';
-    }
-  };
 
   function typewriter(node, { speed = 5, delay = 0 }) {
     const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
@@ -66,99 +48,121 @@
       }
     };
   }
+
+  const handleMousemove = (event) => {
+    if (event === null) {
+      toggle = null;
+      image = 'miettii.png';
+      return;
+    }
+
+    let x = event.clientX;
+    if (x < windowWith / 2) {
+      toggle = 'left';
+    }
+    if (x >= windowWith / 2) {
+      toggle = 'right';
+    }
+    if (windowWith > breakpoints.lg) {
+      if (toggle === 'left') {
+        image = 'raivo.png';
+        return;
+      }
+      if (toggle === 'right') {
+        image = 'suunnittelee2.png';
+        return;
+      }
+    }
+    image = 'miettii.png';
+  };
 </script>
 
 <svelte:window bind:innerWidth={windowWith} />
 
 <div id="hero" class="flex flex-col justify-center items-center pb-[50px]">
   <h1 class="mb-10 text-center">
-    Vuokraa<br /><span class="mark gradient">Full Stack</span> -koodari projektiisi!
+    Vuokraa <span class="mark gradient">Full Stack</span> -koodari projektiisi!
   </h1>
-  <div class={clsx('flex justify-center items-center flex-wrap')}>
-    <!-- PÄÄKUVA -->
-    <div
-      in:fade={{ duration: 300 }}
-      class={clsx(
-        'flex flex-col justify-center items-center text-center my-3 w-10/12',
-        'lg:px-7 lg:w-1/3 lg:order-2'
-      )}
-    >
-      {#each [images[index]] as src (index)}
-        <img class="stack max-h-[500px]" {src} alt="muotokuva" />
-      {/each}
-      <h3 class="text-primary mt-4">ARTTU ISOPAHKALA</h3>
-      <p class="text-base">Ohjelmistokehittäjä | Web-sovellukset | Android</p>
-    </div>
-    <!-- VASEN PUOLI -->
-    <div
-      in:fly={{ x: -200, duration: 500, delay: 300 }}
-      on:mouseenter={() => ((toggleCoder = true), handleImage(), toggleIndex(0))}
-      on:mouseleave={() => ((toggleCoder = false), handleImage(), toggleIndex(1))}
-      on:click={() => animateScroll.scrollTo({ element: '#development', offset: -60 })}
-      class={clsx(
-        'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',
-        'lg:min-h-[350px] lg:w-1/3 lg:order-1',
-        toggleDesigner ? 'lg:opacity-30' : ''
-      )}
-    >
-      <h3>Web- ja mobiilikehitys</h3>
-      <p>
-        Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
-        käyttöliittymät, että älykkäät ja nykyaikaiset taustapalvelut.
-      </p>
-      {#if toggleCoder && windowWith > breakpoints.lg}
-        <div
-          class="mockup-code mt-5 transition-opacity duration-300"
-          in:slide={{ duration: 300 }}
-          out:slide={{ duration: 300 }}
-        >
-          <pre data-prefix=">">
+  <div
+    on:mousemove={handleMousemove}
+    on:mouseleave={() => handleMousemove(null)}
+    class={clsx('flex justify-center items-center flex-wrap min-h-[500px] lg:py-10')}
+  >
+    {#if pageLoaded}
+      <!-- PÄÄKUVA -->
+      <div
+        in:fade={{ duration: 300 }}
+        class={clsx(
+          'flex flex-col justify-center items-center text-center my-3 w-10/12',
+          'lg:px-7 lg:w-1/3 lg:order-2'
+        )}
+      >
+        <img class={clsx("max-h-[500px]")} src={image} alt="muotokuva" />
+        <h3 class="text-primary mt-4">ARTTU ISOPAHKALA</h3>
+        <p class="text-base">Web-sovellukset | Android</p>
+      </div>
+
+      <!-- VASEN PUOLI -->
+      <div
+        in:fly={{ x: -200, duration: 500, delay: 300 }}
+        on:click={() => animateScroll.scrollTo({ element: '#development', offset: -60 })}
+        class={clsx(
+          'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',
+          'lg:min-h-[350px] lg:w-1/3 lg:order-1',
+          toggle === 'right' ? 'lg:opacity-30' : ''
+        )}
+      >
+        <h3 class="portfolio-title">Ohjelmistokehittäjä</h3>
+        <p>
+          Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
+          käyttöliittymät, että älykkäät ja nykyaikaiset taustapalvelut.
+        </p>
+        {#if toggle === 'left' && windowWith > breakpoints.lg}
+          <div
+            class="mockup-code mt-5 transition-opacity duration-300"
+            in:slide={{ duration: 300 }}
+            out:slide={{ duration: 300 }}
+          >
+            <pre data-prefix=">">
             <code in:typewriter={{ delay: 300 }}>console.log("Hello world!");</code>
           </pre>
-          <pre data-prefix=">" class="text-success">
+            <pre data-prefix=">" class="text-success">
             <code in:fade={{ duration: 0, delay: 1300 }}>Hello world!</code>
           </pre>
-        </div>
-      {/if}
-    </div>
-    <!-- OIKEA PUOLI -->
-    <div
-      in:fly={{ x: 200, duration: 500, delay: 300 }}
-      on:mouseenter={() => ((toggleDesigner = true), handleImage())}
-      on:mouseleave={() => ((toggleDesigner = false), handleImage())}
-      on:click={() => animateScroll.scrollTo({ element: '#design', offset: -60 })}
-      class={clsx(
-        'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
-        'lg:min-h-[350px] lg:w-1/3 lg:order-3',
-        toggleCoder ? 'lg:opacity-30' : ''
-      )}
-    >
-      <h3>Ohjelmistojen suunnittelu</h3>
-      <p>
-        Muunnan liiketoimintasi kehitystarpeen tai idean tekniseen muotoon, suunnittelen
-        ominaisuuksille tai ohjelmistolle nykyaikaisen teknisen ratkaisun sekä taiteilen
-        käyttäjäystävälliset UI/UX-suunnitelmat.
-      </p>
-      {#if toggleDesigner && windowWith > breakpoints.lg}
-        <div
-          class="mockup-code mt-5 transition-opacity duration-300"
-          in:slide={{ duration: 300 }}
-          out:slide={{ duration: 300 }}
-        >
-          <pre data-prefix="1">
-            <code in:typewriter={{ delay: 300 }}>&#123;</code>
-          </pre>
-          <pre data-prefix="2">
-            <code in:typewriter={{ delay: 300 }}>display: flex;</code>
-          </pre>
-          <pre data-prefix="3">
-            <code in:typewriter={{ delay: 300 }}>&#125;</code>
-          </pre>
-          <pre class="text-warning" data-prefix=">">
-            <code in:typewriter={{ delay: 1000 }}>&#128293; &#128293; &#128293;</code>
-          </pre>
-        </div>
-      {/if}
-    </div>
+          </div>
+        {/if}
+      </div>
+      <!-- OIKEA PUOLI -->
+      <div
+        in:fly={{ x: 200, duration: 500, delay: 300 }}
+        on:click={() => animateScroll.scrollTo({ element: '#design', offset: -60 })}
+        class={clsx(
+          'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
+          'lg:min-h-[350px] lg:w-1/3 lg:order-3',
+          toggle === 'left' ? 'lg:opacity-30' : ''
+        )}
+      >
+        <h3 class="portfolio-title">Ohjelmistoarkkitehti</h3>
+        <p>
+          Muunnan kehitystarpeen tai idean tekniseen muotoon, suunnittelen ominaisuuksille tai
+          ohjelmistolle nykyaikaisen teknisen ratkaisun sekä taiteilen käyttäjäystävälliset
+          UI/UX-suunnitelmat.
+        </p>
+        {#if toggle === 'right' && windowWith > breakpoints.lg}
+          <div
+            class="mockup-code mt-5 transition-opacity duration-300"
+            in:slide={{ duration: 300 }}
+            out:slide={{ duration: 300 }}
+          >
+            <pre data-prefix="1">
+              <code in:typewriter={{ delay: 300 }}>&#123; display: flex; &#125;</code>
+            </pre>
+            <pre class="text-warning" data-prefix=">">
+              <code in:typewriter={{ delay: 1000 }}>&#128293; &#128293; &#128293;</code>
+            </pre>
+          </div>
+        {/if}
+      </div>
+    {/if}
   </div>
 </div>

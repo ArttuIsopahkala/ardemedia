@@ -1,11 +1,13 @@
 import { writable } from 'svelte/store';
 
-export const availableDate = writable('1.2.2022');
-export const devPrice = writable('70€ / h');
-export const devPriceHigh = writable('80€ / h');
+// From database
+export const availableDate = writable('-');
+export const devPrice = writable('-');
+export const devPriceHigh = writable('-');
 
-export const designPriceHour = writable('60€ / h');
-export const designPriceFeature = writable('50€ / ominaisuus');
-export const designPriceWithUI = writable('+ 50€ UI-kuvan kanssa');
+export const designPriceHour = writable('-');
+export const designPricePerFeature = writable('-');
+export const designPriceWithUI = writable('-');
 
+// For app
 export const selectedService = writable('development');
