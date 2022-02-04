@@ -36,10 +36,12 @@
   });
 </script>
 
-<div class="w-full bg-background relative min-h-full h-auto">
+<div class="w-full h-auto">
   <Header />
-  <main class="flex flex-col pt-[60px] pb-[400px]">
-    <!-- padding for footer -->
+  <!-- footer 330px + padding bottom 70px = 400px -->
+  <main
+    class="flex flex-col pt-[60px] bg-base-100 bg-[url('/bg-pattern.svg')] min-h-[calc(100vh-330px)]"
+  >
     <slot />
   </main>
   <Footer />

@@ -115,7 +115,7 @@
         <h3 class="portfolio-title">Ohjelmistokehittäjä</h3>
         <p>
           Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
-          käyttöliittymät, että älykkäät ja nykyaikaiset taustapalvelut.
+          käyttöliittymät että älykkäät ja nykyaikaiset taustapalvelut.
         </p>
         {#if toggle === 'left' && windowWith > breakpoints.lg}
           <div

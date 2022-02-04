@@ -66,6 +66,7 @@ import Container from '$lib/common/Container.svelte';
         <br/>&bull; Blogialusta
         <br/>&bull; Yhteydenottolomake"
       logo="favicon.png"
+      github="https://github.com/ArttuIsopahkala/ardemedia"
     >
       <div slot="carousel" class="flex flex-col justify-center items-center">
         <h5>UI-suunnitelmat</h5>
@@ -126,7 +127,7 @@ import Container from '$lib/common/Container.svelte';
     </PortfolioItem>
     <Divider />
     <PortfolioItem
-      title="Firstbeatin web-sovellukset"
+      title="Firstbeat web-sovellukset"
       year="Vuodet 2017-2020"
       description="Työsuhteessa Firstbeatilla ylläpidin yksin lähemmäs 10 eri web-sovellusta. 
       Näistä toteutin itse muutaman kokonaan itse (mm. asiakashallintajärjestelmä). 
@@ -148,7 +149,7 @@ import Container from '$lib/common/Container.svelte';
     <h2 id="mobile" class="portfolio-title">Mobiilisovellukset</h2>
     <PortfolioItem
       title="Floorball Manager"
-      year="Julkaistu 2019, 12 päivitystä"
+      year="Julkaistu 2019"
       description="Salibandyjoukkueen käyttöön tarkoitettu sovellus, jonka avulla voidaan pitää kirjaa otteluista sekä tarkoista joukkue- ja pelaajatilastoista. Kokoonpanoja voidaan suunnitella kemialaskurin avulla.
       <br/><br/>
       Ominaisuudet:
@@ -157,6 +158,7 @@ import Container from '$lib/common/Container.svelte';
       <br/>&bull; Pelaajien välisen kemian analysointi tilastojen perusteella
       <br/>&bull; Joukkueiden hallinta ja pelaajien kutsuminen/lisääminen"
       url="https://play.google.com/store/apps/details?id=com.ardeapps.floorballcoach"
+      github="https://github.com/ArttuIsopahkala/FloorballManager"
       logo="floorball/floorball.png"
     >
       <Carousel
@@ -179,7 +181,7 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Herätysvalo"
-      year="Julkaistu 2018, 8 päivitystä"
+      year="Julkaistu 2018"
       description="Herätysvalo toimii manuaalisesti tai yhteistyössä laitteen herätyskellon kanssa. Se käynnistyy ensin himmeänä ja kirkastuu aina herätykseen asti.
       <br/><br/>
       Ominaisuudet:
@@ -187,6 +189,7 @@ import Container from '$lib/common/Container.svelte';
       <br/>&bull; Valon säätö (väri, kesto, nopeus)
       <br/>&bull; Pienoisohjelma kotinäytölle"
       url="https://play.google.com/store/apps/details?id=com.ardeapps.simplewakeuplight"
+      github="https://github.com/ArttuIsopahkala/SimpleWakeUpLight"
       logo="heratysvalo/heratysvalo.png"
     >
       <Carousel
@@ -200,13 +203,14 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Live Location"
-      year="Julkaistu 2017, 3 päivitystä, ei aktiivinen"
+      year="Julkaistu 2017, ei aktiivinen"
       description="Yksinkertainen sovellus sijainnin jakamiseen kavereiden kesken reaaliaikaisesti. Lisää kaverit, jaa sijaintisi ja näe kartalla missä kaverit liikkuvat.
       <br/><br/>
       Ominaisuudet:
       <br/>&bull; Kirjautuminen (Facebook / sähköposti)
       <br/>&bull; Kuvien lataaminen
       <br/>&bull; Sijainnin jakaminen reaaliaikatietokannan avulla"
+      github="https://github.com/ArttuIsopahkala/LiveLocation"
       logo="livelocation/livelocation.png"
     >
       <Carousel
@@ -229,7 +233,7 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Opiskelijalounas"
-      year="Julkaistu 2017, 5 päivitystä"
+      year="Julkaistu 2017"
       description="Sovellus näyttää Kelan tukemat opiskelijalounasta tarjoavat ravintolat ja niiden lounaslistat.
       <br/><br/>
       Ominaisuudet:
@@ -238,6 +242,7 @@ import Container from '$lib/common/Container.svelte';
       <br/>&bull; Löydä ravintolat lähellä sinua sijaintisi perusteella
       <br/>&bull; Lataa suosikkiravintoloiden lounaslistat automaattisesti"
       url="https://play.google.com/store/apps/details?id=com.ardeapps.opiskelijalounas"
+      github="https://github.com/ArttuIsopahkala/Opiskelijalounas"
       logo="opiskelijalounas/opiskelijalounas.png"
     >
       <Carousel
@@ -263,7 +268,7 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Menomesta"
-      year="Julkaistu 2016, 23 päivitystä"
+      year="Julkaistu 2016"
       description="Onko illan menomestan valinta ollut joskus vaikeaa? Ei ole enää! Tämä sovellus näyttää sinulle kätevästi kaupunkisi halvimmat, lähimmät ja suosituimmat baarit. Koska käyttäjät voivat lisätä ja muokata tietoja, teet sovelluksesta entistä hyödyllisemmän omalla aktiivisuudella ja myös sinusta voi tulla kaikkien Janoisten Sankari!
       <br/><br/>
       Ominaisuudet:
@@ -275,6 +280,7 @@ import Container from '$lib/common/Container.svelte';
       <br/>&bull; Anonyymi chat
       <br/>&bull; Seuranhakutoiminto"
       url="https://play.google.com/store/apps/details?id=com.ardeapps.menomesta"
+      github="https://github.com/ArttuIsopahkala/Menomesta"
       logo="menomesta/menomesta.png"
     >
       <Carousel
@@ -304,7 +310,7 @@ import Container from '$lib/common/Container.svelte';
     <Divider />
     <PortfolioItem
       title="Maze Speedrun"
-      year="Julkaistu 2016, 2 päivitystä"
+      year="Julkaistu 2016"
       description="Löydä tiesi maaliin mahdollisimman nopeasti, mutta älä koske seiniin! Kilpaile muita pelaajia, kavereitasi, ja itseäsi vastaan. Peli sisältää 30 erilaista sokkeloa erilaisilla vaikeustasoilla, joten pelattavaa riittää tunneiksi.
       <br/><br/>
       Ominaisuudet:
@@ -312,6 +318,7 @@ import Container from '$lib/common/Container.svelte';
       <br/>&bull; Offline pelaaminen"
       logo="maze/maze.png"
       url="https://play.google.com/store/apps/details?id=com.ardeapps.mazespeedrun"
+      github="https://github.com/ArttuIsopahkala/MazeSpeedrun"
     >
       <Carousel
         slot="carousel"
@@ -366,7 +373,7 @@ import Container from '$lib/common/Container.svelte';
     <h2 id="design" class="portfolio-title">Ohjelmistojen suunnittelu</h2>
     <h2 id="video" class="portfolio-title">Videoeditointi</h2>
     <p class="px-5">
-      Olen editoinnut Youtubeen noin 60 videota. Tässä niistä parhaita ja tuoreimpia paloja.
+      Olen tuottanut Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
       Työkaluina on toiminut lähinnä Sony Vegas PRO ja Adobe After Effects.
     </p>
     <div class="flex flex-row flex-wrap justify-center p-5 gap-5">

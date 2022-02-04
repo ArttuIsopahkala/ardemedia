@@ -7,7 +7,7 @@
 </script>
 
 <footer
-  class="bg-base-content border-t-2 border-primary flex flex-col items-center text-base-300 absolute bottom-0 w-full"
+  class="bg-base-content border-t-2 border-primary flex flex-col items-center text-base-300"
 >
   <div
     class="w-16 h-16 btn btn-circle -mt-6 bg-base-content"

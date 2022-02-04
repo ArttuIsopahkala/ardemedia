@@ -17,18 +17,17 @@
     <div>
       <h2 class="py-5">Olen Arttu Isopahkala, Arde Median <span class="mark">yrittäjä</span></h2>
       <div class="flex flex-row">
-        <div class="p-5 card shadow-lg bg-base-100 md:w-1/2">
+        <div class="p-5 card shadow-lg bg-base-100 md:max-w-2xl">
           <span class="w-[30px] h-[30px]">
             <MdFormatQuote />
           </span>
           <p class="">
-            Olen koodaillut kaikenlaista kohta jo 10 vuotta. Olen Full Stack koodari, joka
-            käytännössä osaa suunnitella erilaisten sovellusten ulkoasun ja teknisen toteutuksen
-            sekä niiden kehittämisen ja ylläpidon. Ensisijainen osaamiseni on web-teknologioiden ja
-            pilvipalvelujen puolella, mutta lisäksi mobiilihommat luonnistuu vankan
+            Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien työpaikkojen avulla olen kehittynyt Full Stack -koodariksi, 
+            joka osaa suunnitella ja toteuttaa erilaisia sovelluksia tarvittaessa täysin itsenäisesti. Ensisijainen 
+            osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat luonnistuu vankan
             Android-kokemuksen johdosta. Olen aina ollut kiinnostunut teknologiasta ja
-            tietokoneista, jonka takia seuraan tiiviisti alan trendejä ja uutisia. Koodailun
-            vastapainoksi vapaa-aikani kuluu salibandyn ja muun pelailun parissa.
+            tietokoneista, joten seuraan tiiviisti alan trendejä ja uusia julkaisuja. Koodailun
+            vastapainoksi vapaa-aikani menee salibandyn, läheisten ja hyvän kirjan parissa.
           </p>
         </div>
         <div class="hidden md:flex justify-center items-center md:w-1/2">
@@ -40,9 +39,9 @@
       <h2 class="py-5">Teknologioita ja työkaluja, jotka hallitsen</h2>
       <p class="pb-5">
         Lasken osaamiseksi sen, että olen toteuttanut projektin valmiiksi, jossa olen käyttänyt
-        kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira ja Github
-        Projects kuuluvat työkalujeni piiriin. Käyttöjärjestelmistä Windows (+WSL) on lähellä
-        sydäntä. Myös Linuxin käyttö on hanskassa eli voin työskennellä kummalla tahansa.
+        kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira tai Github
+        Projects kuuluvat arikäyttööni. Käyttöjärjestelmistä kallistun Windowsin (+WSL) puoleen, 
+        mutta myös Linuxin käyttö on hanskassa.
       </p>
       <div>
         <TechTable />
@@ -51,25 +50,22 @@
     <div>
       <h2 class="py-5">Rooli- ja vastuuosaaminen</h2>
       <p>
-        Ennen yrittäjyyttä olen toiminut ohjelmistokehittäjänä tehtävänimikkeellä Lead Software
-        Developer. Tässä roolissa olen saanut kokemusta verkkopalvelujen teknisestä omistajuudesta.
-        Omistajuuteen on kuulunut vastuu verkkopalvelujen kehitystarpeiden teknisestä
-        suunnittelusta, visualisoinnista (UI design) sekä toteutuksesta. Kokemusta on siis
-        monipuolisesti ihan rivikoodarista Leadin rooliin.
+        Toimin aikaisemmassa työsuhteessa tehtävänimikkeellä Lead Software Developer. 
+        Tässä roolissa sain kokemusta verkkopalvelujen teknisestä omistajuudesta.
+        Omistajuuteen kuului vastuu verkkopalvelujen kehitystarpeiden teknisestä
+        suunnittelusta, visualisoinnista (UI design) sekä toteutuksesta.
       </p>
     </div>
     <div>
       <h2 class="py-5">Erityisosaaminen ja muu osaaminen</h2>
       <p>
-        Erityisosaamiseksi voidaan laskea sellainen osaaminen, joka on erityisen syvää tai
-        harvinaista ohjelmistoalalla. Minun erityisosaaminen teknologioiden osalta on GWT (Google
-        Web Toolkit), joka on harvinaisempi teknologia nykypäivänä. Vahvuutena koen Full Stack
-        -ohjelmistokehityksen, jonka ansiosta osaamista löytyy jokaiselta ohjelmistokehityksen
-        osa-alueelta.
+        Lasken erityisosaamiseksi sellaisen osaamisen, joka on erityisen syvää tai harvinaista. 
+        Teknologioiden osalta erityisosaamistani on Svelte ja GWT (Google Web Toolkit), jotka ovat harvinaisempia teknologioita tällä hetkellä (2022). 
+        Vahvuutena koen Full Stack -ohjelmistokehityksen, jonka seurauksena minulta löytyy monipuolisuutta ja laajojen kokonaisuuksien hallintakykyä.
         <br /><br />
-        Tarvittaessa hyödynnettäviä taitojani on videoeditointi ja kuvankäsittely, joista minulla on
+        Erityisiä hyödynnettäviä taitojani ovat myös videoeditointi ja kuvankäsittely, joista minulla on
         vuosien kokemus. Olen toteuttanut yli 50 videoprojektia vapaa-ajallani. Näiden lisäksi kokemusta
-        ja ymmärrystä löytyy lisäksi jonkin verran Facebook-markkinoinnista ja hakukoneoptimoinnista.
+        ja ymmärrystä löytyy jonkin verran Facebook-markkinoinnista ja hakukoneoptimoinnista.
       </p>
     </div>
     <div class="flex flex-row flex-wrap py-5">
@@ -102,7 +98,7 @@
         />
       </div>
     </div>
-    <div>
+    <div class="hidden">
       <Divider />
       <Story />
     </div>

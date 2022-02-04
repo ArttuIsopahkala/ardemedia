@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   export interface Form {
+    name: string;
     email: string;
-    phone: string;
     message: string;
   }
 </script>
@@ -14,9 +14,10 @@
 
   type State = 'loading' | 'error' | 'success';
 
+  let name: string = '';
   let email: string = '';
-  let phone: string = '';
   let message: string = '';
+  let nameEmpty: boolean = false;
   let emailInvalid: boolean = false;
   let emailEmpty: boolean = false;
   let messageEmpty: boolean = false;
@@ -38,9 +39,14 @@
 
   const onSubmit = () => {
     submitClicked = true;
+    nameEmpty = false;
     emailEmpty = false;
     emailInvalid = false;
     messageEmpty = false;
+
+    if (isRequiredFieldEmpty(name)) {
+      nameEmpty = true;
+    }
 
     if (isRequiredFieldEmpty(email)) {
       emailEmpty = true;
@@ -54,13 +60,13 @@
       messageEmpty = true;
     }
 
-    if (emailEmpty || emailInvalid || messageEmpty) {
+    if (nameEmpty || emailEmpty || emailInvalid || messageEmpty) {
       return;
     }
 
     let form: Form = {
+      name,
       email,
-      phone,
       message
     };
     console.log(form);
@@ -72,72 +78,41 @@
       .then(() => {
         state = 'success';
         email = '';
-        phone = '';
+        name = '';
         message = '';
         submitClicked = false;
       })
       .catch((error) => {
-        alert(error);
         state = 'error';
       });
-
-    /* const addMessage = httpsCallable(functions, 'sendContactEmail');
-    addMessage(form)
-      .then(() => {
-        state = 'success';
-      })
-      .catch((error) => {
-        state = 'error';
-      }); */
-
-    /*  const addMessage = httpsCallable(functions, 'genericEmail');
-    addMessage(form)
-      .then(() => {
-        state = 'success';
-      })
-      .catch((error) => {
-        state = 'error';
-      }); */
   };
-
-  /* const sendEmail = (form: Form) => {
-    const callable = httpsCallable(functions, 'genericEmail');
-    return callable({ text: 'Sending email', subj });
-  };
-
-  // Sends email via HTTP. Can be called from frontend code.
-  export const genericEmail = functions.https.onCall(async (data, context) => {
-    if (!context.auth && !context.auth.token.email) {
-      throw new functions.https.HttpsError(
-        'failed-precondition',
-        'Must be logged with an email address'
-      );
-    }
-
-    const msg = {
-      to: context.auth.token.email,
-      from: 'hello@fireship.io',
-      templateId: TEMPLATE_ID,
-      dynamic_template_data: {
-        subject: data.subject,
-        name: data.text
-      }
-    };
-
-    await sgMail.send(msg);
-
-    // Handle errors here
-
-    // Response must be JSON serializable
-    return { success: true };
-  }); */
 </script>
 
 <form class="flex flex-wrap my-5" on:submit|preventDefault={onSubmit}>
   <div class="flex flex-col justify-between h-48 mb-5 w-full lg:mr-[10px] lg:w-[calc(50%-10px)]">
     <div class="form-control">
+      <label class="label" for="name">
+        <span class="label-text">Nimi</span>
+      </label>
+      <input
+        class={clsx(
+          'input input-bordered',
+          submitClicked && isRequiredFieldEmpty(name) && 'textarea-error'
+        )}
+        type="text"
+        id="name"
+        name="name"
+        bind:value={name}
+      />
+      {#if submitClicked && isRequiredFieldEmpty(name)}
+        <label class="label" for="name">
+          <span class="label-text-alt text-error">Täytä nimi</span>
+        </label>
+      {/if}
+    </div>
+    <div class="form-control">
       <label class="label" for="email">
-        <span class="label-text">Sähköpostisi</span>
+        <span class="label-text">Sähköposti</span>
       </label>
       <input
         class={clsx(
@@ -161,17 +136,11 @@
         </label>
       {/if}
     </div>
-    <div class="form-control">
-      <label class="label" for="phone">
-        <span class="label-text">Puhelinnumerosi (ei pakollinen)</span>
-      </label>
-      <input class="input input-bordered" type="tel" id="phone" name="phone" bind:value={phone} />
-    </div>
   </div>
   <div class="flex flex-col gap-5 w-full lg:ml-[10px] lg:w-[calc(50%-10px)]">
     <div class="form-control h-48">
       <label class="label" for="message">
-        <span class="label-text">Viestisi</span>
+        <span class="label-text">Viesti</span>
       </label>
       <textarea
         class={clsx(
@@ -205,7 +174,7 @@
                 d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
               />
             </svg>
-            <p>Tapahtui virhe eikä viestiä lähetetty! Laita ihmeessä viestiä silti LinkedIn:ssä.</p>
+            <p>Tapahtui virhe eikä viestiä lähetetty! Vaihtoehtoisesti laita viestiä LinkedIn:ssä.</p>
           </div>
         </div>
       {:else if state === 'success'}

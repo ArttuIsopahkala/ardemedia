@@ -1,8 +1,12 @@
 <script lang="ts">
+  import Button from '$lib/common/Button.svelte';
+  import Icon from '$lib/common/Icon.svelte';
+
   export let title: string = '';
   export let description: string = '';
   export let year: string = '';
   export let url: string = '';
+  export let github: string = '';
   export let logo: string = '';
 </script>
 
@@ -15,24 +19,38 @@
         {/if}
         <h3 class="text-primary mark">{title}</h3>
       </div>
-      <h5 class="pt-2">{year}</h5>
+      <h5 class="pt-3">{year}</h5>
       <p class="py-5">
         {@html description}
       </p>
     </div>
-    <div class="">
-      <h5 class="">Teknologiat</h5>
+    <div>
+      <h5>Teknologiat</h5>
       <div class="flex flex-row items-start py-5">
         <slot />
       </div>
-      {#if url}
-        <a class="link link-primary font-bold" href={url} target="_blank">Linkki sovellukseen →</a>
-      {/if}
+      <div class="flex flex-row gap-3">
+        {#if url}
+          <a href={url} target="_blank">
+            <button class="btn btn-sm">
+              <Icon type="google-play" color="text-textLight" style="w-[15px] h-[15px] mr-2" />
+              Sovellukseen →
+            </button>
+          </a>
+        {/if}
+        {#if github}
+          <a href={github} target="_blank">
+            <button class="btn btn-sm">
+              <Icon type="github" color="text-textLight" style="w-[18px] h-[18px] mr-2" />
+              Koodiin →
+            </button>
+          </a>
+        {/if}
+      </div>
     </div>
   </div>
   <div class="w-full md:w-1/2 flex flex-wrap flex-row justify-center items-center">
-    <slot name="carousel"/>
-    
+    <slot name="carousel" />
 
     <!-- <div class="mockup-window bg-base-300 sm:w-2/3 p-5">
       <div class="flex justify-center px-4 py-16 bg-base-200">

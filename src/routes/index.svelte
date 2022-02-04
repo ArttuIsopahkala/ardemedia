@@ -8,27 +8,45 @@
   import Reasons from '$lib/home/Reasons.svelte';
   import References from '$lib/home/References.svelte';
   import Services from '$lib/home/Services.svelte';
+  import Container from '$lib/common/Container.svelte';
 </script>
 
 <svelte:head>
   <title>Arde Media | Vuokraa Full Stack -koodari</title>
 </svelte:head>
 
-<section class="bg-base-100 bg-[url('/bg-pattern.svg')] shadow-md pt-5 px-5 xl:px-0">
+<section class="shadow-md pt-5 px-5 xl:px-0 mb-0.5">
   <div class="container mx-auto max-w-7xl ">
     <Hero />
   </div>
 </section>
-<section class="container mx-auto max-w-5xl pb-10 px-5 xl:px-0 flex flex-col mt-14 gap-14">
-  <Services />
-  <Reasons />
-  <References />
-  <Divider />
-  <Company />
-  <Values />
-  <Divider />
-  <div class="flex flex-col justify-center items-center mb-14">
-    <h3 class="mb-10">Lähetä minulle viesti ja laitetaan rattaat pyörimään!</h3>
-    <Button text="Ota yhteyttä →" size="btn-lg" outlined={false} onClick={() => goto('/contact')} />
+<Container style="bg-background bg-none">
+  <div class="flex flex-col mt-14 gap-14">
+    <Services />
+    <Reasons />
+    <References />
+    <Divider />
+    <Company />
+    <Values />
+    <Divider />
+    <div class="flex flex-col justify-center items-center mb-14">
+      <h3 class="mb-10">Lähetä minulle viesti ja laitetaan rattaat pyörimään!</h3>
+      <Button
+        text="Ota yhteyttä →"
+        size="btn-lg"
+        outlined={false}
+        onClick={() => goto('/contact')}
+      />
+    </div>
   </div>
+</Container>
+<!-- <section
+  class="bg-background bg-none"
+>
+  <section
+    class="container mx-auto max-w-5xl pb-10 px-5 xl:px-0 flex flex-col mt-14 gap-14 "
+  >
+    
+  </section>
 </section>
+ -->

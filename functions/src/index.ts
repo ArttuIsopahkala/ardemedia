@@ -21,8 +21,8 @@ export const sendContactEmailFirestore = functions.region(REGION).firestore
       from: "contact@ardemedia.fi",
       templateId: "d-38e22653363d4b198389f865d0162fc9",
       dynamicTemplateData: {
+        name: snap.get("name"),
         email: snap.get("email"),
-        phone: snap.get("phone"),
         message: snap.get("message")
       }
     }
