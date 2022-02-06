@@ -5,6 +5,7 @@
   import Values from '$lib/about/Values.svelte';
   import Container from '$lib/common/Container.svelte';
   import Divider from '$lib/common/Divider.svelte';
+  import LazyImage from '$lib/common/LazyImage.svelte';
   import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
 </script>
 
@@ -22,16 +23,18 @@
             <MdFormatQuote />
           </span>
           <p class="">
-            Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien työpaikkojen avulla olen kehittynyt Full Stack -koodariksi, 
-            joka osaa suunnitella ja toteuttaa erilaisia sovelluksia tarvittaessa täysin itsenäisesti. Ensisijainen 
-            osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat luonnistuu vankan
-            Android-kokemuksen johdosta. Olen aina ollut kiinnostunut teknologiasta ja
-            tietokoneista, joten seuraan tiiviisti alan trendejä ja uusia julkaisuja. Koodailun
-            vastapainoksi vapaa-aikani menee salibandyn, läheisten ja hyvän kirjan parissa.
+            Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien
+            työpaikkojen avulla olen kehittynyt Full Stack -koodariksi, joka osaa suunnitella ja
+            toteuttaa erilaisia sovelluksia tarvittaessa täysin itsenäisesti. Ensisijainen
+            osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat
+            luonnistuu vankan Android-kokemuksen johdosta. Olen aina ollut kiinnostunut
+            teknologiasta ja tietokoneista, joten seuraan tiiviisti alan trendejä ja uusia
+            julkaisuja. Koodailun vastapainoksi vapaa-aikani menee salibandyn, läheisten ja hyvän
+            kirjan parissa.
           </p>
         </div>
         <div class="hidden md:flex justify-center items-center md:w-1/2">
-          <img class="max-h-[300px]" src={'muotokuva.png'} alt="muotokuva" />
+          <LazyImage style="max-h-[300px]" src={'muotokuva.png'} alt="muotokuva" />
         </div>
       </div>
     </div>
@@ -40,7 +43,7 @@
       <p class="pb-5">
         Lasken osaamiseksi sen, että olen toteuttanut projektin valmiiksi, jossa olen käyttänyt
         kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira tai Github
-        Projects kuuluvat arikäyttööni. Käyttöjärjestelmistä kallistun Windowsin (+WSL) puoleen, 
+        Projects kuuluvat arikäyttööni. Käyttöjärjestelmistä kallistun Windowsin (+WSL) puoleen,
         mutta myös Linuxin käyttö on hanskassa.
       </p>
       <div>
@@ -50,21 +53,23 @@
     <div>
       <h2 class="py-5">Rooli- ja vastuuosaaminen</h2>
       <p>
-        Toimin aikaisemmassa työsuhteessa tehtävänimikkeellä Lead Software Developer. 
-        Tässä roolissa sain kokemusta verkkopalvelujen teknisestä omistajuudesta.
-        Omistajuuteen kuului vastuu verkkopalvelujen kehitystarpeiden teknisestä
-        suunnittelusta, visualisoinnista (UI design) sekä toteutuksesta.
+        Toimin aikaisemmassa työsuhteessa tehtävänimikkeellä Lead Software Developer. Tässä roolissa
+        sain kokemusta verkkopalvelujen teknisestä omistajuudesta. Omistajuuteen kuului vastuu
+        verkkopalvelujen kehitystarpeiden teknisestä suunnittelusta, visualisoinnista (UI design)
+        sekä toteutuksesta.
       </p>
     </div>
     <div>
       <h2 class="py-5">Erityisosaaminen ja muu osaaminen</h2>
       <p>
-        Lasken erityisosaamiseksi sellaisen osaamisen, joka on erityisen syvää tai harvinaista. 
-        Teknologioiden osalta erityisosaamistani on Svelte ja GWT (Google Web Toolkit), jotka ovat harvinaisempia teknologioita tällä hetkellä (2022). 
-        Vahvuutena koen Full Stack -ohjelmistokehityksen, jonka seurauksena minulta löytyy monipuolisuutta ja laajojen kokonaisuuksien hallintakykyä.
+        Lasken erityisosaamiseksi sellaisen osaamisen, joka on erityisen syvää tai harvinaista.
+        Teknologioiden osalta erityisosaamistani on Svelte ja GWT (Google Web Toolkit), jotka ovat
+        harvinaisempia teknologioita tällä hetkellä (2022). Vahvuutena koen Full Stack
+        -ohjelmistokehityksen, jonka seurauksena minulta löytyy monipuolisuutta ja laajojen
+        kokonaisuuksien hallintakykyä.
         <br /><br />
-        Erityisiä hyödynnettäviä taitojani ovat myös videoeditointi ja kuvankäsittely, joista minulla on
-        vuosien kokemus. Olen toteuttanut yli 50 videoprojektia vapaa-ajallani. Näiden lisäksi kokemusta
+        Erityisiä hyödynnettäviä taitojani ovat myös videoeditointi ja kuvankäsittely, joista minulla
+        on vuosien kokemus. Olen toteuttanut yli 50 videoprojektia vapaa-ajallani. Näiden lisäksi kokemusta
         ja ymmärrystä löytyy jonkin verran Facebook-markkinoinnista ja hakukoneoptimoinnista.
       </p>
     </div>

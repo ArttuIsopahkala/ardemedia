@@ -6,7 +6,7 @@
   export let label: string;
 </script>
 
-<a href={url} target="_blank">
+<a rel="noreferrer" href={url} target="_blank">
   <div class="flex flex-col items-center gap-1">
     <Icon type={icon} color="text-base-300" style="hover:text-textLight" />
     <span class="text-xs">{label}</span>

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import LazyImage from '$lib/common/LazyImage.svelte';
+
   import ServiceItem from '$lib/home/ServiceItem.svelte';
 </script>
 
@@ -20,7 +22,7 @@
         { title: 'Mobiili', techs: 'Java (Android) / PWA' }
       ]}
     >
-      <img slot="image" src="laptop.jpg" alt="läppäri" />
+      <LazyImage slot="image" src="laptop.jpg" alt="läppäri" />
     </ServiceItem>
     <ServiceItem
       serviceName="Arde suunnittelee"
@@ -33,11 +35,9 @@
       href="/services"
       id="design"
       techTitle="Käyttämiäni työkaluja"
-      techs={[
-        { title: 'UI/UX ja kaaviot', techs: 'Photoshop / AdobeDX / draw.io / Marvel' }
-      ]}
+      techs={[{ title: 'UI/UX ja kaaviot', techs: 'Photoshop / AdobeDX / draw.io / Marvel' }]}
     >
-      <img slot="image" src="design.jpg" alt="design" />
+      <LazyImage slot="image" src="design.jpg" alt="design" />
     </ServiceItem>
   </div>
 </div>

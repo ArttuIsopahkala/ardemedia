@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import Button from '$lib/common/Button.svelte';
+  import LazyImage from '$lib/common/LazyImage.svelte';
 </script>
 
 <div id="story">
@@ -15,7 +16,7 @@
       <Button text="Lue tarinani →" outlined={true} onClick={() => goto('/blog/story')} />
     </div>
     <div class="hidden md:flex justify-center ml-5">
-      <img class="max-h-[250px] mask mask-squircle" src={'story.jpg'} alt="tarina" />
+      <LazyImage style="max-h-[250px] mask mask-squircle" src={'story.jpg'} alt="tarina" />
     </div>
   </div>
 </div>

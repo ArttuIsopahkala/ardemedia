@@ -67,6 +67,7 @@
   import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
   import MdBrush from 'svelte-icons/md/MdBrush.svelte';
   import clsx from 'clsx';
+  import LazyImage from './LazyImage.svelte';
 
   export let type: IconType = '';
   export let size: number = 30;
@@ -78,13 +79,13 @@
   {#if type === 'aws'}
     <FaAws />
   {:else if type === 'firebase'}
-    <img src="firebase.png" alt="firebase" class="w-full h-full object-contain" />
+    <LazyImage style="w-full h-full object-contain" src="firebase.png" alt="firebase" />
   {:else if type === 'react'}
     <FaReact />
   {:else if type === 'nodejs'}
     <FaNode />
   {:else if type === 'svelte'}
-    <img src="svelte.png" alt="svelte" class="w-full h-full object-contain" />
+    <LazyImage style="w-full h-full object-contain" src="svelte.png" alt="svelte" />
   {:else if type === 'googlemaps'}
     <FaMapMarkedAlt />
   {:else if type === 'java'}

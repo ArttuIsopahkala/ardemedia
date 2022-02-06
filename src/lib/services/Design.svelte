@@ -8,6 +8,7 @@
   import { designPriceHour } from './../../store.js';
   import PriceItem from './PriceItem.svelte';
   import ServiceSection from './ServiceSection.svelte';
+  import LazyImage from '$lib/common/LazyImage.svelte';
 </script>
 
 <div class="" in:fade={{ duration: 300 }}>
@@ -53,10 +54,10 @@
   </div>
   <div id="design-example">
     <Collapse title="Esimerkki vaatimusmäärittelystä (Trello)">
-      <img class="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittely" />
+      <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittely" />
     </Collapse>
     <Collapse title="Esimerkki UI-kuvasta (Marvel)">
-      <img class="max-h-[800px]" src="ui-kuva.png" alt="esimerkki ui-kuvasta" />
+      <LazyImage style="max-h-[800px]" src="ui-kuva.png" alt="esimerkki ui-kuvasta" />
     </Collapse>
   </div>
   <Divider />

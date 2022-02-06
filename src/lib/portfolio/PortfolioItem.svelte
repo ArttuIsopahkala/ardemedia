@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Button from '$lib/common/Button.svelte';
   import Icon from '$lib/common/Icon.svelte';
+import LazyImage from '$lib/common/LazyImage.svelte';
 
   export let title: string = '';
   export let description: string = '';
@@ -11,11 +11,11 @@
 </script>
 
 <div class="flex flex-row flex-wrap">
-  <div class="flex flex-col w-full md:w-1/2 py-5 justify-between">
+  <div class="flex flex-col w-full lg:w-1/2 py-5 justify-between">
     <div>
       <div class="flex flex-row items-center">
         {#if logo}
-          <img class="max-h-[40px] mr-5" src={logo} alt="logo" />
+          <LazyImage src={logo} alt="logo" style="max-h-[40px] max-w-[50px] mr-5" />
         {/if}
         <h3 class="text-primary mark">{title}</h3>
       </div>
@@ -31,7 +31,7 @@
       </div>
       <div class="flex flex-row gap-3">
         {#if url}
-          <a href={url} target="_blank">
+          <a rel="noreferrer" href={url} target="_blank">
             <button class="btn btn-sm">
               <Icon type="google-play" color="text-textLight" style="w-[15px] h-[15px] mr-2" />
               Sovellukseen →
@@ -39,7 +39,7 @@
           </a>
         {/if}
         {#if github}
-          <a href={github} target="_blank">
+          <a rel="noreferrer" href={github} target="_blank">
             <button class="btn btn-sm">
               <Icon type="github" color="text-textLight" style="w-[18px] h-[18px] mr-2" />
               Koodiin →
@@ -49,7 +49,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full md:w-1/2 flex flex-wrap flex-row justify-center items-center">
+  <div class="w-full lg:w-1/2 flex flex-wrap flex-row justify-center items-center">
     <slot name="carousel" />
 
     <!-- <div class="mockup-window bg-base-300 sm:w-2/3 p-5">

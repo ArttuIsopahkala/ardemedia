@@ -14,6 +14,7 @@
     'btn text-base',
     outlined && 'btn-outline bg-base-100',
     secondary ? 'btn-neutral no-animation' : 'w-fit btn-primary',
+    'btn-sm sm:btn-md',
     size
   )}
 >

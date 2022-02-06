@@ -1,57 +1,66 @@
+<script lang="ts" context="module">
+  export interface ImageCombo {
+    web?: string;
+    phone?: string;
+  }
+</script>
+
 <script lang="ts">
   import Button from '$lib/common/Button.svelte';
   import Phone from '$lib/common/Phone.svelte';
   import clsx from 'clsx';
-  import { blur, fade, fly, scale, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
+  import LazyImage from './LazyImage.svelte';
 
-  export let phoneImages: string[] = [];
-  export let showPhone: boolean = true;
+  export let images: ImageCombo[] = [];
   export let height: number = 450;
 
   let index = 0;
 
   const next = () => {
-    index = (index + 1) % phoneImages.length;
+    index = (index + 1) % images.length;
   };
 
   const previous = () => {
     if (index === 0) {
-      index = phoneImages.length - 1;
+      index = images.length - 1;
     } else {
-      index = (index - 1) % phoneImages.length;
+      index = (index - 1) % images.length;
     }
   };
 </script>
 
-{#if phoneImages.length > 0}
+{#if images.length > 0}
   <div class="flex flex-col justify-center items-center">
     <div class={`flex flex-row justify-center items-center gap-2`}>
       <Button text="<" onClick={previous} />
-      {#if showPhone}
-        <Phone>
-          {#each [phoneImages[index]] as src (index)}
-            <img
-              class={`h-[450px] w-[250px]`}
-              in:fade={{ duration: 100 }}
-              {src}
-              alt="preview"
-            />
-          {/each}
-        </Phone>
-      {:else}
-        <div class="p-2 m-auto h-[{height}px]">
-          <div class="overflow-hidden w-full h-full">
-            {#each [phoneImages[index]] as src (index)}
-              <img in:slide={{ duration: 100 }} {src} alt="preview" />
-            {/each}
+      {#each [images[index]] as combo (index)}
+        <!-- DESKTOP IMAGES -->
+        {#if combo.web}
+          <div class="mockup-window bg-base-300">
+            <div class="flex justify-center bg-white border-2 border-base-300">
+              <div class="min-w-[300px] min-h-[210px]">
+                <LazyImage src={combo.web} alt="web-preview" style={`object-cover`} />
+              </div>
+            </div>
           </div>
-        </div>
-      {/if}
-
+        {/if}
+        <!-- PHONE IMAGES -->
+        {#if combo.phone}
+          <Phone>
+            <LazyImage
+              src={combo.phone}
+              alt="mobile-preview"
+              style={`h-[450px] min-h-[450px] w-[250px] min-w-[250px]`}
+            />
+          </Phone>
+        {/if}
+      {/each}
       <Button text=">" onClick={next} />
     </div>
+    <!-- DOTS -->
     <div class="flex flex-row gap-3 m-3">
-      {#each phoneImages as image, i}
+      {#each images as image, i}
         <div
           class="h-4 w-4 flex justify-center items-center cursor-pointer"
           on:click={() => (index = i)}
@@ -59,7 +68,7 @@
           <div
             class={clsx(
               'rounded-full',
-              phoneImages[index] === image ? 'h-4 w-4 bg-textDark' : 'h-2 w-2 bg-textGray',
+              images[index] === image ? 'h-4 w-4 bg-textDark' : 'h-2 w-2 bg-textGray',
               'transition-all'
             )}
           />

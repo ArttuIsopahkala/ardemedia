@@ -7,7 +7,8 @@
   import Divider from '$lib/common/Divider.svelte';
   import Carousel from '$lib/common/Carousel.svelte';
   import { fade } from 'svelte/transition';
-import Container from '$lib/common/Container.svelte';
+  import Container from '$lib/common/Container.svelte';
+  import LazyVideo from '$lib/common/LazyVideo.svelte';
 
   let selectedValue: string;
   let previousValue: string;
@@ -28,10 +29,10 @@ import Container from '$lib/common/Container.svelte';
       label: 'Mobiili-sovellukset',
       value: 'mobile'
     },
-    {
+    /* {
       label: 'Web-suunnittelu',
       value: 'design'
-    },
+    }, */
     {
       label: 'Videoeditointi',
       value: 'video'
@@ -58,28 +59,18 @@ import Container from '$lib/common/Container.svelte';
     <PortfolioItem
       title="Arde Median kotisivut"
       year="Julkaistu 2022"
-      description="Kotisivut yritykselleni! Tässä niitä juuri katselet.
+      description="Kotisivut yritykselleni, joita katselet parhaillaan! Homma lähti käyntiin 
+      sivukartan suunnittelusta ja käyttöliittymäkuvien piirtämisestä. Kun suunnitelma oli suunnilleen valmis, 
+      alkoi armoton koodaaminen. Toteutin sivuston Sveltellä, joka on JavaScriptin trendikäs ja kehittäjäystävällinen viitekehys.
         <br/><br/>
         Ominaisuudet:
         <br/>&bull; Kuvakaruselli
-        <br/>&bull; Uskomattomia animaatioita
+        <br/>&bull; Visuaalista ilmettä
         <br/>&bull; Blogialusta
         <br/>&bull; Yhteydenottolomake"
-      logo="favicon.png"
+      logo="logo_black.png"
       github="https://github.com/ArttuIsopahkala/ardemedia"
     >
-      <div slot="carousel" class="flex flex-col justify-center items-center">
-        <h5>UI-suunnitelmat</h5>
-        <Carousel
-          phoneImages={[
-            'flappi/infra.png',
-            'floorball/floorball2.png',
-            'floorball/floorball3.png',
-            'floorball/floorball4.png',
-            'floorball/floorball5.png'
-          ]}
-        />
-      </div>
       <TechItem title="Svelte" desc="Tailwind CSS, daisyUI">
         <Icon type="svelte" />
       </TechItem>
@@ -92,24 +83,24 @@ import Container from '$lib/common/Container.svelte';
       title="Flappi"
       year="Kehityksessä 2020-2021, ei aktiivinen"
       description="Digitaalinen fläppitaulu ja salibandyjoukkueen hallintajärjestelmä. Opin tämän projektin aikana hurjasti Reactia, TypeScriptiä ja AWS:n palveluja. 
-      Työstin sovellusta ystävieni kanssa, jotka auttoivat <a class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
+      Työstin sovellusta ystävieni kanssa, jotka auttoivat <a rel='noreferrer' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
       Itse hoidin ohjelmoinnin ja projektinhallinnan.
       <br/><br/>
       Valmiit ominaisuudet:
-      <br/>&bull; PÄIVITÄ!
-      <br/>&bull; PÄIVITÄ!
-      <br/>&bull; PÄIVITÄ!
-      <br/>&bull; PÄIVITÄ!"
+      <br/>&bull; Animoitu fläppitaulu
+      <br/>&bull; Harjoituskirjasto
+      <br/>&bull; Kokoonpanon hallinta
+      <br/>&bull; Kalenteri ja tapahtumat"
       logo="flappi/flappi.svg"
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'flappi/infra.png',
-          'floorball/floorball2.png',
-          'floorball/floorball3.png',
-          'floorball/floorball4.png',
-          'floorball/floorball5.png'
+        images={[
+          { web: 'flappi/flappi2.png' },
+          { web: 'flappi/flappi3.png' },
+          { web: 'flappi/flappi4.png' },
+          { web: 'flappi/flappi5.png' },
+          { web: 'flappi/flappi6.png' }
         ]}
       />
       <TechItem
@@ -131,7 +122,7 @@ import Container from '$lib/common/Container.svelte';
       year="Vuodet 2017-2020"
       description="Työsuhteessa Firstbeatilla ylläpidin yksin lähemmäs 10 eri web-sovellusta. 
       Näistä toteutin itse muutaman kokonaan itse (mm. asiakashallintajärjestelmä). 
-      Valitettavasti näistä ei ole tarkempia kuvia, mutta tässä <a class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-201705026047' target='_blank'>linkki</a> opinnäytetyöhöni, jossa toteutin yhden järjestelmän uudistuksen."
+      Valitettavasti näistä ei ole tarkempia kuvia, mutta tässä <a rel='noreferrer' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-201705026047' target='_blank'>linkki</a> opinnäytetyöhöni, jossa toteutin yhden järjestelmän uudistuksen."
     >
       <TechItem
         title="Amazon Web Services"
@@ -163,12 +154,12 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'floorball/floorball1.png',
-          'floorball/floorball2.png',
-          'floorball/floorball3.png',
-          'floorball/floorball4.png',
-          'floorball/floorball5.png'
+        images={[
+          { phone: 'floorball/floorball1.png' },
+          { phone: 'floorball/floorball2.png' },
+          { phone: 'floorball/floorball3.png' },
+          { phone: 'floorball/floorball4.png' },
+          { phone: 'floorball/floorball5.png' }
         ]}
       />
       <TechItem title="Firebase" desc="Realtime Database, Authentication, Storage">
@@ -194,7 +185,10 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={['heratysvalo/heratysvalo1.png', 'heratysvalo/heratysvalo2.png']}
+        images={[
+          { phone: 'heratysvalo/heratysvalo1.png' },
+          { phone: 'heratysvalo/heratysvalo2.png' }
+        ]}
       />
       <TechItem title="Android" desc="Java">
         <Icon type="android" />
@@ -215,7 +209,10 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={['livelocation/livelocation1.png', 'livelocation/livelocation2.png']}
+        images={[
+          { phone: 'livelocation/livelocation1.png' },
+          { phone: 'livelocation/livelocation2.png' }
+        ]}
       />
       <TechItem title="Firebase" desc="Realtime Database, Authentication, Storage">
         <Icon type="firebase" />
@@ -247,12 +244,12 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'opiskelijalounas/opiskelijalounas1.png',
-          'opiskelijalounas/opiskelijalounas2.png',
-          'opiskelijalounas/opiskelijalounas3.png',
-          'opiskelijalounas/opiskelijalounas5.png',
-          'opiskelijalounas/opiskelijalounas4.png'
+        images={[
+          { phone: 'opiskelijalounas/opiskelijalounas1.png' },
+          { phone: 'opiskelijalounas/opiskelijalounas2.png' },
+          { phone: 'opiskelijalounas/opiskelijalounas3.png' },
+          { phone: 'opiskelijalounas/opiskelijalounas5.png' },
+          { phone: 'opiskelijalounas/opiskelijalounas4.png' }
         ]}
       />
       <TechItem title="Firebase" desc="Realtime Database">
@@ -285,13 +282,13 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'menomesta/menomesta1.png',
-          'menomesta/menomesta2.png',
-          'menomesta/menomesta3.png',
-          'menomesta/menomesta4.png',
-          'menomesta/menomesta5.png',
-          'menomesta/menomesta6.png'
+        images={[
+          { phone: 'menomesta/menomesta1.png' },
+          { phone: 'menomesta/menomesta2.png' },
+          { phone: 'menomesta/menomesta3.png' },
+          { phone: 'menomesta/menomesta4.png' },
+          { phone: 'menomesta/menomesta5.png' },
+          { phone: 'menomesta/menomesta6.png' }
         ]}
       />
       <TechItem title="Firebase" desc="Realtime Database, Authentication">
@@ -322,15 +319,15 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'maze/maze1.png',
-          'maze/maze2.png',
-          'maze/maze3.png',
-          'maze/maze4.png',
-          'maze/maze5.png',
-          'maze/maze6.png',
-          'maze/maze7.png',
-          'maze/maze8.png'
+        images={[
+          { phone: 'maze/maze1.png' },
+          { phone: 'maze/maze2.png' },
+          { phone: 'maze/maze3.png' },
+          { phone: 'maze/maze4.png' },
+          { phone: 'maze/maze5.png' },
+          { phone: 'maze/maze6.png' },
+          { phone: 'maze/maze7.png' },
+          { phone: 'maze/maze8.png' }
         ]}
       />
       <TechItem title="Google API" desc="Games">
@@ -356,11 +353,11 @@ import Container from '$lib/common/Container.svelte';
     >
       <Carousel
         slot="carousel"
-        phoneImages={[
-          'travelmeter/travelmeter1.png',
-          'travelmeter/travelmeter2.png',
-          'travelmeter/travelmeter3.png',
-          'travelmeter/travelmeter4.png'
+        images={[
+          { phone: 'travelmeter/travelmeter1.png' },
+          { phone: 'travelmeter/travelmeter2.png' },
+          { phone: 'travelmeter/travelmeter3.png' },
+          { phone: 'travelmeter/travelmeter4.png' }
         ]}
       />
       <TechItem title="Android" desc="Java">
@@ -370,7 +367,6 @@ import Container from '$lib/common/Container.svelte';
         <Icon type="googlemaps" />
       </TechItem>
     </PortfolioItem>
-    <h2 id="design" class="portfolio-title">Ohjelmistojen suunnittelu</h2>
     <h2 id="video" class="portfolio-title">Videoeditointi</h2>
     <p class="px-5">
       Olen tuottanut Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
@@ -378,14 +374,7 @@ import Container from '$lib/common/Container.svelte';
     </p>
     <div class="flex flex-row flex-wrap justify-center p-5 gap-5">
       {#each videos as video}
-        <iframe
-          class="w-full max-w-[480px] h-72"
-          src={video}
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
+        <LazyVideo src={video} />
       {/each}
     </div>
   </div>
