@@ -40,7 +40,7 @@
           <div class="mockup-window bg-base-300">
             <div class="flex justify-center bg-white border-2 border-base-300">
               <div class="min-w-[300px] min-h-[210px]">
-                <LazyImage src={combo.web} alt="web-preview" style={`object-cover`} />
+                <LazyImage src={combo.web} alt="työpöytä esikatselu" style={`object-cover`} />
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@
           <Phone>
             <LazyImage
               src={combo.phone}
-              alt="mobile-preview"
+              alt="mobiili esikatselu"
               style={`h-[450px] min-h-[450px] w-[250px] min-w-[250px]`}
             />
           </Phone>

@@ -38,7 +38,7 @@
     </p>
     <h5 class="mt-5 mb-2 text-primary">{techTitle}</h5>
     {#each techs as tech}
-      <h6>{tech.title}</h6>
+      <p class="text-textDark font-semibold text-sm">{tech.title}</p>
       <span class="mb-3">{tech.techs}</span>
     {/each}
     <span class="my-2 text-sm"

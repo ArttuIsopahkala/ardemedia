@@ -14,7 +14,9 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Blogi | Arde Media</title>
+  <!-- Poista kun otetaan käyttöön -->
+  <meta name="robots" content="none">
 </svelte:head>
 
 <section>

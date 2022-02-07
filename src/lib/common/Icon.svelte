@@ -79,13 +79,13 @@
   {#if type === 'aws'}
     <FaAws />
   {:else if type === 'firebase'}
-    <LazyImage style="w-full h-full object-contain" src="firebase.png" alt="firebase" />
+    <LazyImage style="w-full h-full object-contain" src="firebase.png" alt="firebase logo" />
   {:else if type === 'react'}
     <FaReact />
   {:else if type === 'nodejs'}
     <FaNode />
   {:else if type === 'svelte'}
-    <LazyImage style="w-full h-full object-contain" src="svelte.png" alt="svelte" />
+    <LazyImage style="w-full h-full object-contain" src="svelte.png" alt="svelte logo" />
   {:else if type === 'googlemaps'}
     <FaMapMarkedAlt />
   {:else if type === 'java'}

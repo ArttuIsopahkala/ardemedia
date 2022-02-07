@@ -12,7 +12,8 @@
 </script>
 
 <svelte:head>
-  <title>Arde Media | Vuokraa Full Stack -koodari</title>
+  <title>Vuokraa Full Stack -koodari projektiisi! | Arde Media</title>
+
 </svelte:head>
 
 <section class="shadow-md pt-5 px-5 xl:px-0 mb-0.5">

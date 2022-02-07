@@ -83,7 +83,7 @@
       title="Flappi"
       year="Kehityksessä 2020-2021, ei aktiivinen"
       description="Digitaalinen fläppitaulu ja salibandyjoukkueen hallintajärjestelmä. Opin tämän projektin aikana hurjasti Reactia, TypeScriptiä ja AWS:n palveluja. 
-      Työstin sovellusta ystävieni kanssa, jotka auttoivat <a rel='noreferrer' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
+      Työstin sovellusta ystävieni kanssa, jotka auttoivat <a rel='noreferrer nofollow noopener' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
       Itse hoidin ohjelmoinnin ja projektinhallinnan.
       <br/><br/>
       Valmiit ominaisuudet:
@@ -122,7 +122,7 @@
       year="Vuodet 2017-2020"
       description="Työsuhteessa Firstbeatilla ylläpidin yksin lähemmäs 10 eri web-sovellusta. 
       Näistä toteutin itse muutaman kokonaan itse (mm. asiakashallintajärjestelmä). 
-      Valitettavasti näistä ei ole tarkempia kuvia, mutta tässä <a rel='noreferrer' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-201705026047' target='_blank'>linkki</a> opinnäytetyöhöni, jossa toteutin yhden järjestelmän uudistuksen."
+      Valitettavasti näistä ei ole tarkempia kuvia, mutta tässä <a rel='noreferrer nofollow noopener' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-201705026047' target='_blank'>linkki</a> opinnäytetyöhöni, jossa toteutin yhden järjestelmän uudistuksen."
     >
       <TechItem
         title="Amazon Web Services"

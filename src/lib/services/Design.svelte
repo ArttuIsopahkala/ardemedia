@@ -54,7 +54,7 @@
   </div>
   <div id="design-example">
     <Collapse title="Esimerkki vaatimusmäärittelystä (Trello)">
-      <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittely" />
+      <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittelystä" />
     </Collapse>
     <Collapse title="Esimerkki UI-kuvasta (Marvel)">
       <LazyImage style="max-h-[800px]" src="ui-kuva.png" alt="esimerkki ui-kuvasta" />

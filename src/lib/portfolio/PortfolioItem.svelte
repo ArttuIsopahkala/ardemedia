@@ -15,7 +15,7 @@ import LazyImage from '$lib/common/LazyImage.svelte';
     <div>
       <div class="flex flex-row items-center">
         {#if logo}
-          <LazyImage src={logo} alt="logo" style="max-h-[40px] max-w-[50px] mr-5" />
+          <LazyImage src={logo} alt="sovelluksen logo" style="max-h-[40px] max-w-[50px] mr-5" />
         {/if}
         <h3 class="text-primary mark">{title}</h3>
       </div>
@@ -31,7 +31,7 @@ import LazyImage from '$lib/common/LazyImage.svelte';
       </div>
       <div class="flex flex-row gap-3">
         {#if url}
-          <a rel="noreferrer" href={url} target="_blank">
+          <a rel="noreferrer nofollow noopener" href={url} target="_blank">
             <button class="btn btn-sm">
               <Icon type="google-play" color="text-textLight" style="w-[15px] h-[15px] mr-2" />
               Sovellukseen →
@@ -39,7 +39,7 @@ import LazyImage from '$lib/common/LazyImage.svelte';
           </a>
         {/if}
         {#if github}
-          <a rel="noreferrer" href={github} target="_blank">
+          <a rel="noreferrer nofollow noopener" href={github} target="_blank">
             <button class="btn btn-sm">
               <Icon type="github" color="text-textLight" style="w-[18px] h-[18px] mr-2" />
               Koodiin →

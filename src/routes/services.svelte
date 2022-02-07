@@ -24,7 +24,13 @@
 </script>
 
 <svelte:head>
-  <title>Palvelut | Arde Media</title>
+  {#if selectedValue === 'development'}
+    <title>Ohjelmistokehitys | Arde Media</title>
+  {:else if selectedValue === 'design'}
+    <title>Ohjelmistojen suunnittelu | Arde Media</title>
+  {:else}
+    <title>Palvelut | Arde Media</title>
+  {/if}
 </svelte:head>
 
 <Container>

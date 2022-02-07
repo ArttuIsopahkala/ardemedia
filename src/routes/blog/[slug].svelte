@@ -15,9 +15,11 @@
 
 <svelte:head>
   <title>{post.title}</title>
+  <!-- Poista kun otetaan käyttöön -->
+  <meta name="robots" content="none">
 </svelte:head>
 
 <article>
-  <h1>{post.title}</h1>
+  <h5>{post.title}</h5>
   {@html post.body_html}
 </article>

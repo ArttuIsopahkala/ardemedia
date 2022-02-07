@@ -22,7 +22,7 @@
         { title: 'Mobiili', techs: 'Java (Android) / PWA' }
       ]}
     >
-      <LazyImage slot="image" src="laptop.jpg" alt="läppäri" />
+      <LazyImage slot="image" src="laptop.jpg" alt="ohjelmistokehitys läppäri" />
     </ServiceItem>
     <ServiceItem
       serviceName="Arde suunnittelee"
@@ -37,7 +37,7 @@
       techTitle="Käyttämiäni työkaluja"
       techs={[{ title: 'UI/UX ja kaaviot', techs: 'Photoshop / AdobeDX / draw.io / Marvel' }]}
     >
-      <LazyImage slot="image" src="design.jpg" alt="design" />
+      <LazyImage slot="image" src="design.jpg" alt="ohjelmistosuunnittelu työpöytä" />
     </ServiceItem>
   </div>
 </div>
