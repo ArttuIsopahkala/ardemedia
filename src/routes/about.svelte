@@ -16,7 +16,7 @@
 <Container>
   <div class="flex flex-col gap-14">
     <div>
-      <h2 class="py-5">Olen Arttu Isopahkala, Arde Median <span class="mark">yrittäjä</span></h2>
+      <h1 class="py-5">Olen Arttu Isopahkala, Arde Median <span class="mark">yrittäjä</span></h1>
       <div class="flex flex-row">
         <div class="p-5 card shadow-lg bg-base-100 md:max-w-2xl">
           <span class="w-[30px] h-[30px]">
@@ -29,7 +29,7 @@
             osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat
             luonnistuu vankan Android-kokemuksen johdosta. Olen aina ollut kiinnostunut
             teknologiasta ja tietokoneista, joten seuraan tiiviisti alan trendejä ja uusia
-            julkaisuja. Koodailun vastapainoksi vapaa-aikani menee salibandyn, läheisten ja hyvän
+            julkaisuja. Koodailun vastapainoksi vapaa-aikani menee salibandyn, läheisten tai hyvän
             kirjan parissa.
           </p>
         </div>
@@ -39,11 +39,11 @@
       </div>
     </div>
     <div>
-      <h2 class="py-5">Teknologioita ja työkaluja, jotka hallitsen</h2>
+      <h1 class="py-5">Teknologioita ja työkaluja, jotka hallitsen</h1>
       <p class="pb-5">
         Lasken osaamiseksi sen, että olen toteuttanut projektin valmiiksi, jossa olen käyttänyt
         kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira tai Github
-        Projects kuuluvat arikäyttööni. Käyttöjärjestelmistä kallistun Windowsin (+WSL) puoleen,
+        Projects kuuluvat arkikäyttööni. Käyttöjärjestelmistä suosin Windowsia (+WSL),
         mutta myös Linuxin käyttö on hanskassa.
       </p>
       <div>
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div>
-      <h2 class="py-5">Rooli- ja vastuuosaaminen</h2>
+      <h1 class="py-5">Rooli- ja vastuuosaaminen</h1>
       <p>
         Toimin aikaisemmassa työsuhteessa tehtävänimikkeellä Lead Software Developer. Tässä roolissa
         sain kokemusta verkkopalvelujen teknisestä omistajuudesta. Omistajuuteen kuului vastuu
@@ -60,11 +60,11 @@
       </p>
     </div>
     <div>
-      <h2 class="py-5">Erityisosaaminen ja muu osaaminen</h2>
+      <h1 class="py-5">Erityisosaaminen ja muu osaaminen</h1>
       <p>
         Lasken erityisosaamiseksi sellaisen osaamisen, joka on erityisen syvää tai harvinaista.
         Teknologioiden osalta erityisosaamistani on Svelte ja GWT (Google Web Toolkit), jotka ovat
-        harvinaisempia teknologioita tällä hetkellä (2022). Vahvuutena koen Full Stack
+        harvinaisempia teknologioita tätä kirjoittaessa (2022). Vahvuutena koen Full Stack
         -ohjelmistokehityksen, jonka seurauksena minulta löytyy monipuolisuutta ja laajojen
         kokonaisuuksien hallintakykyä.
         <br /><br />
@@ -75,7 +75,7 @@
     </div>
     <div class="flex flex-row flex-wrap py-5">
       <div class="flex-col md:w-1/2">
-        <h3 class="mark">Työpaikkoja</h3>
+        <h2 class="mark">Työpaikkoja</h2>
         <HistoryItem role="Ohjelmistokehittäjä, Yrittäjä" year="2018-" company="Arde Media" />
         <HistoryItem
           role="Lead Software Developer"
@@ -85,7 +85,7 @@
       </div>
 
       <div class="flex-col md:w-1/2">
-        <h3 class="mark">Kouluja</h3>
+        <h2 class="mark">Kouluja</h2>
         <HistoryItem
           role="Insinööri (ylempi AMK)"
           year="2021 - Ohjelmistotekniikka ja ICT"

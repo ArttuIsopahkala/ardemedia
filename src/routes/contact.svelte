@@ -20,19 +20,19 @@
 </svelte:head>
 
 <Container>
-  <h2 class="py-5">Ennen kuin otat yhteyttä...</h2>
-  <h4 class="pb-5">sinun on hyvä tietää nämä jutut:</h4>
+  <h1 class="py-5">Ennen kuin otat yhteyttä...</h1>
+  <h3 class="pb-5">sinun on hyvä tietää nämä jutut:</h3>
   <div class="flex flex-row flex-wrap justify-between">
     <NoteItem description="Voin aloittaa seuraavan projektin">
       <Icon slot="icon" type="calendar" />
-      <h3 slot="extra" class='text-primary'>
+      <h2 slot="extra" class='text-primary'>
         {$availableDate}
         <!-- {#if isFutureDate($availableDate)}
           {$availableDate}
         {:else}
           Vaikka heti!
         {/if} -->
-      </h3>
+      </h2>
     </NoteItem>
     <NoteItem
       description="Majailen Tampereella, joten voin työskennellä toimistollasi Tampereen alueella. Muuten palveluni tapahtuvat etänä."
@@ -52,7 +52,7 @@
   </div>
   <div class="bg-card p-5 my-5">
     <div class="flex items-center">
-      <h4 class="py-5 mr-5">Lähetä minulle viesti</h4>
+      <h3 class="py-5 mr-5">Lähetä minulle viesti</h3>
       <Icon type="email" color="text-primary" />
     </div>
     <p class="">Vastaan heti kun se on inhimillisesti mahdollista!</p>

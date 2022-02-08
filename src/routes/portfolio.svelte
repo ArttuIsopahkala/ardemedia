@@ -55,7 +55,7 @@
 <Container>
   <Selector bind:selectedValue {items} defaultValue="web" />
   <div in:fade={{ duration: 300 }}>
-    <h2 id="web" class="portfolio-title">Web-sovellukset</h2>
+    <h1 id="web" class="portfolio-title">Web-sovellukset</h1>
     <PortfolioItem
       title="Arde Median kotisivut"
       year="Julkaistu 2022"
@@ -137,7 +137,7 @@
         <Icon type="java" />
       </TechItem>
     </PortfolioItem>
-    <h2 id="mobile" class="portfolio-title">Mobiilisovellukset</h2>
+    <h1 id="mobile" class="portfolio-title">Mobiilisovellukset</h1>
     <PortfolioItem
       title="Floorball Manager"
       year="Julkaistu 2019"
@@ -367,7 +367,7 @@
         <Icon type="googlemaps" />
       </TechItem>
     </PortfolioItem>
-    <h2 id="video" class="portfolio-title">Videoeditointi</h2>
+    <h1 id="video" class="portfolio-title">Videoeditointi</h1>
     <p class="px-5">
       Olen tuottanut Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
       Työkaluina on toiminut lähinnä Sony Vegas PRO ja Adobe After Effects.

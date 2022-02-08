@@ -5,7 +5,7 @@
 </script>
 
 <div id="story">
-  <h2 class="text-center py-5">Tarinani koodarina</h2>
+  <h1 class="text-center py-5">Tarinani koodarina</h1>
   <div class="flex flex-row justify-center">
     <div class="md:max-w-md">
       <p class="mb-4">
@@ -13,7 +13,7 @@
         koodarina on ollut pikkupojasta aina tähän päivään asti. Tämä lyhyt elämänkerta sisältää
         kurkistuksen ensimmäisiin nettisivuihini, opiskeluun, työelämään ja luonteeseeni.
       </p>
-      <Button text="Lue tarinani →" outlined={true} onClick={() => goto('/blog/story')} />
+      <Button text="Lue tarinani" outlined={true} onClick={() => goto('/blog/story')} />
     </div>
     <div class="hidden md:flex justify-center ml-5">
       <LazyImage style="max-h-[250px] mask mask-squircle" src={'story.jpg'} alt="tarina" />

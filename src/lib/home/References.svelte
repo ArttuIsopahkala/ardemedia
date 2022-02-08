@@ -4,7 +4,7 @@
 </script>
 
 <div id="company" class="flex flex-col">
-  <h2 class="py-5">ASIAKKAAN SUUSTA</h2>
+  <h1 class="py-5">Asiakkaan suusta</h1>
   <div class="p-5 card shadow-md max-w-2xl bg-base-100">
     <div class="flex flex-row justify-between mb-4">
       <div class="flex items-center flex-row">

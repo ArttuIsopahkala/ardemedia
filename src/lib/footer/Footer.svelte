@@ -17,7 +17,7 @@
   </div>
   <div class="max-w-5xl w-full flex flex-row justify-around">
     <div class="flex flex-col">
-      <h4 class="text-base-300">Arde Media</h4>
+      <h3 class="text-base-300">Arde Media</h3>
       <span>Y-tunnus: 2945862-1</span>
       <div class="flex flex-row gap-5 mt-4">
         <SomeButton

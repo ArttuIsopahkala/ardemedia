@@ -11,11 +11,11 @@
     { label: 'Pilvipalvelut', value: 'AWS (Amazon Web Services), Firebase' },
     {
       label: 'Automaatio ja infra',
-      value: 'CircleCI, GitHub, Jboss EAP, Serverless, OpenAPI, Ant / Maven / Gradle'
+      value: 'CircleCI, GitHub Actions, Jboss EAP, Serverless'
     },
     {
       label: 'Jonkin verran pyöritellyt',
-      value: 'PWA, PHP, Jenkins, Terraform, Python, Flutter, Dart, ML (SkLearn)'
+      value: 'PHP, Jenkins, Terraform, Python, Flutter, Dart, ML (SkLearn)'
     }
   ];
 </script>

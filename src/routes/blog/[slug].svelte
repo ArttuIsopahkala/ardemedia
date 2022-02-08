@@ -20,6 +20,6 @@
 </svelte:head>
 
 <article>
-  <h5>{post.title}</h5>
+  <h4>{post.title}</h4>
   {@html post.body_html}
 </article>

@@ -17,15 +17,15 @@ import LazyImage from '$lib/common/LazyImage.svelte';
         {#if logo}
           <LazyImage src={logo} alt="sovelluksen logo" style="max-h-[40px] max-w-[50px] mr-5" />
         {/if}
-        <h3 class="text-primary mark">{title}</h3>
+        <h2 class="text-primary mark">{title}</h2>
       </div>
-      <h5 class="pt-3">{year}</h5>
+      <h4 class="pt-3">{year}</h4>
       <p class="py-5">
         {@html description}
       </p>
     </div>
     <div>
-      <h5>Teknologiat</h5>
+      <h4>Teknologiat</h4>
       <div class="flex flex-row items-start py-5">
         <slot />
       </div>

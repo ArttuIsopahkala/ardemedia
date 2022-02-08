@@ -74,7 +74,7 @@
           on:click={() => (showMobileMenu = false)}
           href={'/contact'}
         >
-          <Button text={'Ota yhteyttä →'} outlined={false} />
+          <Button text={'Ota yhteyttä'} outlined={false} />
         </a>
       {/if}
     </div>

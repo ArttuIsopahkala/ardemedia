@@ -57,7 +57,7 @@ module.exports = {
           fontWeight: '600',
           textTransform: 'uppercase'
         },
-        'h1': {
+        /* 'h1': {
           fontSize: theme('fontSize.3xl'),
           color: theme('colors.textDark'),
           [`@media (min-width: ${theme('screens.md')})`]: {
@@ -66,8 +66,8 @@ module.exports = {
           [`@media (min-width: ${theme('screens.xl')})`]: {
             fontSize: theme('fontSize.5xl'),
           }
-        },
-        'h2': {
+        }, */
+        'h1': {
           fontSize: theme('fontSize.xl'),
           color: theme('colors.textDark'),
           [`@media (min-width: ${theme('screens.md')})`]: {
@@ -77,7 +77,7 @@ module.exports = {
             fontSize: theme('fontSize.3xl'),
           }
         },
-        'h3': {
+        'h2': {
           fontSize: theme('fontSize.lg'),
           color: theme('colors.textDark'),
           [`@media (min-width: ${theme('screens.md')})`]: {
@@ -87,7 +87,7 @@ module.exports = {
             fontSize: theme('fontSize.2xl'),
           }
         },
-        'h4': {
+        'h3': {
           fontSize: theme('fontSize.base'),
           color: theme('colors.textDark'),
           [`@media (min-width: ${theme('screens.md')})`]: {
@@ -97,11 +97,11 @@ module.exports = {
             fontSize: theme('fontSize.xl'),
           }
         },
-        'h5': {
+        'h4': {
           fontSize: theme('fontSize.base'),
           color: theme('colors.textDark'),
         },
-        'h6': {
+        'h5': {
           fontSize: theme('fontSize.sm'),
           color: theme('colors.textDark'),
         }

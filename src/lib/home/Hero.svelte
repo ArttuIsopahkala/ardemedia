@@ -80,8 +80,8 @@
 <svelte:window bind:innerWidth={windowWith} />
 
 <div id="hero" class="flex flex-col justify-center items-center pb-[50px]">
-  <h1 class="mb-10 text-center">
-    Vuokraa <span class="mark gradient">Full Stack</span> -koodari projektiisi!
+  <h1 class="mb-10 text-center text-3xl md:text-4xl xl:text-5xl">
+    Vuokraa <span class="mark gradient">Full Stack</span> -koodari käyttöösi!
   </h1>
   <div
     on:mousemove={handleMousemove}
@@ -98,8 +98,8 @@
         )}
       >
         <img class={clsx("max-h-[500px]")} src={image} alt="muotokuva" />
-        <h3 class="text-primary mt-4">ARTTU ISOPAHKALA</h3>
-        <p class="text-base">Web-sovellukset | Android</p>
+        <h2 class="text-primary mt-4">ARTTU ISOPAHKALA</h2>
+        <h4 class="font-normal">Full Stack Developer</h4>
       </div>
 
       <!-- VASEN PUOLI -->
@@ -112,7 +112,7 @@
           toggle === 'right' ? 'lg:opacity-30' : ''
         )}
       >
-        <h3 class="portfolio-title">Ohjelmistokehittäjä</h3>
+        <h2 class="portfolio-title">Ohjelmistokehittäjä</h2>
         <p>
           Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
           käyttöliittymät että älykkäät ja nykyaikaiset taustapalvelut.
@@ -142,7 +142,7 @@
           toggle === 'left' ? 'lg:opacity-30' : ''
         )}
       >
-        <h3 class="portfolio-title">Ohjelmistoarkkitehti</h3>
+        <h2 class="portfolio-title">Ohjelmistojen suunnittelija</h2>
         <p>
           Muunnan kehitystarpeen tai idean tekniseen muotoon, suunnittelen ominaisuuksille tai
           ohjelmistolle nykyaikaisen teknisen ratkaisun sekä taiteilen käyttäjäystävälliset

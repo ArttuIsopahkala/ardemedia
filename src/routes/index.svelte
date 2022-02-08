@@ -13,7 +13,6 @@
 
 <svelte:head>
   <title>Vuokraa Full Stack -koodari projektiisi! | Arde Media</title>
-
 </svelte:head>
 
 <section class="shadow-md pt-5 px-5 xl:px-0 mb-0.5">
@@ -26,15 +25,20 @@
     <Services />
     <Reasons />
     <References />
+    <div>
+      <h1 class="my-5">Etkö vielä vakuuttunut?</h1>
+      <p class="my-5">Antaa todisteiden puhua puolestaan!</p>
+      <Button text="Portfolioon" size="sm:btn-lg" onClick={() => goto("/portfolio")}/>
+    </div>
     <Divider />
     <Company />
     <Values />
     <Divider />
     <div class="flex flex-col justify-center items-center mb-14">
-      <h3 class="mb-10">Lähetä minulle viesti niin laitetaan rattaat pyörimään!</h3>
+      <h2 class="mb-10">Lähetä minulle viesti niin laitetaan rattaat pyörimään!</h2>
       <Button
-        text="Ota yhteyttä →"
-        size="btn-lg"
+        text="Ota yhteyttä"
+        size="sm:btn-lg"
         outlined={false}
         onClick={() => goto('/contact')}
       />

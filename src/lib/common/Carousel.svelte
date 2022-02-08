@@ -33,7 +33,7 @@
 {#if images.length > 0}
   <div class="flex flex-col justify-center items-center">
     <div class={`flex flex-row justify-center items-center gap-2`}>
-      <Button text="<" onClick={previous} />
+      <Button text="<" hideArrow={true} onClick={previous} />
       {#each [images[index]] as combo (index)}
         <!-- DESKTOP IMAGES -->
         {#if combo.web}
@@ -56,7 +56,7 @@
           </Phone>
         {/if}
       {/each}
-      <Button text=">" onClick={next} />
+      <Button text=">" hideArrow={true} onClick={next} />
     </div>
     <!-- DOTS -->
     <div class="flex flex-row gap-3 m-3">

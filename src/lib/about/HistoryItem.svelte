@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col">
-  <h5 class="mt-2">{role}</h5>
+  <h4 class="mt-2">{role}</h4>
   <p>{year}</p>
   <p>{company}</p>
 </div>
