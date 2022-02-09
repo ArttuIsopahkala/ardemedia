@@ -115,7 +115,7 @@
         <h2 class="portfolio-title">Ohjelmistokehittäjä</h2>
         <p>
           Kädet savessa koodaaminen on ydinosaamistani. Työpöydälläni rakentuvat sekä kuvankauniit
-          käyttöliittymät että älykkäät ja nykyaikaiset taustapalvelut.
+          käyttöliittymät että älykkäät ja tehokkaat taustapalvelut.
         </p>
         {#if toggle === 'left' && windowWith > breakpoints.lg}
           <div
@@ -144,8 +144,8 @@
       >
         <h2 class="portfolio-title">Ohjelmistojen suunnittelija</h2>
         <p>
-          Muunnan kehitystarpeen tai idean tekniseen muotoon, suunnittelen ominaisuuksille tai
-          ohjelmistolle nykyaikaisen teknisen ratkaisun sekä taiteilen käyttäjäystävälliset
+          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistolle tai
+          sen ominaisuuksille nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
           UI/UX-suunnitelmat.
         </p>
         {#if toggle === 'right' && windowWith > breakpoints.lg}

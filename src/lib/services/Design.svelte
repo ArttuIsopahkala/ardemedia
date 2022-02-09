@@ -21,7 +21,7 @@
   <div id="service-container" class="flex flex-wrap justify-between">
     <ServiceSection
       title="UI-suunnitelmat"
-      desc="Määritellään sovelluksellesi visuaalinen ilme. Suunnitelmaan voidaan sisällyttää värimaailma, fontit, brändi, mockupit ja vaikka logo. Olen tehnyt UI-suunnitelmia useille mobiilisovellukselle sekä nettisivuille."
+      desc="Määritellään sovelluksellesi visuaalinen ilme. Suunnitelmaan voidaan sisällyttää mm. värimaailma, fontit, brändi, mockupit ja logo. Olen tehnyt UI-suunnitelmia useille mobiilisovellukselle sekä nettisivuille."
     >
       <TechSection
         slot="techs"
@@ -32,25 +32,19 @@
     </ServiceSection>
 
     <ServiceSection
-      title="Tekninen suunnittelu Vaatimusmäärittelyt"
-      desc="Luodaan sovelluksellesi runko vaatimuksista. Vaatimusmäärittelyt voidaan tehdä eri tilanteisiin nähden tarkasti teknisellä tasolla tai esimerkiksi MVP-versiolle korkealla tasolla. Teknisen vaatimusmäärittelyn avulla ohjelmistokehittäjä osaa toteuttaa kehitystarpeen."
+      title="Tekninen suunnittelu"
+      desc="Löydetään sovelluksellesi sopivia teknologiaratkaisuja. Opastan mikä teknisesti on mahdollista ja järkevää toteuttaa sekä luon suunnitelman sovelluksesi ominaisuuksista, jotka ohjelmistokehittäjä osaa toteuttaa. Suunnitelma vodaan toteuttaa vaatimusmäärittelyinä sisältäen ominaisuuksien yleiset ja tekniset kuvaukset, arkkitehtuurikaaviot sekä mahdolliset käyttöliittymäkuvat."
     >
       <Icon type="compass" slot="icon" />
     </ServiceSection>
 
-    <ServiceSection
-      title="Arkkitehtuuriratkaisut"
-      desc="Suunnittelen ja dokumentoin teknologiaratkaisuja, jotka sopivat juuri sinun ideaasi. Tietoturva mielessä pitäen, "
-    >
-      <Icon type="warehouse" slot="icon" />
-    </ServiceSection>
   </div>
   <div id="design-example">
-    <Collapse title="Esimerkki vaatimusmäärittelystä (Trello)">
-      <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittelystä" />
-    </Collapse>
     <Collapse title="Esimerkki UI-kuvasta (Marvel)">
       <LazyImage style="max-h-[800px]" src="ui-kuva.png" alt="esimerkki ui-kuvasta" />
+    </Collapse>
+    <Collapse title="Esimerkki vaatimusmäärittelystä (Trello)">
+      <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittelystä" />
     </Collapse>
   </div>
   <Divider />
