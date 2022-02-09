@@ -2,11 +2,10 @@
   import HistoryItem from '$lib/about/HistoryItem.svelte';
   import Story from '$lib/about/Story.svelte';
   import TechTable from '$lib/about/TechTable.svelte';
-  import Values from '$lib/about/Values.svelte';
   import Container from '$lib/common/Container.svelte';
   import Divider from '$lib/common/Divider.svelte';
+  import Icon from '$lib/common/Icon.svelte';
   import LazyImage from '$lib/common/LazyImage.svelte';
-  import MdFormatQuote from 'svelte-icons/md/MdFormatQuote.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +19,7 @@
       <div class="flex flex-row">
         <div class="p-5 card shadow-lg bg-base-100 md:max-w-2xl">
           <span class="w-[30px] h-[30px]">
-            <MdFormatQuote />
+            <Icon type="quote" />
           </span>
           <p class="">
             Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien
@@ -43,8 +42,8 @@
       <p class="pb-5">
         Lasken osaamiseksi sen, että olen toteuttanut projektin valmiiksi, jossa olen käyttänyt
         kyseistä teknologiaa. Näiden lisäksi projektinhallintatyökalut kuten Trello, Jira tai Github
-        Projects kuuluvat arkikäyttööni. Käyttöjärjestelmistä suosin Windowsia (+WSL),
-        mutta myös Linuxin käyttö on hanskassa.
+        Projects kuuluvat arkikäyttööni. Käyttöjärjestelmistä suosin Windowsia (+WSL), mutta myös
+        Linuxin käyttö on hanskassa.
       </p>
       <div>
         <TechTable />
@@ -73,8 +72,8 @@
         ja ymmärrystä löytyy jonkin verran Facebook-markkinoinnista ja hakukoneoptimoinnista.
       </p>
     </div>
-    <div class="flex flex-row flex-wrap py-5">
-      <div class="flex-col md:w-1/2">
+    <div class="flex flex-row flex-wrap py-5 gap-5 sm:gap-20">
+      <div class="flex-col">
         <h2 class="mark">Työpaikkoja</h2>
         <HistoryItem role="Ohjelmistokehittäjä, Yrittäjä" year="2018-" company="Arde Media" />
         <HistoryItem
@@ -84,7 +83,7 @@
         />
       </div>
 
-      <div class="flex-col md:w-1/2">
+      <div class="flex-col">
         <h2 class="mark">Kouluja</h2>
         <HistoryItem
           role="Insinööri (ylempi AMK)"

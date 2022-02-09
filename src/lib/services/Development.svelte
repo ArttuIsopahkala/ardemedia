@@ -3,7 +3,6 @@
   import Button from '$lib/common/Button.svelte';
   import Divider from '$lib/common/Divider.svelte';
   import Icon from '$lib/common/Icon.svelte';
-  import Reasons from '$lib/home/Reasons.svelte';
   import TechSection from '$lib/common/TechSection.svelte';
   import { fade } from 'svelte/transition';
   import { devPrice, devPriceHigh } from './../../store.js';
@@ -136,7 +135,7 @@
   </div>
   <div class="py-5">
     <h3 class="mt-5 mb-3"><span class="mark">100%</span> Tyytyväisyystakuu</h3>
-    <p class="lg:max-w-lg text-base">
+    <p class="lg:max-w-lg">
       Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Jos et ole
       tyytyväinen työhöni tai huomaat parannettavaa, kerro siitä minulle. Takuu edellyttää reilua
       avoimuutta minua kohtaan jo yhteistyön aikana. Jos et kirjallisen kritiikkisikään jälkeen ole

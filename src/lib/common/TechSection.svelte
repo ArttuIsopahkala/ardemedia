@@ -17,5 +17,5 @@
   {#if tech.title}
     <p class="text-textDark font-semibold text-sm">{tech.title}</p>
   {/if}
-  <span class="mb-3">{tech.techs}</span>
+  <p class="mb-3">{tech.techs}</p>
 {/each}

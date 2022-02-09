@@ -14,7 +14,7 @@
   )}
   on:click={() => (open = !open)}
 >
-  <div class="collapse-title text-base font-medium">{title}</div>
+  <div class="collapse-title font-medium">{title}</div>
   <div class="collapse-content focus:bg-base-100">
     <slot />
   </div>

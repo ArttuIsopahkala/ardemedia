@@ -21,6 +21,7 @@
       outlined={selectedValue !== item.value}
       secondary={true}
       onClick={() => (selectedValue = item.value)}
+      size="btn-sm sm:btn-md min-w-[220px]"
     />
   {/each}
 </div>

@@ -9,11 +9,9 @@
   import Button from '$lib/common/Button.svelte';
   import Phone from '$lib/common/Phone.svelte';
   import clsx from 'clsx';
-  import { fade } from 'svelte/transition';
   import LazyImage from './LazyImage.svelte';
 
   export let images: ImageCombo[] = [];
-  export let height: number = 450;
 
   let index = 0;
 

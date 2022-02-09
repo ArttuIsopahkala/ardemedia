@@ -48,6 +48,10 @@ module.exports = {
         },
         'p': {
           lineHeight: 1.75,
+          fontSize: '0.875rem',
+          [`@media (min-width: ${theme('screens.sm')})`]: {
+            fontSize: '16px',
+          },
           [`@media (min-width: ${theme('screens.xl')})`]: {
             fontSize: '18px',
           }
@@ -57,16 +61,6 @@ module.exports = {
           fontWeight: '600',
           textTransform: 'uppercase'
         },
-        /* 'h1': {
-          fontSize: theme('fontSize.3xl'),
-          color: theme('colors.textDark'),
-          [`@media (min-width: ${theme('screens.md')})`]: {
-            fontSize: theme('fontSize.4xl'),
-          },
-          [`@media (min-width: ${theme('screens.xl')})`]: {
-            fontSize: theme('fontSize.5xl'),
-          }
-        }, */
         'h1': {
           fontSize: theme('fontSize.xl'),
           color: theme('colors.textDark'),

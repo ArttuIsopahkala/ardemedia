@@ -10,6 +10,6 @@ const app = (getApps().length === 0 ? initializeApp(config) : getApp())
 // Analytics for future
 /* const analytics = getAnalytics(app); */
 const db = getFirestore(app);
-const functions = getFunctions(app);
+const functions = getFunctions(app, "europe-central2");
 
 export { app, db, functions }

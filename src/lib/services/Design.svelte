@@ -58,7 +58,7 @@
   </div>
   <div class="py-5">
     <h3 class="mt-5 mb-3"><span class="mark">100%</span> Tyytyväisyystakuu</h3>
-    <p class="lg:max-w-lg text-base">
+    <p class="lg:max-w-lg">
       Varmistan aina oma-aloitteisesti, että työni jälki on yrityksesi arvoista. Jos et ole
       tyytyväinen työhöni tai huomaat parannettavaa, kerro siitä minulle. Takuu edellyttää reilua
       avoimuutta minua kohtaan jo yhteistyön aikana. Jos et kirjallisen kritiikkisikään jälkeen ole

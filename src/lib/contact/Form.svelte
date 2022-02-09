@@ -8,9 +8,9 @@
 
 <script lang="ts">
   import Icon from '$lib/common/Icon.svelte';
-  import { db } from '$lib/static/firebase';
+  import { functions } from '$lib/static/firebase';
   import clsx from 'clsx';
-  import { addDoc, collection } from 'firebase/firestore';
+  import { httpsCallable } from 'firebase/functions';
 
   type State = 'loading' | 'error' | 'success';
 
@@ -24,7 +24,7 @@
   let submitClicked: boolean = false;
   let state: State;
 
-  const isValidEmail = (email) => {
+  const isValidEmail = (email?: string) => {
     return (
       email &&
       email.match(
@@ -33,7 +33,7 @@
     );
   };
 
-  const isRequiredFieldEmpty = (value) => {
+  const isRequiredFieldEmpty = (value?: null | string) => {
     return value === undefined || value === null || value === '';
   };
 
@@ -69,12 +69,26 @@
       email,
       message
     };
-    console.log(form);
 
     // Send form
     state = 'loading';
 
-    addDoc(collection(db, 'contacts'), form)
+    const addMessage = httpsCallable(functions, 'sendContactEmail');
+    addMessage(form)
+      .then(() => {
+        state = 'success';
+        email = '';
+        name = '';
+        message = '';
+        submitClicked = false;
+      })
+      .catch((error) => {
+        console.log(error);
+        state = 'error';
+      });
+
+    // Add contact to database?
+    /*  addDoc(collection(db, 'contacts'), form)
       .then(() => {
         state = 'success';
         email = '';
@@ -84,7 +98,7 @@
       })
       .catch((error) => {
         state = 'error';
-      });
+      }); */
   };
 </script>
 
@@ -174,7 +188,9 @@
                 d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
               />
             </svg>
-            <p>Tapahtui virhe eikä viestiä lähetetty! Vaihtoehtoisesti laita viestiä LinkedIn:ssä.</p>
+            <p>
+              Tapahtui virhe eikä viestiä lähetetty! Vaihtoehtoisesti laita viestiä LinkedIn:ssä.
+            </p>
           </div>
         </div>
       {:else if state === 'success'}

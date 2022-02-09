@@ -26,7 +26,7 @@
     <NoteItem description="Voin aloittaa seuraavan projektin">
       <Icon slot="icon" type="calendar" />
       <h2 slot="extra" class='text-primary'>
-        {$availableDate}
+        {$availableDate ?? '-'}
         <!-- {#if isFutureDate($availableDate)}
           {$availableDate}
         {:else}

@@ -15,8 +15,8 @@
   >
     <Icon type="up" color="text-base-300" />
   </div>
-  <div class="max-w-5xl w-full flex flex-row justify-around">
-    <div class="flex flex-col">
+  <div class="max-w-3xl w-full flex flex-row justify-between flex-wrap">
+    <div class="flex flex-col p-5 xl:p-0">
       <h3 class="text-base-300">Arde Media</h3>
       <span>Y-tunnus: 2945862-1</span>
       <div class="flex flex-row gap-5 mt-4">
@@ -34,7 +34,7 @@
         <SomeButton icon="youtube" url="https://www.youtube.com/pehrehvind" label="Youtube" />
       </div>
     </div>
-    <div class="flex flex-col gap-2 justify-start">
+    <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       {#each data.ROUTES as route}
         <FooterLink label={route.label} href={route.url} />
       {/each}
