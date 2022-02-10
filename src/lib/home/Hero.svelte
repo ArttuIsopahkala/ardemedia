@@ -1,7 +1,6 @@
 <script lang="ts">
   import { breakpoints } from '$lib/static/breakpoints';
   import clsx from 'clsx';
-  import * as animateScroll from 'svelte-scrollto';
   import { fade, fly, slide } from 'svelte/transition';
   import { onMount } from 'svelte';
 
@@ -97,7 +96,7 @@
           'lg:px-7 lg:w-1/3 lg:order-2'
         )}
       >
-        <img class={clsx("max-h-[500px]")} src={image} alt="muotokuva" />
+        <img class={clsx('max-h-[500px]')} src={image} alt="muotokuva" />
         <h2 class="text-primary mt-4">ARTTU ISOPAHKALA</h2>
         <h4 class="font-normal">Full Stack Developer</h4>
       </div>
@@ -105,7 +104,10 @@
       <!-- VASEN PUOLI -->
       <div
         in:fly={{ x: -200, duration: 500, delay: 300 }}
-        on:click={() => animateScroll.scrollTo({ element: '#development', offset: -60 })}
+        on:click={() =>
+          document
+            .getElementById('development')
+            .scrollIntoView({ block: 'start', behavior: 'smooth' })}
         class={clsx(
           'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',
           'lg:min-h-[350px] lg:w-1/3 lg:order-1',
@@ -118,24 +120,27 @@
           käyttöliittymät että älykkäät ja tehokkaat taustapalvelut.
         </p>
         {#if toggle === 'left' && windowWith > breakpoints.lg}
-          <div
-            class="mockup-code mt-5 transition-opacity duration-300"
-            in:slide={{ duration: 300 }}
-            out:slide={{ duration: 300 }}
-          >
-            <pre data-prefix=">">
-            <code in:typewriter={{ delay: 300 }}>console.log("Hello world!");</code>
-          </pre>
-            <pre data-prefix=">" class="text-success">
-            <code in:fade={{ duration: 0, delay: 1300 }}>Hello world!</code>
-          </pre>
-          </div>
+        <div
+        class="mockup-code mt-5 transition-opacity duration-300"
+        in:slide={{ duration: 300 }}
+        out:slide={{ duration: 300 }}
+      >
+        <pre data-prefix=">" class="flex">
+        <code in:typewriter={{ delay: 300 }}>console.log("Hello world!");</code>
+      </pre>
+        <pre data-prefix=">" class="flex text-success">
+        <code in:fade={{ duration: 0, delay: 1300 }}>Hello world!</code>
+      </pre>
+      </div>
         {/if}
       </div>
       <!-- OIKEA PUOLI -->
       <div
         in:fly={{ x: 200, duration: 500, delay: 300 }}
-        on:click={() => animateScroll.scrollTo({ element: '#design', offset: -60 })}
+        on:click={() =>
+          document
+            .getElementById('design')
+            .scrollIntoView({ block: 'start', behavior: 'smooth' })}
         class={clsx(
           'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
           'lg:min-h-[350px] lg:w-1/3 lg:order-3',
@@ -144,8 +149,8 @@
       >
         <h2 class="portfolio-title">Ohjelmistojen suunnittelija</h2>
         <p>
-          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistolle tai
-          sen ominaisuuksille nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
+          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistolle tai sen
+          ominaisuuksille nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
           UI/UX-suunnitelmat.
         </p>
         {#if toggle === 'right' && windowWith > breakpoints.lg}
@@ -154,10 +159,10 @@
             in:slide={{ duration: 300 }}
             out:slide={{ duration: 300 }}
           >
-            <pre data-prefix="1">
+            <pre data-prefix="1" class="flex">
               <code in:typewriter={{ delay: 300 }}>&#123; display: flex; &#125;</code>
             </pre>
-            <pre class="text-warning" data-prefix=">">
+            <pre class="text-warning flex" data-prefix=">">
               <code in:typewriter={{ delay: 1000 }}>&#128293; &#128293; &#128293;</code>
             </pre>
           </div>

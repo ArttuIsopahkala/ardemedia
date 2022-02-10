@@ -1,5 +1,4 @@
 <script lang="ts">
-  import * as animateScroll from 'svelte-scrollto';
   import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
   import PortfolioItem from '$lib/portfolio/PortfolioItem.svelte';
   import TechItem from '$lib/portfolio/TechItem.svelte';
@@ -15,7 +14,7 @@
 
   $: {
     if (previousValue) {
-      animateScroll.scrollTo({ element: '#' + selectedValue, offset: -50 });
+      document.getElementById(selectedValue).scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
     previousValue = selectedValue;
   }

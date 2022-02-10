@@ -1,17 +1,14 @@
 <script lang="ts">
   import Icon from '$lib/common/Icon.svelte';
   import data from '$lib/static/data';
-  import * as animateScroll from 'svelte-scrollto';
   import FooterLink from './FooterLink.svelte';
   import SomeButton from './SomeButton.svelte';
 </script>
 
-<footer
-  class="bg-base-content border-t-2 border-primary flex flex-col items-center text-base-300"
->
+<footer class="bg-base-content border-t-2 border-primary flex flex-col items-center text-base-300">
   <div
     class="w-16 h-16 btn btn-circle -mt-6 bg-base-content"
-    on:click={() => animateScroll.scrollTo({ y: 0 })}
+    on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
   >
     <Icon type="up" color="text-base-300" />
   </div>

@@ -13,6 +13,17 @@ admin.initializeApp();
 
 sgMail.setApiKey(functions.config().sendgrid.key || '');
 
+let ssrServerServer: any;
+export const ssrServer = functions.region("us-central1").https.onRequest(async (request, response) => {
+  if (!ssrServerServer) {
+    functions.logger.info("Initialising SvelteKit SSR entry");
+    ssrServerServer = require("./ssrServer/index").default;
+    functions.logger.info("SvelteKit SSR entry initialised!");
+  }
+  functions.logger.info("Requested resource: " + request.originalUrl);
+  return ssrServerServer(request, response);
+});
+
 // Send email from contact form
 export const sendContactEmailFirestore = functions.region(REGION).firestore
   .document('contacts/{contactId}')
@@ -47,7 +58,7 @@ export const sendContactEmail = functions.region(REGION).https.onCall(async data
   }
 
   const response = await sgMail.send(msg)
-  if(response[0].statusCode >= 400) {
+  if (response[0].statusCode >= 400) {
     throw new HttpsError("aborted", 'Error with sendgrid service')
   }
   return { success: true }

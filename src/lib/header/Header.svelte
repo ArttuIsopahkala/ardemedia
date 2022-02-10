@@ -63,7 +63,7 @@
           <NavItem
             label={route.label}
             href={route.url}
-            active={$page.url.pathname === route.url}
+            active={$page.path === route.url}
             onClick={() => (showMobileMenu = false)}
           />
         {/if}
