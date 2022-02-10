@@ -2,12 +2,11 @@
   import { onMount } from 'svelte';
   import Button from '$lib/common/Button.svelte';
   import { page } from '$app/stores';
-  import MdMenu from 'svelte-icons/md/MdMenu.svelte';
-  import MdClose from 'svelte-icons/md/MdClose.svelte';
   import clsx from 'clsx';
   import NavItem from '$lib/header/NavItem.svelte';
   import { breakpoints } from '$lib/static/breakpoints';
   import data from '$lib/static/data';
+  import Icon from '$lib/common/Icon.svelte';
 
   // Show mobile icon and display menu
   let showMobileMenu = false;
@@ -45,12 +44,13 @@
       </a>
       <button
         on:click={handleMobileIconClick}
-        class="btn btn-md btn-ghost btn-circle cursor-pointer lg:hidden"
+        class="btn btn-ghost btn-circle lg:hidden"
+        aria-label="Open or close toggle menu"
       >
         {#if showMobileMenu}
-          <MdClose />
+          <Icon type="close" color="text-textLight" />
         {:else}
-          <MdMenu />
+          <Icon type="menu" color="text-textLight" />
         {/if}
       </button>
     </div>

@@ -32,7 +32,9 @@
     | 'settings'
     | 'compass'
     | 'warehouse'
-    | 'brush';
+    | 'brush'
+    | 'menu'
+    | 'close';
 </script>
 
 <script lang="ts">
@@ -66,6 +68,8 @@
   import FaDraftingCompass from 'svelte-icons/fa/FaDraftingCompass.svelte';
   import FaWarehouse from 'svelte-icons/fa/FaWarehouse.svelte';
   import MdBrush from 'svelte-icons/md/MdBrush.svelte';
+  import MdMenu from 'svelte-icons/md/MdMenu.svelte';
+  import MdClose from 'svelte-icons/md/MdClose.svelte';
   import clsx from 'clsx';
   import LazyImage from './LazyImage.svelte';
 
@@ -140,5 +144,9 @@
     <FaWarehouse />
   {:else if type === 'brush'}
     <MdBrush />
+  {:else if type === 'menu'}
+    <MdMenu />
+  {:else if type === 'close'}
+    <MdClose />
   {/if}
 </div>

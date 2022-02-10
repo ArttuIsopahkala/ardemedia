@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Vuokraa Full Stack -koodari projektiisi! | Arde Media</title>
+  <title>Vuokraa Full Stack -koodari käyttöösi! | Arde Media</title>
 </svelte:head>
 
 <section class="shadow-md pt-5 px-5 xl:px-0 mb-0.5">
@@ -28,7 +28,7 @@
     <div>
       <h1 class="my-5">Etkö vielä vakuuttunut?</h1>
       <p class="my-5">Antaa todisteiden puhua puolestaan!</p>
-      <Button text="Portfolioon" size="sm:btn-lg" onClick={() => goto("/portfolio")}/>
+      <Button text="Portfolioon" size="btn-sm sm:btn-lg" onClick={() => goto("/portfolio")}/>
     </div>
     <Divider />
     <Company />

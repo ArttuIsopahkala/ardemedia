@@ -149,9 +149,9 @@
       >
         <h2 class="portfolio-title">Ohjelmistojen suunnittelija</h2>
         <p>
-          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistolle tai sen
-          ominaisuuksille nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
-          UI/UX-suunnitelmat.
+          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistoille 
+          nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
+          UI-suunnitelmat.
         </p>
         {#if toggle === 'right' && windowWith > breakpoints.lg}
           <div
