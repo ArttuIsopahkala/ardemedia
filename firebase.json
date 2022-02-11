@@ -12,7 +12,9 @@
         "function": "ssrServer"
       }
     ],
-    "predeploy": ["npm run build"]
+    "predeploy": [
+      "npm run build"
+    ]
   },
   "functions": {
     "source": "functions",
@@ -32,5 +34,9 @@
     "ui": {
       "enabled": true
     }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }

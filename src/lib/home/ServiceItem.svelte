@@ -36,7 +36,7 @@
     </p>
     <slot name="techs" />
     <span class="my-2 text-sm"
-      >Huom! Myös teidän työkalut ja teknologiat ovat opeteltavissa &#9996; &#128640;</span
+      >Huom! Myös teidän työkalut ja teknologiat ovat opeteltavissa &#128640;</span
     >
     <div class="card-actions flex">
       <Button text="Lisätietoa palvelusta" onClick={handleReadMore} />

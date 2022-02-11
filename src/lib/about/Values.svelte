@@ -57,7 +57,7 @@
         </p>
       {:else if selectedValue === 'kunnioitus'}
         <p in:fade={{ duration: 300 }}>
-          Jokainen ihminen ansaitsee tulla kuuluksi, eikä kenenkään toiveita tai mielipiteitä saa sivuuttaa.
+          Jokainen ihminen ansaitsee tulla kuulluksi, eikä kenenkään toiveita tai mielipiteitä saa sivuuttaa.
           Huomioonottaminen ja huumori luovat ympäristön, jossa kaikilla on hyvä olla. &#128106;
         </p>
       {/if}

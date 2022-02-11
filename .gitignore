@@ -6,5 +6,6 @@ node_modules
 .env
 .env.*
 src/lib/static/firebaseConfig.js
-firestore-debug.log
 /.firebase
+/firestore-mock-data
+*.log
