@@ -3,7 +3,7 @@
   import Design from '$lib/services/Design.svelte';
   import Development from '$lib/services/Development.svelte';
   import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
-  import { selectedService } from './../store.js';
+  import { selectedService } from '../store.js';
 
   let selectedValue: string = $selectedService;
 

@@ -3,7 +3,7 @@
   import Icon from '$lib/common/Icon.svelte';
   import Form from '$lib/contact/Form.svelte';
   import NoteItem from '$lib/contact/NoteItem.svelte';
-  import { availableDate } from './../store.js';
+  import { availableDate } from '../store.js';
 
   // Future feature
 /*   const isFutureDate = (dateString: string) => {

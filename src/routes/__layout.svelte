@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GdprBanner from '$lib/common/GdprBanner.svelte';
   import Footer from '$lib/footer/Footer.svelte';
   import Header from '$lib/header/Header.svelte';
   import { db } from '$lib/static/firebase';
@@ -11,8 +12,9 @@
     designPricePerFeature,
     designPriceWithUI,
     devPrice,
-    devPriceHigh
-  } from './../store.js';
+    devPriceHigh,
+    gdprVersion
+  } from '../store.js';
 
   onMount(() => {
     if (!$devPrice) {
@@ -29,6 +31,10 @@
           // Set contact data to store
           const contactData = data.docs.find((doc) => doc.id === 'contact')?.data();
           availableDate.set(contactData['availableDate']);
+
+          // GDPR document version number
+          const commonData = data.docs.find((doc) => doc.id === 'common')?.data();
+          gdprVersion.set(commonData['gdprVersion']);
         })
         .catch((error) => {
           console.log(error);
@@ -37,7 +43,6 @@
   });
 </script>
 
-<!-- <GdprBanner/> -->
 <div class="w-full h-auto">
   <Header />
   <!-- footer 330px + padding bottom 70px = 400px -->
@@ -48,3 +53,4 @@
   </main>
   <Footer />
 </div>
+<GdprBanner />

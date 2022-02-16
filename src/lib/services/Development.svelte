@@ -5,7 +5,7 @@
   import Icon from '$lib/common/Icon.svelte';
   import TechSection from '$lib/common/TechSection.svelte';
   import { fade } from 'svelte/transition';
-  import { devPrice, devPriceHigh } from './../../store.js';
+  import { devPrice, devPriceHigh } from '../../store.js';
   import PriceItem from './PriceItem.svelte';
   import ServiceSection from './ServiceSection.svelte';
 </script>

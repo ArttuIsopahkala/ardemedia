@@ -5,7 +5,7 @@
   import Divider from '$lib/common/Divider.svelte';
   import Icon from '$lib/common/Icon.svelte';
   import { fade } from 'svelte/transition';
-  import { designPriceHour } from './../../store.js';
+  import { designPriceHour } from '../../store.js';
   import PriceItem from './PriceItem.svelte';
   import ServiceSection from './ServiceSection.svelte';
   import LazyImage from '$lib/common/LazyImage.svelte';

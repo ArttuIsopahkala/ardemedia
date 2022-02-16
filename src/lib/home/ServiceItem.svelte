@@ -8,7 +8,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import Button from '$lib/common/Button.svelte';
-  import { selectedService } from './../../store.js';
+  import { selectedService } from '../../store.js';
 
   export let id: string = '';
   export let serviceName: string = '';

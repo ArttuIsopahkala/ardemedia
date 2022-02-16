@@ -30,6 +30,7 @@
         />
         <SomeButton icon="youtube" url="https://www.youtube.com/pehrehvind" label="Youtube" />
       </div>
+      <a class="link text-sm mt-5" href="/cookies">Evästepolitiikka</a>
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       {#each data.ROUTES as route}

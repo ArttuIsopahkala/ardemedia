@@ -7,6 +7,7 @@
   export let secondary: boolean = false;
   export let hideArrow: boolean = false;
   export let size: string = '';
+  export let style: string = '';
 </script>
 
 <button
@@ -16,6 +17,7 @@
     outlined && 'btn-outline bg-base-100',
     secondary ? 'btn-neutral no-animation' : 'w-fit btn-primary',
     size || 'btn-sm sm:btn-md',
+    style
   )}
 >
   {text} {secondary || hideArrow ? '' : ' →'}

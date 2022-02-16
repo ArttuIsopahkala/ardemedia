@@ -34,7 +34,8 @@
     | 'warehouse'
     | 'brush'
     | 'menu'
-    | 'close';
+    | 'close'
+    | 'cookie';
 </script>
 
 <script lang="ts">
@@ -70,6 +71,7 @@
   import MdBrush from 'svelte-icons/md/MdBrush.svelte';
   import MdMenu from 'svelte-icons/md/MdMenu.svelte';
   import MdClose from 'svelte-icons/md/MdClose.svelte';
+  import FaCookieBite from 'svelte-icons/fa/FaCookieBite.svelte';
   import clsx from 'clsx';
   import LazyImage from './LazyImage.svelte';
 
@@ -148,5 +150,7 @@
     <MdMenu />
   {:else if type === 'close'}
     <MdClose />
+  {:else if type === 'cookie'}
+    <FaCookieBite />
   {/if}
 </div>

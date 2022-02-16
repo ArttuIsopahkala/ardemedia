@@ -18,7 +18,7 @@
     "start:functions": "npm run watch --prefix functions"
   },
   "devDependencies": {
-    "@beyonk/gdpr-cookie-consent-banner": "^9.0.3",
+    "@beyonk/svelte-google-analytics": "^2.2.0",
     "@sveltejs/kit": "1.0.0-next.180",
     "@tailwindcss/typography": "^0.5.0",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
