@@ -11,8 +11,6 @@ export const designPricePerFeature = writable();
 export const designPriceWithUI = writable();
 
 // For app
-export const selectedService = writable('development');
-
 export const gdprVersion = writable();
 
 export const gdprSettings = writable(browser && JSON.parse(localStorage.getItem("gdprSettings")) || {

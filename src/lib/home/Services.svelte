@@ -14,8 +14,7 @@
       label="Ohjelmistokehitys"
       description="Web- ja mobiilisovellusten kehittämistä lähes 10 vuoden kokemuksella. Voit sijoittaa minut tiimiisi lisäkäsiksi tai erillistä projektia kehittämään. 
       Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita täysin itsenäisestikin."
-      href="/services"
-      id="development"
+      href="/development"
     >
       <TechSection
         slot="techs"
@@ -40,8 +39,7 @@
   nykyisen työn tekninen dokumentaatio. Suunnitelma voidaan toteuttaa
   vaatimusmäärittelyillä suosimaasi projektinhallintajärjestelmään. Suunnitelma voi sisältää
   ominaisuuksien yleiset ja tekniset kuvaukset, arkkitehtuurikaaviot sekä mahdolliset käyttöliittymäkuvat."
-      href="/services"
-      id="design"
+      href="/design"
     >
       <TechSection
         slot="techs"

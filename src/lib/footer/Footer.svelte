@@ -1,6 +1,5 @@
 <script lang="ts">
   import Icon from '$lib/common/Icon.svelte';
-  import data from '$lib/static/data';
   import FooterLink from './FooterLink.svelte';
   import SomeButton from './SomeButton.svelte';
 </script>
@@ -13,8 +12,8 @@
     <Icon type="up" color="text-base-300" />
   </div>
   <div class="max-w-3xl w-full flex flex-row justify-between flex-wrap">
-    <div class="flex flex-col p-5 xl:p-0">
-      <h3 class="text-base-300">Arde Media</h3>
+    <div class="flex flex-col p-5 mt-2 xl:p-0">
+      <h3 class="text-base-300 mb-5">Arde Media</h3>
       <span>Y-tunnus: 2945862-1</span>
       <div class="flex flex-row gap-5 mt-4">
         <SomeButton
@@ -30,12 +29,19 @@
         />
         <SomeButton icon="youtube" url="https://www.youtube.com/pehrehvind" label="Youtube" />
       </div>
-      <a class="link text-sm mt-5" href="/cookies">Evästepolitiikka</a>
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
-      {#each data.ROUTES as route}
-        <FooterLink label={route.label} href={route.url} />
-      {/each}
+      <h3 class="p-2 text-base-300">Palvelut</h3>
+      <FooterLink label={'Ohjelmistokehitys'} href={'/development'} />
+      <FooterLink label={'Ohjelmistojen suunnittelu'} href={'/design'} />
+    </div>
+    <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
+      <h3 class="p-2 text-base-300">Pikalinkit</h3>
+      <FooterLink label="Etusivu" href={'/'} />
+      <FooterLink label="Tietoa minusta" href={'/about'} />
+      <FooterLink label="Portfolio" href={'/portfolio'} />
+      <FooterLink label="Ota yhteyttä!" href={'/contact'} />
+      <FooterLink label="Evästepolitiikka" href={'/cookies'} />
     </div>
   </div>
   <div>
