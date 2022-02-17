@@ -7,11 +7,15 @@
 </script>
 
 <script lang="ts">
-  import Button from './Button.svelte';
-  import { gdprSettings, gdprVersion } from '../../store.js';
   import config from '$lib/static/firebaseConfig.js';
-  import Icon from './Icon.svelte';
   import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
+  import { onMount } from 'svelte';
+  import { gdprSettings, gdprVersion } from '../../store.js';
+  import Button from './Button.svelte';
+  import Icon from './Icon.svelte';
+
+  let pageLoaded = false;
+  onMount(() => (pageLoaded = true));
 
   let currentSettings: GdprSettings = $gdprSettings;
   let analyticsCheck = $gdprSettings.analytics;
@@ -55,7 +59,7 @@
   enabled={currentSettings.analytics}
 />
 
-{#if currentSettings.show || ($gdprVersion && currentSettings.version < $gdprVersion)}
+{#if pageLoaded && (currentSettings.show || ($gdprVersion && currentSettings.version < $gdprVersion))}
   <div
     class="border flex flex-col fixed z-[99999] bg-base-100 p-5 shadow-lg bottom-0 right-0 m-5 max-w-lg"
   >
@@ -64,8 +68,9 @@
       <Icon type="cookie" />
     </div>
     <p class="py-3 text-base">
-      Tällä sivustolla käytetään evästeitä. Hyväksy evästeet, jotta sivuston käyttö olisi sujuvaa ja sen kehittäminen helpompaa.
-      Evästeitä ei käytetä kohdennettuun mainontaan eikä ne sisällä henkilötietoja.
+      Tällä sivustolla käytetään evästeitä. Hyväksy evästeet, jotta sivuston käyttö olisi sujuvaa ja
+      sen kehittäminen helpompaa. Evästeitä ei käytetä kohdennettuun mainontaan eikä ne sisällä
+      henkilötietoja.
       <a class="link" href="/cookies">Lue lisää</a>
     </p>
     {#if showSettings}
