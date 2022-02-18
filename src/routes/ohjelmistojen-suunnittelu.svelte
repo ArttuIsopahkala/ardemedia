@@ -163,7 +163,7 @@
         text="Ota yhteyttä"
         size="sm:btn-lg"
         outlined={false}
-        onClick={() => goto('/contact')}
+        onClick={() => goto('/ota-yhteytta')}
       />
     </div>
   </div></Container

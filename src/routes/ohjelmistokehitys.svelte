@@ -1,20 +1,25 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import Button from '$lib/common/Button.svelte';
+  import Container from '$lib/common/Container.svelte';
   import Divider from '$lib/common/Divider.svelte';
   import Icon from '$lib/common/Icon.svelte';
   import TechSection from '$lib/common/TechSection.svelte';
-  import { fade } from 'svelte/transition';
-  import { devPrice, devPriceHigh } from '../../store.js';
-  import PriceItem from './PriceItem.svelte';
-  import ServiceSection from './ServiceSection.svelte';
+  import PriceItem from '$lib/services/PriceItem.svelte';
+  import ServiceSection from '$lib/services/ServiceSection.svelte';
+  import { devPrice,devPriceHigh } from '../store.js';
 </script>
 
-<div class="" in:fade={{ duration: 300 }}>
+<svelte:head>
+  <title>Ohjelmistokehitys | Arde Media</title>
+</svelte:head>
+
+<Container>
   <div>
+    <h1 class="portfolio-title pt-8">Ohjelmistokehitys</h1>
     <h4 class="mark">Arde kehittää</h4>
     <h1 class="pt-5">Timanttista <span class="mark">koodia</span> yritykseesi</h1>
-    <div class="flex flex-wrap justify-between">
+    <div class="flex flex-wrap justify-between pt-5">
       <ServiceSection
         title="Web-sovellukset"
         desc="Sijoita minut tiimiisi lisäkäsiksi tehostamaan kehitystyötänne. Full Stack -koodarina osaan toteuttaa kokonaisia web-sovelluksia itsenäisestikin."
@@ -74,7 +79,10 @@
             techs:
               'API Gateway, Cognito, Cloudfront, DynamoDB, Lambda, S3, EC2, CloudFormation, Route 53, IAM, Certificate Manager, KMS, CloudWatch'
           },
-          { title: 'Firebase', techs: 'Realtime database, Firestore, Storage, Functions, Hosting' }
+          {
+            title: 'Firebase',
+            techs: 'Realtime database, Firestore, Storage, Functions, Hosting'
+          }
         ]}
       />
     </ServiceSection>
@@ -149,7 +157,7 @@
       text="Ota yhteyttä"
       size="sm:btn-lg"
       outlined={false}
-      onClick={() => goto('/contact')}
+      onClick={() => goto('/ota-yhteytta')}
     />
   </div>
-</div>
+</Container>

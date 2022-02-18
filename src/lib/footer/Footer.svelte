@@ -32,16 +32,16 @@
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Palvelut</h3>
-      <FooterLink label={'Ohjelmistokehitys'} href={'/development'} />
-      <FooterLink label={'Ohjelmistojen suunnittelu'} href={'/design'} />
+      <FooterLink label={'Ohjelmistokehitys'} href={'/ohjelmistokehitys'} />
+      <FooterLink label={'Ohjelmistojen suunnittelu'} href={'/ohjelmistojen-suunnittelu'} />
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Pikalinkit</h3>
       <FooterLink label="Etusivu" href={'/'} />
-      <FooterLink label="Tietoa minusta" href={'/about'} />
+      <FooterLink label="Tietoa minusta" href={'/tietoa-minusta'} />
       <FooterLink label="Portfolio" href={'/portfolio'} />
-      <FooterLink label="Ota yhteyttä!" href={'/contact'} />
-      <FooterLink label="Evästepolitiikka" href={'/cookies'} />
+      <FooterLink label="Ota yhteyttä!" href={'/ota-yhteytta'} />
+      <FooterLink label="Evästepolitiikka" href={'/evasteet'} />
     </div>
   </div>
   <div>

@@ -54,14 +54,14 @@
       <div class={clsx('flex flex-col justify-center lg:hidden')}>
         <NavItem
           label={'Ohjelmistokehitys'}
-          href={'/development'}
-          active={$page.path === '/development'}
+          href={'/ohjelmistokehitys'}
+          active={$page.path === '/ohjelmistokehitys'}
           onClick={() => (showMobileMenu = false)}
         />
         <NavItem
           label={'Ohjelmistojen suunnittelu'}
-          href={'/design'}
-          active={$page.path === '/design'}
+          href={'/ohjelmistojen-suunnittelu'}
+          active={$page.path === '/ohjelmistojen-suunnittelu'}
           onClick={() => (showMobileMenu = false)}
         />
       </div>
@@ -72,7 +72,7 @@
             'flex justify-center items-center w-full p-4 text-base transition-all',
             'lg:px-6 lg:w-auto lg:inline-flex',
             'hover:text-primary',
-            ($page.path === '/development' || $page.path === '/design') && 'text-primary'
+            ($page.path === '/ohjelmistokehitys' || $page.path === '/ohjelmistojen-suunnittelu') && 'text-primary'
           )}
         >
           Palvelut &#11206;
@@ -83,22 +83,22 @@
         >
           <NavItem
             label={'Ohjelmistokehitys'}
-            href={'/development'}
-            active={$page.path === '/development'}
+            href={'/ohjelmistokehitys'}
+            active={$page.path === '/ohjelmistokehitys'}
             onClick={() => (showMobileMenu = false)}
           />
           <NavItem
             label={'Ohjelmistojen suunnittelu'}
-            href={'/design'}
-            active={$page.path === '/design'}
+            href={'/ohjelmistojen-suunnittelu'}
+            active={$page.path === '/ohjelmistojen-suunnittelu'}
             onClick={() => (showMobileMenu = false)}
           />
         </div>
       </div>
       <NavItem
         label={'Tietoa minusta'}
-        href={'/about'}
-        active={$page.path === '/about'}
+        href={'/tietoa-minusta'}
+        active={$page.path === '/tietoa-minusta'}
         onClick={() => (showMobileMenu = false)}
       />
       <NavItem
@@ -110,7 +110,7 @@
       <a
         class={clsx('flex justify-center items-center my-5 w-full ', 'lg:w-auto lg:my-0 lg:mx-5')}
         on:click={() => (showMobileMenu = false)}
-        href={'/contact'}
+        href={'/ota-yhteytta'}
       >
         <Button text={'Ota yhteyttä'} outlined={false} />
       </a>

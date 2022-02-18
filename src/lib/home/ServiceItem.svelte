@@ -13,10 +13,11 @@
   export let label: string = '';
   export let href: string = '/';
   export let description: string = '';
+  export let id: string;
 
 </script>
 
-<div class="card shadow-md bg-base-100 w-full md:w-[calc(50%-10px)]">
+<div {id} class="card shadow-md bg-base-100 w-full md:w-[calc(50%-10px)]">
   <figure class="hidden md:flex">
     <slot name="image" />
   </figure>

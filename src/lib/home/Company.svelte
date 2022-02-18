@@ -17,7 +17,7 @@
         on koukuttavaa puuhaa ja ohjelmistoja rakentamalla saan mielihyvää onnistumisen tunteista.
         Toivottavasti pääsen kehittämään teidänkin yritystä!
       </p>
-      <Button text="Lisätietoa minusta" onClick={() => goto('/about')} />
+      <Button text="Lisätietoa minusta" onClick={() => goto('/tietoa-minusta')} />
     </div>
     <div class="hidden lg:flex justify-center p-6 md:w-1/2">
       <LazyImage style="max-h-[300px]" src={'muotokuva.png'} alt="muotokuva" />

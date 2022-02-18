@@ -71,7 +71,7 @@
       Tällä sivustolla käytetään evästeitä. Hyväksy evästeet, jotta sivuston käyttö olisi sujuvaa ja
       sen kehittäminen helpompaa. Evästeitä ei käytetä kohdennettuun mainontaan eikä ne sisällä
       henkilötietoja.
-      <a class="link" href="/cookies">Lue lisää</a>
+      <a class="link" href="/evasteet">Lue lisää</a>
     </p>
     {#if showSettings}
       <div class="form-control mb-5">
