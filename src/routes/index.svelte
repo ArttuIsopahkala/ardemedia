@@ -9,10 +9,11 @@
   import References from '$lib/home/References.svelte';
   import Services from '$lib/home/Services.svelte';
   import Container from '$lib/common/Container.svelte';
+  import ROUTES from '$lib/static/routes';
 </script>
 
 <svelte:head>
-  <title>Vuokraa Full Stack -koodari käyttöösi! | Arde Media</title>
+  <title>Vuokraa Full Stack -kehittäjä käyttöösi! | Arde Media</title>
 </svelte:head>
 
 <section class="shadow-md pt-5 px-5 xl:px-0 mb-0.5">
@@ -28,9 +29,8 @@
     <div>
       <h1 class="my-5">Etkö vielä vakuuttunut?</h1>
       <p class="my-5">Antaa todisteiden puhua puolestaan!</p>
-      <Button text="Portfolioon" size="btn-sm sm:btn-lg" onClick={() => goto("/portfolio")}/>
+      <Button text="Portfolioon" size="btn-sm sm:btn-lg" onClick={() => goto(ROUTES.portfolio)} />
     </div>
-    <Divider />
     <Company />
     <Values />
     <Divider />
@@ -40,18 +40,8 @@
         text="Ota yhteyttä"
         size="sm:btn-lg"
         outlined={false}
-        onClick={() => goto('/ota-yhteytta')}
+        onClick={() => goto(ROUTES.contact)}
       />
     </div>
   </div>
 </Container>
-<!-- <section
-  class="bg-background bg-none"
->
-  <section
-    class="container mx-auto max-w-5xl pb-10 px-5 xl:px-0 flex flex-col mt-14 gap-14 "
-  >
-    
-  </section>
-</section>
- -->

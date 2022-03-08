@@ -1,16 +1,23 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import Button from '$lib/common/Button.svelte';
-  import Container from '$lib/common/Container.svelte';
   import Collapse from '$lib/common/Collapse.svelte';
+  import Container from '$lib/common/Container.svelte';
   import Divider from '$lib/common/Divider.svelte';
   import Icon from '$lib/common/Icon.svelte';
-  import { fade } from 'svelte/transition';
-  import { designPriceHour } from '../store.js';
-  import PriceItem from '$lib/services/PriceItem.svelte';
-  import ServiceSection from '$lib/services/ServiceSection.svelte';
   import LazyImage from '$lib/common/LazyImage.svelte';
   import TechSection from '$lib/common/TechSection.svelte';
+  import PriceItem from '$lib/services/PriceItem.svelte';
+  import ServiceSection from '$lib/services/ServiceSection.svelte';
+  import { ServicesOptions } from '$lib/static/firestore';
+  import ROUTES from '$lib/static/routes';
+  import { options } from '../store';
+
+  let services: ServicesOptions;
+
+  options.subscribe(options => {
+    services = options.services;
+  });
 </script>
 
 <svelte:head>
@@ -124,7 +131,7 @@
     <div class="py-5">
       <h2 class=" mb-3">Hinta</h2>
       <div class="flex flex-row gap-5">
-        <PriceItem price={$designPriceHour} list={['Tuntihinnalla']} />
+        <PriceItem price={services.designPriceHour} list={['Tuntihinnalla']} />
         <!-- <PriceItem price={$designPricePerFeature} list={[$designPriceWithUI]} /> -->
       </div>
     </div>
@@ -163,7 +170,7 @@
         text="Ota yhteyttä"
         size="sm:btn-lg"
         outlined={false}
-        onClick={() => goto('/ota-yhteytta')}
+        onClick={() => goto(ROUTES.contact)}
       />
     </div>
   </div></Container

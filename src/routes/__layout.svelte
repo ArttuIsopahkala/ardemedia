@@ -1,45 +1,37 @@
 <script lang="ts">
+  import { metadataToPost, PostItem, sortByCreatedDate } from '$lib/blog/Post.svelte';
   import GdprBanner from '$lib/common/GdprBanner.svelte';
   import Footer from '$lib/footer/Footer.svelte';
   import Header from '$lib/header/Header.svelte';
-  import { db } from '$lib/static/firebase';
-  import { collection, getDocs } from 'firebase/firestore';
+  import { getLikes, getOptions } from '$lib/static/firestore';
   import { onMount } from 'svelte';
   import '../app.css';
-  import {
-    availableDate,
-    designPriceHour,
-    designPricePerFeature,
-    designPriceWithUI,
-    devPrice,
-    devPriceHigh,
-    gdprVersion
-  } from '../store.js';
+  import { likesData, options, posts } from '../store';
+  import '../theme/prism.css';
 
-  onMount(() => {
-    if (!$devPrice) {
-      getDocs(collection(db, 'options'))
-        .then((data) => {
-          // Set service data to store
-          const servicesData = data.docs.find((doc) => doc.id === 'services')?.data();
-          devPrice.set(servicesData['devPrice']);
-          devPriceHigh.set(servicesData['devPriceHigh']);
-          designPriceHour.set(servicesData['designPriceHour']);
-          designPricePerFeature.set(servicesData['designPricePerFeature']);
-          designPriceWithUI.set(servicesData['designPriceWithUI']);
+  onMount(async () => {
+    // Load blog posts
+    if ($posts.length === 0) {
+      const likes = await getLikes();
+      likesData.set(likes);
 
-          // Set contact data to store
-          const contactData = data.docs.find((doc) => doc.id === 'contact')?.data();
-          availableDate.set(contactData['availableDate']);
-
-          // GDPR document version number
-          const commonData = data.docs.find((doc) => doc.id === 'common')?.data();
-          gdprVersion.set(commonData['gdprVersion']);
+      let localPosts: PostItem[] = await Promise.all(
+        Object.entries(import.meta.glob('./blogi/*.md')).map(async ([path, page]) => {
+          const { metadata } = await page();
+          const slug = path.split('/').pop().split('.').shift();
+          const readingTimeInMinutes = metadata.words ? Math.round(metadata.words / 195) : 0;
+          let likesCount: number = likes[slug] ? likes[slug] : 0;
+          return metadataToPost(slug, metadata, readingTimeInMinutes, likesCount);
         })
-        .catch((error) => {
-          console.log(error);
-        });
+      );
+      localPosts = sortByCreatedDate(localPosts);
+
+      posts.set(localPosts);
     }
+
+    // Load prices and common data
+    const data = await getOptions();
+    options.set(data);
   });
 </script>
 

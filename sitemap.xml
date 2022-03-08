@@ -5,7 +5,7 @@
       https://ardemedia.fi/
     </loc>
     <lastmod>
-      2022-02-17
+      2022-03-08
     </lastmod>
     <priority>
       1.00
@@ -50,6 +50,28 @@
     </loc>
     <lastmod>
       2022-02-17
+    </lastmod>
+    <priority>
+      0.80
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://ardemedia.fi/blogi
+    </loc>
+    <lastmod>
+      2022-03-08
+    </lastmod>
+    <priority>
+      0.80
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://ardemedia.fi/blogi/kuinka-minusta-tuli-koodari
+    </loc>
+    <lastmod>
+      2022-03-08
     </lastmod>
     <priority>
       0.80

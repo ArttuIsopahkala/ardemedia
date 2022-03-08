@@ -1,12 +1,9 @@
 <script lang="ts">
-  import clsx from 'clsx';
+	import clsx from 'clsx';
 
-  export let vertical: boolean = false;
+	export let vertical: boolean = false;
 </script>
 
-<div
-  class={clsx(
-    'divider before:bg-primary after:bg-primary opacity-50',
-    vertical && 'divider-vertical'
-  )}
-/>
+<div class={clsx('divider before:bg-primary after:bg-primary', vertical && 'divider-horizontal')}>
+	<slot />
+</div>

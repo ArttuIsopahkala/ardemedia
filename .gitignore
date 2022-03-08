@@ -9,3 +9,4 @@ src/lib/static/firebaseConfig.js
 /.firebase
 /firestore-mock-data
 *.log
+firebase-export-*

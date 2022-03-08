@@ -20,7 +20,7 @@
   ];
 </script>
 
-<div class="overflow-x-auto shadow-lg">
+<div class="overflow-x-auto shadow-lg bg-base-100">
   <table class="table w-full table-zebra">
     <tbody>
       {#each items as item}

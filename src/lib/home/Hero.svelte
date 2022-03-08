@@ -80,7 +80,7 @@
 
 <div id="hero" class="flex flex-col justify-center items-center pb-[50px]">
   <h1 class="mb-10 text-center text-3xl md:text-4xl xl:text-5xl">
-    Vuokraa <span class="mark gradient">Full Stack</span> -koodari käyttöösi!
+    Vuokraa <span class="mark gradient">Full Stack</span> -kehittäjä käyttöösi!
   </h1>
   <div
     on:mousemove={handleMousemove}
@@ -97,8 +97,8 @@
         )}
       >
         <img class={clsx('max-h-[500px]')} src={image} alt="muotokuva" />
-        <h2 class="text-primary mt-4">ARTTU ISOPAHKALA</h2>
-        <h4 class="font-normal">Full Stack Developer</h4>
+        <h2 class="text-primary mt-4">Arttu Isopahkala</h2>
+        <p class="">Freelance Full Stack Developer</p>
       </div>
 
       <!-- VASEN PUOLI -->
@@ -120,27 +120,25 @@
           käyttöliittymät että älykkäät ja tehokkaat taustapalvelut.
         </p>
         {#if toggle === 'left' && windowWith > breakpoints.lg}
-        <div
-        class="mockup-code mt-5 transition-opacity duration-300"
-        in:slide={{ duration: 300 }}
-        out:slide={{ duration: 300 }}
-      >
-        <pre data-prefix=">" class="flex">
+          <div
+            class="mockup-code mt-5 transition-opacity duration-300"
+            in:slide={{ duration: 300 }}
+            out:slide={{ duration: 300 }}
+          >
+            <pre data-prefix=">" class="flex">
         <code in:typewriter={{ delay: 300 }}>console.log("Hello world!");</code>
       </pre>
-        <pre data-prefix=">" class="flex text-success">
+            <pre data-prefix=">" class="flex text-success">
         <code in:fade={{ duration: 0, delay: 1300 }}>Hello world!</code>
       </pre>
-      </div>
+          </div>
         {/if}
       </div>
       <!-- OIKEA PUOLI -->
       <div
         in:fly={{ x: 200, duration: 500, delay: 300 }}
         on:click={() =>
-          document
-            .getElementById('design')
-            .scrollIntoView({ block: 'start', behavior: 'smooth' })}
+          document.getElementById('design').scrollIntoView({ block: 'start', behavior: 'smooth' })}
         class={clsx(
           'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
           'lg:min-h-[350px] lg:w-1/3 lg:order-3',
@@ -149,9 +147,8 @@
       >
         <h2 class="portfolio-title">Ohjelmistojen suunnittelija</h2>
         <p>
-          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistoille 
-          nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset
-          UI-suunnitelmat.
+          Muunnan kehitystarpeen tai idean tekniseen muotoon. Suunnittelen ohjelmistoille
+          nykyaikaiset teknologiaratkaisut sekä taiteilen käyttäjäystävälliset UI-suunnitelmat.
         </p>
         {#if toggle === 'right' && windowWith > breakpoints.lg}
           <div

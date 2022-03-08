@@ -3,10 +3,16 @@
   import Icon from '$lib/common/Icon.svelte';
   import Form from '$lib/contact/Form.svelte';
   import NoteItem from '$lib/contact/NoteItem.svelte';
-  import { availableDate } from '../store.js';
+  import { options } from '../store';
+
+  let availableDate: string;
+
+  options.subscribe((options) => {
+    availableDate = options.contact.availableDate;
+  });
 
   // Future feature
-/*   const isFutureDate = (dateString: string) => {
+  /*   const isFutureDate = (dateString: string) => {
     const today = new Date();
     const compare = new Date(dateString);
     console.log("dateString",compare)
@@ -25,8 +31,15 @@
   <div class="flex flex-row flex-wrap justify-between">
     <NoteItem description="Voin aloittaa seuraavan projektin">
       <Icon slot="icon" type="calendar" />
-      <h2 slot="extra" class='text-primary'>
-        {$availableDate ?? '-'}
+      <h2
+        slot="extra"
+        class="text-primary"
+        on:click={() =>
+          document
+            .getElementById('contactBox')
+            .scrollIntoView({ block: 'center', behavior: 'smooth' })}
+      >
+        {availableDate ?? '-'}
         <!-- {#if isFutureDate($availableDate)}
           {$availableDate}
         {:else}
@@ -50,7 +63,7 @@
       <Icon slot="icon" type="language" />
     </NoteItem>
   </div>
-  <div class="bg-card p-5 my-5">
+  <div id="contactBox" class="bg-card p-5 my-5">
     <div class="flex items-center">
       <h3 class="py-5 mr-5">Lähetä minulle viesti</h3>
       <Icon type="email" color="text-primary" />

@@ -102,9 +102,7 @@
         />
       </div>
     </div>
-    <div class="hidden">
-      <Divider />
-      <Story />
-    </div>
+    <Divider />
+    <Story />
   </div>
 </Container>

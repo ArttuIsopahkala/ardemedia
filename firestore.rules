@@ -4,8 +4,8 @@ service cloud.firestore {
     match /options/{option} {
       allow read: if true;
     }
-    match /contacts/{contact} {
-      allow create: if true;
+    match /posts/{post} {
+      allow read, write: if true;
     }
   }
 }

@@ -1,12 +1,14 @@
 <script lang="ts">
+  import Divider from '$lib/common/Divider.svelte';
   import LazyImage from '$lib/common/LazyImage.svelte';
   import TechSection from '$lib/common/TechSection.svelte';
 
   import ServiceItem from '$lib/home/ServiceItem.svelte';
+  import ROUTES from '$lib/static/routes';
 </script>
 
 <div id="services">
-  <h3 class="py-5 text-primary">Palvelut</h3>
+  <h3 class="py-5 text-primary"><Divider>Palvelut</Divider></h3>
   <h1 class="pb-5">Mitä saisi olla?</h1>
   <div class="flex flex-row flex-wrap gap-5">
     <ServiceItem
@@ -14,7 +16,7 @@
       label="Ohjelmistokehitys"
       description="Web- ja mobiilisovellusten kehittämistä lähes 10 vuoden kokemuksella. Voit sijoittaa minut tiimiisi lisäkäsiksi tai erillistä projektia kehittämään. 
       Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita täysin itsenäisestikin."
-      href="/ohjelmistokehitys"
+      href={ROUTES.development}
       id="development"
     >
       <TechSection
@@ -40,7 +42,7 @@
   nykyisen työn tekninen dokumentaatio. Suunnitelma voidaan toteuttaa
   vaatimusmäärittelyillä suosimaasi projektinhallintajärjestelmään. Suunnitelma voi sisältää
   ominaisuuksien yleiset ja tekniset kuvaukset, arkkitehtuurikaaviot sekä mahdolliset käyttöliittymäkuvat."
-      href="/ohjelmistojen-suunnittelu"
+      href={ROUTES.design}
       id="design"
     >
       <TechSection

@@ -137,7 +137,7 @@
       <Icon type="java" />
     </TechItem>
   </PortfolioItem>
-  <h1 id="mobile" class="portfolio-title">Mobiilisovellukset</h1>
+  <a id="mobile" ><h1 class="portfolio-title">Mobiilisovellukset</h1></a>
   <PortfolioItem
     title="Floorball Manager"
     year="Julkaistu 2019"

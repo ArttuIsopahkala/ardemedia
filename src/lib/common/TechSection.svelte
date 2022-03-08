@@ -1,21 +1,21 @@
 <script lang="ts" context="module">
-  export interface ServiceTech {
-    title?: string;
-    techs: string;
-  }
+	export interface ServiceTech {
+		title?: string;
+		techs: string;
+	}
 </script>
 
 <script lang="ts">
-  export let title: string = '';
-  export let techs: ServiceTech[] = [];
+	export let title: string = '';
+	export let techs: ServiceTech[] = [];
 </script>
 
 {#if title}
-  <h4 class="mb-2 text-primary">{title}</h4>
+	<h4 class="mb-2 text-primary">{title}</h4>
 {/if}
 {#each techs as tech}
-  {#if tech.title}
-    <p class="text-textDark font-semibold text-sm">{tech.title}</p>
-  {/if}
-  <p class="mb-3">{tech.techs}</p>
+	{#if tech.title}
+		<p class="text-textDark font-semibold text-sm">{tech.title}</p>
+	{/if}
+	<p class="mb-3">{tech.techs}</p>
 {/each}

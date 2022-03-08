@@ -7,7 +7,15 @@
   import TechSection from '$lib/common/TechSection.svelte';
   import PriceItem from '$lib/services/PriceItem.svelte';
   import ServiceSection from '$lib/services/ServiceSection.svelte';
-  import { devPrice,devPriceHigh } from '../store.js';
+  import { ServicesOptions } from '$lib/static/firestore';
+  import ROUTES from '$lib/static/routes';
+  import { options } from '../store';
+
+  let services: ServicesOptions;
+
+  options.subscribe(options => {
+    services = options.services;
+  });
 </script>
 
 <svelte:head>
@@ -36,7 +44,7 @@
           slot="proof"
           text="Työnäytteitä"
           size="btn-sm sm:btn-sm"
-          onClick={() => goto('/portfolio#web')}
+          onClick={() => goto(ROUTES.portfolio + '#web')}
         />
         <span class="text-xl" slot="icon">&#128187;</span>
       </ServiceSection>
@@ -53,7 +61,7 @@
           slot="proof"
           text="Työnäytteitä"
           size="btn-sm sm:btn-sm"
-          onClick={() => goto('/portfolio#mobile')}
+          onClick={() => goto(ROUTES.portfolio + '#mobile')}
         />
         <span class="text-xl" slot="icon">&#128241;</span>
       </ServiceSection>
@@ -130,9 +138,9 @@
   <div class="py-5">
     <h2 class="mb-3">Hinta</h2>
     <div class="flex flex-row gap-5">
-      <PriceItem price={$devPrice} list={['Yli kuukauden kestävät projektit']} />
+      <PriceItem price={services.devPrice} list={['Yli kuukauden kestävät projektit']} />
       <PriceItem
-        price={$devPriceHigh}
+        price={services.devPriceHigh}
         list={[
           'Alle kuukauden kestävät projektit',
           'GWT projektit',
@@ -157,7 +165,7 @@
       text="Ota yhteyttä"
       size="sm:btn-lg"
       outlined={false}
-      onClick={() => goto('/ota-yhteytta')}
+      onClick={() => goto(ROUTES.contact)}
     />
   </div>
 </Container>

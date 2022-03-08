@@ -3,6 +3,7 @@
   import Button from '$lib/common/Button.svelte';
   import Icon from '$lib/common/Icon.svelte';
   import NavItem from '$lib/header/NavItem.svelte';
+  import ROUTES from '$lib/static/routes';
   import clsx from 'clsx';
 
   // Show mobile icon and display menu
@@ -25,7 +26,7 @@
     )}
   >
     <div class="flex justify-between items-center p-3 h-[60px]">
-      <a on:click={() => (showMobileMenu = false)} href={'/'}>
+      <a on:click={() => (showMobileMenu = false)} href={ROUTES.home}>
         <img class="h-[40px] p-1" src="/logo_white.png" alt="Arde Media logo" />
       </a>
       <button
@@ -46,22 +47,22 @@
     >
       <NavItem
         label={'Etusivu'}
-        href={'/'}
-        active={$page.path === '/'}
+        href={ROUTES.home}
+        active={$page.path === ROUTES.home}
         onClick={() => (showMobileMenu = false)}
       />
       <!-- Different view in mobile menu with dropdown, note lg:hidden -->
       <div class={clsx('flex flex-col justify-center lg:hidden')}>
         <NavItem
           label={'Ohjelmistokehitys'}
-          href={'/ohjelmistokehitys'}
-          active={$page.path === '/ohjelmistokehitys'}
+          href={ROUTES.development}
+          active={$page.path === ROUTES.development}
           onClick={() => (showMobileMenu = false)}
         />
         <NavItem
           label={'Ohjelmistojen suunnittelu'}
-          href={'/ohjelmistojen-suunnittelu'}
-          active={$page.path === '/ohjelmistojen-suunnittelu'}
+          href={ROUTES.design}
+          active={$page.path === ROUTES.design}
           onClick={() => (showMobileMenu = false)}
         />
       </div>
@@ -72,7 +73,7 @@
             'flex justify-center items-center w-full p-4 text-base transition-all',
             'lg:px-6 lg:w-auto lg:inline-flex',
             'hover:text-primary',
-            ($page.path === '/ohjelmistokehitys' || $page.path === '/ohjelmistojen-suunnittelu') && 'text-primary'
+            ($page.path === ROUTES.development || $page.path === ROUTES.design) && 'text-primary'
           )}
         >
           Palvelut &#11206;
@@ -83,34 +84,40 @@
         >
           <NavItem
             label={'Ohjelmistokehitys'}
-            href={'/ohjelmistokehitys'}
-            active={$page.path === '/ohjelmistokehitys'}
+            href={ROUTES.development}
+            active={$page.path === ROUTES.development}
             onClick={() => (showMobileMenu = false)}
           />
           <NavItem
             label={'Ohjelmistojen suunnittelu'}
-            href={'/ohjelmistojen-suunnittelu'}
-            active={$page.path === '/ohjelmistojen-suunnittelu'}
+            href={ROUTES.design}
+            active={$page.path === ROUTES.design}
             onClick={() => (showMobileMenu = false)}
           />
         </div>
       </div>
       <NavItem
         label={'Tietoa minusta'}
-        href={'/tietoa-minusta'}
-        active={$page.path === '/tietoa-minusta'}
+        href={ROUTES.about}
+        active={$page.path === ROUTES.about}
         onClick={() => (showMobileMenu = false)}
       />
       <NavItem
         label={'Portfolio'}
-        href={'/portfolio'}
-        active={$page.path === '/portfolio'}
+        href={ROUTES.portfolio}
+        active={$page.path === ROUTES.portfolio}
+        onClick={() => (showMobileMenu = false)}
+      />
+      <NavItem
+        label={'Blogi'}
+        href={ROUTES.blog}
+        active={$page.path === ROUTES.blog}
         onClick={() => (showMobileMenu = false)}
       />
       <a
         class={clsx('flex justify-center items-center my-5 w-full ', 'lg:w-auto lg:my-0 lg:mx-5')}
         on:click={() => (showMobileMenu = false)}
-        href={'/ota-yhteytta'}
+        href={ROUTES.contact}
       >
         <Button text={'Ota yhteyttä'} outlined={false} />
       </a>

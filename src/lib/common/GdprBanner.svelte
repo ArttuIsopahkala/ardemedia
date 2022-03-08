@@ -8,11 +8,18 @@
 
 <script lang="ts">
   import config from '$lib/static/firebaseConfig.js';
+  import ROUTES from '$lib/static/routes';
   import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
   import { onMount } from 'svelte';
-  import { gdprSettings, gdprVersion } from '../../store.js';
+  import { gdprSettings, options } from '../../store';
   import Button from './Button.svelte';
   import Icon from './Icon.svelte';
+
+  let gdprVersion: number;
+
+  options.subscribe((options) => {
+    gdprVersion = options.common.gdprVersion;
+  });
 
   let pageLoaded = false;
   onMount(() => (pageLoaded = true));
@@ -30,7 +37,7 @@
     let newSettings: GdprSettings = {
       show: false,
       analytics: true,
-      version: $gdprVersion
+      version: gdprVersion
     };
     gdprSettings.set(newSettings);
     // Init analytics
@@ -43,7 +50,7 @@
     let newSettings: GdprSettings = {
       show: false,
       analytics: analyticsCheck,
-      version: $gdprVersion
+      version: gdprVersion
     };
     gdprSettings.set(newSettings);
     // Init analytics
@@ -59,7 +66,7 @@
   enabled={currentSettings.analytics}
 />
 
-{#if pageLoaded && (currentSettings.show || ($gdprVersion && currentSettings.version < $gdprVersion))}
+{#if pageLoaded && (currentSettings.show || (gdprVersion && currentSettings.version < gdprVersion))}
   <div
     class="border flex flex-col fixed z-[99999] bg-base-100 p-5 shadow-lg bottom-0 right-0 m-5 max-w-lg"
   >
@@ -71,10 +78,14 @@
       Tällä sivustolla käytetään evästeitä. Hyväksy evästeet, jotta sivuston käyttö olisi sujuvaa ja
       sen kehittäminen helpompaa. Evästeitä ei käytetä kohdennettuun mainontaan eikä ne sisällä
       henkilötietoja.
-      <a class="link" href="/evasteet">Lue lisää</a>
+      <a class="link" href={ROUTES.cookies}>Lue lisää</a>
     </p>
     {#if showSettings}
       <div class="form-control mb-5">
+        <label class="cursor-pointer label">
+          <span class="label-text">Välttämättömät</span>
+          <input type="checkbox" class="toggle" disabled checked />
+        </label>
         <label class="cursor-pointer label">
           <span class="label-text">Google Analytics for Firebase</span>
           <input type="checkbox" class="toggle" bind:checked={analyticsCheck} />

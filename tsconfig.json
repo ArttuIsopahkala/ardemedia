@@ -3,6 +3,7 @@
     "moduleResolution": "node",
     "module": "es2020",
     "lib": ["es2020", "DOM"],
+    "types": ["svelte"],
     "target": "es2020",
     /**
       svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
@@ -30,8 +31,9 @@
       "$src": ["src"],
       "$src/*": ["src/*"],
       "$firebase": ["firebase"],
-      "$firebase/*": ["firebase/*"],
+      "$firebase/*": ["firebase/*"]
     }
   },
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/store.js"]
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/store.ts"],
+  "exclude": ["node_modules/*", "build/*"]
 }

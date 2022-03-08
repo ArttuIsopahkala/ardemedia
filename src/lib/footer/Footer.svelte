@@ -1,5 +1,6 @@
 <script lang="ts">
   import Icon from '$lib/common/Icon.svelte';
+  import ROUTES from '$lib/static/routes';
   import FooterLink from './FooterLink.svelte';
   import SomeButton from './SomeButton.svelte';
 </script>
@@ -32,16 +33,17 @@
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Palvelut</h3>
-      <FooterLink label={'Ohjelmistokehitys'} href={'/ohjelmistokehitys'} />
-      <FooterLink label={'Ohjelmistojen suunnittelu'} href={'/ohjelmistojen-suunnittelu'} />
+      <FooterLink label={'Ohjelmistokehitys'} href={ROUTES.development} />
+      <FooterLink label={'Ohjelmistojen suunnittelu'} href={ROUTES.design} />
     </div>
     <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Pikalinkit</h3>
-      <FooterLink label="Etusivu" href={'/'} />
-      <FooterLink label="Tietoa minusta" href={'/tietoa-minusta'} />
-      <FooterLink label="Portfolio" href={'/portfolio'} />
-      <FooterLink label="Ota yhteyttä!" href={'/ota-yhteytta'} />
-      <FooterLink label="Evästepolitiikka" href={'/evasteet'} />
+      <FooterLink label="Etusivu" href={ROUTES.home} />
+      <FooterLink label="Tietoa minusta" href={ROUTES.about} />
+      <FooterLink label="Portfolio" href={ROUTES.portfolio} />
+      <FooterLink label="Blogi" href={ROUTES.blog} />
+      <FooterLink label="Ota yhteyttä!" href={ROUTES.contact} />
+      <FooterLink label="Evästepolitiikka" href={ROUTES.cookies} />
     </div>
   </div>
   <div>
