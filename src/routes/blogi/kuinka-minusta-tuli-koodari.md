@@ -1,20 +1,20 @@
 ---
 title: Kuinka minusta tuli koodari?
 categories:
-  - elämänkerta
-  - lifestyle
-created: 2022-03-04
-updated:
+  - yleinen
+  - minä
+created: 2022-03-08
+updated: 2022-03-10
 description: "Mikä ohjelmoinnissa oikein viehättää ja millainen matkani koodarina on ollut pikkupojasta aina tähän päivään asti. Tämä lyhyt elämänkerta sisältää kurkistuksen ensimmäisiin nettisivuihini, koodarin opintoihini sekä työpaikkoihin."
 thumbnail: story.jpg
 words: 712
 ---
 
-Koodariksi voidaan nykyään päätyä useita erilaisia reittejä pitkin. Ohjelmistoalan piirteisiin kuuluu jatkuva oppiminen, jotta teknologian kyydissä pysyy mukana. Tästä syystä pelkkä koodarin koulutus ei aina ole välttämättömi työpaikan saamiseen, vaan itseoppineita koodareita löytyy paljon. Polkuja koodariksi löytyykin varmasti yhtä monta kuin on koodareitakin. Tässä elämänkerrallisessa tekstissä jaan oman tarinan matkastani koodariksi.
+Koodariksi voidaan nykyään päätyä useita erilaisia reittejä pitkin. Ohjelmistoalan piirteisiin kuuluu jatkuva oppiminen, jotta teknologian kyydissä pysyy mukana. Tästä syystä pelkkä koodarin koulutus ei aina ole välttämätön työpaikan saamiseen, vaan itseoppineita koodareita löytyy paljon. Polkuja koodariksi löytyykin varmasti yhtä monta kuin on koodareitakin. Tässä elämänkerrallisessa tekstissä jaan oman tarinan matkastani koodariksi.
 <br/>
 
 ### 👶 Syntyminen korpikainuuseen (1992)
-Vaikka teksti käsitteleekin matkaani koodariksi, on hyvä tietää vähän taustaa minusta. Nimeni on Arttu Isopahkala ja olen syntynyt Kajaanissa vuonna 1992. Synnyin keskimmäisenä lapsena viisihenkiseen perheeseen. Isäni on toiminut ammattikoulun opettajana sähköpuolella, josta kiinnostus teknologiaan todennäköisesti on alunperin lähtenyt. Uskon kuitenkin vakaasti, että tietokoneiden ja internetin yleistyminen nuoruudessani sekä veljeni innostus tietokoneista ovat ne suurimmat tekijät, jotka ajoivat minut teknologian pariin. Enhän halunnut jäädä veljeni varjoon yhteisen harrastuksen parissa vaan näyttää kuka edelleen on se isoveli.
+Vaikka teksti käsitteleekin matkaani koodariksi, on hyvä tietää vähän taustaa minusta. Nimeni on Arttu Isopahkala ja olen syntynyt Kajaanissa vuonna 1992. Synnyin keskimmäisenä lapsena viisihenkiseen perheeseen. Isäni on toiminut ammattikoulun opettajana sähköpuolella, josta kiinnostus teknologiaan todennäköisesti on alunperin lähtenyt. Uskon kuitenkin vakaasti, että tietokoneiden ja internetin yleistyminen nuoruudessani sekä veljeni innostus tietokoneista ovat ne suurimmat tekijät, jotka ajoivat minut teknologian pariin.
 
 <br/>
 

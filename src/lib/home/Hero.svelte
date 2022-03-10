@@ -80,7 +80,7 @@
 
 <div id="hero" class="flex flex-col justify-center items-center pb-[50px]">
   <h1 class="mb-10 text-center text-3xl md:text-4xl xl:text-5xl">
-    Vuokraa <span class="mark gradient">Full Stack</span> -kehittäjä käyttöösi!
+    Vuokraa <span class="mark">Full Stack</span> -kehittäjä käyttöösi!
   </h1>
   <div
     on:mousemove={handleMousemove}

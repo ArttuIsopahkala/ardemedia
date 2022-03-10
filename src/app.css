@@ -7,18 +7,12 @@
   .mark {
     font-family: Rampart One, sans serif;
     color: #f89b00;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: #684d24;
+    -webkit-text-stroke: 0.1px #684d24;
+    -webkit-text-fill-color: #f89b00;
+    /* -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #684d24; */
   }
-  .gradient {
-    background: -webkit-linear-gradient(45deg, #f89b00, #d98700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .stroke {
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: #684d24;
-  }
+
   .bg-card {
     @apply card;
     @apply shadow-md;
