@@ -13,7 +13,7 @@
 </svelte:head>
 
 <Container>
-  <div class="flex flex-col gap-14">
+  <div class="grid gap-10">
     <div>
       <h1 class="py-5">Olen Arttu Isopahkala, Arde Median <span class="mark">yrittäjä</span></h1>
       <div class="flex flex-row">
@@ -72,7 +72,7 @@
         ja ymmärrystä löytyy jonkin verran Facebook-markkinoinnista ja hakukoneoptimoinnista.
       </p>
     </div>
-    <div class="flex flex-row flex-wrap py-5 gap-5 sm:gap-20">
+    <div class="grid md:grid-cols-2 py-5 gap-5">
       <div class="flex-col">
         <h2 class="mark">Työpaikkoja</h2>
         <HistoryItem role="Ohjelmistokehittäjä, Yrittäjä" year="2018-" company="Arde Media" />

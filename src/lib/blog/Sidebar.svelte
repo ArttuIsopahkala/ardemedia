@@ -24,7 +24,7 @@
     class="max-w-xs justify-self-end self-start sticky m-10 hidden xl:block"
   >
     <h3 class="portfolio-title">Viimeisimmät postaukset</h3>
-    <div class="flex flex-col gap-4">
+    <div class="grid gap-4">
       {#each recentPosts as post}
         <a href={ROUTES.blog + '/' + post.url} class="link text-textDark">{post.title}</a>
       {/each}
@@ -36,7 +36,7 @@
       {/each}
     </div>
     <h3 class="portfolio-title mt-5">Linkit</h3>
-    <div class="flex flex-col gap-4">
+    <div class="grid gap-4">
       <a href={ROUTES.blog} class="link text-textDark">Kaikki postaukset</a>
       <a href={ROUTES.home} class="link text-textDark">Etusivu</a>
     </div>

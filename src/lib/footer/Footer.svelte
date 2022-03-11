@@ -16,7 +16,7 @@
     <div class="flex flex-col p-5 mt-2 xl:p-0">
       <h3 class="text-base-300 mb-5">Arde Media</h3>
       <span>Y-tunnus: 2945862-1</span>
-      <div class="flex flex-row gap-5 mt-4">
+      <div class="grid grid-flow-col gap-5 mt-4">
         <SomeButton
           icon="linkedin"
           url="https://www.linkedin.com/in/arttu-isopahkala-865557ba"
@@ -31,12 +31,12 @@
         <SomeButton icon="youtube" url="https://www.youtube.com/pehrehvind" label="Youtube" />
       </div>
     </div>
-    <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
+    <div class="flex flex-col justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Palvelut</h3>
       <FooterLink label={'Ohjelmistokehitys'} href={ROUTES.development} />
       <FooterLink label={'Ohjelmistojen suunnittelu'} href={ROUTES.design} />
     </div>
-    <div class="flex flex-col gap-2 justify-start p-5 xl:p-0">
+    <div class="flex flex-col justify-start p-5 xl:p-0">
       <h3 class="p-2 text-base-300">Pikalinkit</h3>
       <FooterLink label="Etusivu" href={ROUTES.home} />
       <FooterLink label="Tietoa minusta" href={ROUTES.about} />

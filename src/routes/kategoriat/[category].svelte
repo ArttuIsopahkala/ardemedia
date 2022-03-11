@@ -22,7 +22,7 @@
 <Blog>
   <Container>
     <h3 class="portfolio-title">Kategoria: {category}</h3>
-    <div class="flex flex-row flex-wrap gap-5">
+    <div class="grid gap-5">
       {#each filteredPosts as post}
         <Post {post} />
       {/each}

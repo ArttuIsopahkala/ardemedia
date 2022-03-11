@@ -4,13 +4,12 @@
 @tailwind utilities;
 
 @layer utilities {
-  .mark {
-    font-family: Rampart One, sans serif;
+
+ .mark {
+    font-family: Rampart one, sans serif;
+    -webkit-text-stroke: 0.04em #684d24;
+    font-weight: 400;
     color: #f89b00;
-    -webkit-text-stroke: 0.1px #684d24;
-    -webkit-text-fill-color: #f89b00;
-    /* -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: #684d24; */
   }
 
   .bg-card {

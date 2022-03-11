@@ -25,7 +25,7 @@
         <span class="text-3xl">&#128226;</span>
         <h1 class="py-5" in:fly={{ x: -100, duration: 600 }}>Oodi koodille</h1>
       </div>
-      <div class="flex flex-col gap-5">
+      <div class="grid gap-5">
         {#each $posts as post}
           <Post {post} />
         {/each}

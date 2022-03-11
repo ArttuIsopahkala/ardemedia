@@ -1,15 +1,13 @@
 <script lang="ts">
-  import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
+  import Carousel from '$lib/common/Carousel.svelte';
+  import Container from '$lib/common/Container.svelte';
+  import Divider from '$lib/common/Divider.svelte';
+  import Icon from '$lib/common/Icon.svelte';
+  import LazyVideo from '$lib/common/LazyVideo.svelte';
+  import DesignExamples from '$lib/portfolio/DesignExamples.svelte';
   import PortfolioItem from '$lib/portfolio/PortfolioItem.svelte';
   import TechItem from '$lib/portfolio/TechItem.svelte';
-  import Icon from '$lib/common/Icon.svelte';
-  import Divider from '$lib/common/Divider.svelte';
-  import Carousel from '$lib/common/Carousel.svelte';
-  import { fade } from 'svelte/transition';
-  import Container from '$lib/common/Container.svelte';
-  import LazyVideo from '$lib/common/LazyVideo.svelte';
-  import Collapse from '$lib/common/Collapse.svelte';
-  import LazyImage from '$lib/common/LazyImage.svelte';
+  import Selector,{ SelectorItem } from '$lib/services/Selector.svelte';
 
   let selectedValue: string;
   let previousValue: string;
@@ -137,7 +135,7 @@
       <Icon type="java" />
     </TechItem>
   </PortfolioItem>
-  <a id="mobile" ><h1 class="portfolio-title">Mobiilisovellukset</h1></a>
+  <a id="mobile"><h1 class="portfolio-title">Mobiilisovellukset</h1></a>
   <PortfolioItem
     title="Floorball Manager"
     year="Julkaistu 2019"
@@ -368,86 +366,17 @@
     </TechItem>
   </PortfolioItem>
   <h1 id="design" class="portfolio-title">Ohjelmistojen suunnittelu</h1>
-  <Collapse title="Arde Median kotisivujen UI-suunnittelu">
-    <div class="flex flex-col gap-8">
-      <div>
-        <h3 class="mb-2">Väripaletti</h3>
-        <div class="flex flex-row flex-wrap">
-          <div
-            class="h-[50px] w-[100px] flex justify-center items-center bg-primary text-textLight"
-          >
-            #F89B00
-          </div>
-          <div
-            class="h-[50px] w-[100px] flex justify-center items-center bg-base-content text-textLight"
-          >
-            #1f2937
-          </div>
-          <div
-            class="h-[50px] w-[100px] flex justify-center items-center bg-base-300 text-textLight"
-          >
-            #d1d5db
-          </div>
-          <div
-            class="h-[50px] w-[100px] flex justify-center items-center bg-base-100 text-textDark"
-          >
-            #ffffff
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-2">Fontit</h3>
-        <div class="flex flex-row gap-5 flex-wrap">
-          <div class="flex-col">
-            <p class="text-sm">Open Sans</p>
-            <h1 class="font-['Open_Sans'] normal-case">AaBbCc</h1>
-            <h2 class="font-['Open_Sans'] normal-case">AaBbCc</h2>
-            <h3 class="font-['Open_Sans'] normal-case">AaBbCc</h3>
-            <h4 class="font-['Open_Sans'] normal-case">AaBbCc</h4>
-          </div>
-          <div class="flex-col">
-            <p class="text-sm">Barlow Condensed</p>
-            <h1 class="font-['Barlow_Condensed'] normal-case">AaBbCc</h1>
-            <h2 class="font-['Barlow_Condensed'] normal-case">AaBbCc</h2>
-            <h3 class="font-['Barlow_Condensed'] normal-case">AaBbCc</h3>
-            <h4 class="font-['Barlow_Condensed'] normal-case">AaBbCc</h4>
-          </div>
-          <div class="flex-col">
-            <p class="text-sm">Rampart One</p>
-            <h1 class="font-['Rampart_One'] normal-case">AaBbCc</h1>
-            <h2 class="font-['Rampart_One'] normal-case">AaBbCc</h2>
-            <h3 class="font-['Rampart_One'] normal-case">AaBbCc</h3>
-            <h4 class="font-['Rampart_One'] normal-case">AaBbCc</h4>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-2">Logo</h3>
-        <div class="flex flex-row gap-5 flex-wrap">
-          <LazyImage style="max-h-[800px]" src="logo_black.png" alt="musta logo" />
-          <LazyImage style="max-h-[800px]" src="logo_white.png" alt="valkoinen logo" />
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-2">UI-kuva</h3>
-        <LazyImage style="max-h-[800px]" src="ui-kuva.png" alt="esimerkki ui-kuvasta" />
-      </div>
-    </div>
-  </Collapse>
-  <Collapse title="Flappi -sovelluksen tekninen suunnittelu">
-    <h3 class="mb-2">Projektinäkymä</h3>
-    <LazyImage style="max-h-[800px]" src="projekti.png" alt="esimerkki projektinäkymästä" />
-    <h3 class="mb-2 mt-5">Vaatimusmäärittely</h3>
-    <LazyImage style="max-h-[800px]" src="vaatimus.png" alt="esimerkki vaatimusmäärittelystä" />
-    <h3 class="mb-2 mt-5">Tekninen kuvaus (AWS)</h3>
-    <LazyImage style="max-h-[600px]" src="infra.png" alt="esimerkki teknisestä kuvauksesta" />
-  </Collapse>
+  <DesignExamples
+    uiTitle="Arde Median kotisivujen UI-suunnittelu"
+    techTitle="Flappi -sovelluksen tekninen suunnittelu"
+  />
+
   <h1 id="video" class="portfolio-title">Videoeditointi</h1>
-  <p class="px-5">
+  <p class="py-5">
     Olen tuottanut Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
     Työkaluina on toiminut lähinnä Sony Vegas PRO ja Adobe After Effects.
   </p>
-  <div class="flex flex-row flex-wrap justify-center p-5 gap-5">
+  <div class="flex flex-row flex-wrap justify-center gap-5">
     {#each videos as video}
       <LazyVideo src={video} />
     {/each}

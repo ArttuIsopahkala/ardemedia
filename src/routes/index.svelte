@@ -22,7 +22,7 @@
   </div>
 </section>
 <Container style="bg-background bg-none">
-  <div class="flex flex-col mt-14 gap-14">
+  <div class="grid mt-4 gap-10">
     <Services />
     <Reasons />
     <References />
@@ -34,7 +34,7 @@
     <Company />
     <Values />
     <Divider />
-    <div class="flex flex-col justify-center items-center mb-14">
+    <div class="flex flex-col justify-center items-center mb-10">
       <h2 class="mb-10">Lähetä minulle viesti niin laitetaan rattaat pyörimään!</h2>
       <Button
         text="Ota yhteyttä"

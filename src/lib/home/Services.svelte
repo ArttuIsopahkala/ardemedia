@@ -10,7 +10,7 @@
 <div id="services">
   <h3 class="py-5 text-primary"><Divider>Palvelut</Divider></h3>
   <h1 class="pb-5">Mitä saisi olla?</h1>
-  <div class="flex flex-row flex-wrap gap-5">
+  <div class="grid md:grid-cols-2 gap-5">
     <ServiceItem
       serviceName="Arde kehittää"
       label="Ohjelmistokehitys"
@@ -32,6 +32,7 @@
         slot="image"
         src="laptop.jpg"
         alt="koodia tietokoneen näytöllä ohjelmistokehityksen aikana"
+        style="hidden md:flex"
       />
     </ServiceItem>
     <ServiceItem
@@ -54,6 +55,7 @@
         slot="image"
         src="design.jpg"
         alt="suunnitelmia ohjelmistosuunnittelun aikana työpöydällä"
+        style="hidden md:flex"
       />
     </ServiceItem>
   </div>
