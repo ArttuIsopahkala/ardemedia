@@ -8,8 +8,8 @@ import prism from "remark-prism"
 
 function processUrl(url, node) {
   if (node.tagName === "a") {
-    node.properties.class = "text-link"
-
+    node.properties.class = "link"
+    
     if (!url.href.startsWith("/")) {
       // Open external links in new tab
       node.properties.target = "_blank"

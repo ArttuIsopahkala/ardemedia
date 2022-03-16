@@ -2,6 +2,7 @@
   import Blog from '$lib/blog/Blog.svelte';
   import Post from '$lib/blog/Post.svelte';
   import Container from '$lib/common/Container.svelte';
+  import Spinner from '$lib/common/Spinner.svelte';
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
   import { posts } from '../../store';
@@ -26,9 +27,13 @@
         <h1 class="py-5" in:fly={{ x: -100, duration: 600 }}>Oodi koodille</h1>
       </div>
       <div class="grid gap-5">
-        {#each $posts as post}
-          <Post {post} />
-        {/each}
+        {#if $posts.length === 0}
+          <Spinner />
+        {:else}
+          {#each $posts as post}
+            <Post {post} />
+          {/each}
+        {/if}
       </div>
     </Container>
   </Blog>

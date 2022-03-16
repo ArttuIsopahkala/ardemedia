@@ -22,7 +22,7 @@
 
 <Blog>
   <Container style="max-w-2xl">
-    <div class="bg-base-100 p-5 bg-none shadow-md">
+    <div class="bg-base-100 p-5 bg-none shadow-md text-textDark">
       <LazyImage
         style="object-contain max-h-[400px] w-full"
         src={thumbnail ? '/thumbnails/' + thumbnail : '/laptop.jpg'}
@@ -40,7 +40,9 @@
         </h4>
       {/if}
       <Divider />
-      <slot />
+      <div class="blog-content">
+        <slot />
+      </div>
       <!-- Ending section -->
       <div class="flex flex-wrap mt-5">
         {#each categories as category}
@@ -83,8 +85,14 @@
   </div>
 </Blog>
 
-
 <style>
+  :global(.blog-content::first-letter) {
+    float: left;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 62px;
+    padding-right: 6px;
+  }
   :global(.blog-title) {
     text-transform: none;
   }
@@ -106,9 +114,6 @@
   :global(mark) {
     padding: 0.2em;
     background-color: #fcf8e3;
-  }
-  :global(.text-link) {
-    text-decoration: underline;
   }
   :global(.list) {
     display: block;
