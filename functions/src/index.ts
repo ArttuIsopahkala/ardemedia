@@ -29,7 +29,7 @@ export const ssrServer = functions
 // Send email from contact form
 export const sendContactEmail = functions.region(REGION).https.onCall(async (data) => {
   const msg: MailDataRequired = {
-    to: 'arttu.isopahkala@hotmail.com',
+    to: 'arttu.isopahkala@ardemedia.fi',
     from: 'contact@ardemedia.fi',
     templateId: 'd-38e22653363d4b198389f865d0162fc9',
     dynamicTemplateData: {

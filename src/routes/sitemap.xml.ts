@@ -44,7 +44,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 >
 ${pages.map(page => `<url>
   <loc>${host + page}</loc>
-  <lastmod>2022-03-08</lastmod>
+  <lastmod>2022-03-21</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>`
