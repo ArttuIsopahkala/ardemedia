@@ -19,7 +19,7 @@
 <div {id} class="card shadow-md bg-base-100 w-full">
   <slot name="image" />
 
-  <div class="card-body">
+  <div class="card-body gap-0">
     <h4 class="text-primary mb-2 mark">{serviceName}</h4>
     <h2 class="mb-4">{label}</h2>
     <p class="mb-5">

@@ -33,13 +33,14 @@
     const data = await getOptions();
     options.set(data);
   });
+
 </script>
 
 <div class="w-full h-auto">
   <Header />
   <!-- footer 330px + padding bottom 70px = 400px -->
   <main
-    class="flex flex-col pt-[60px] bg-base-100 bg-[url('/bg-pattern.svg')] min-h-[calc(100vh-330px)]"
+    class="flex flex-col pt-[60px] bg-base-100 bg-[url('/bg-animated.svg')] min-h-[calc(100vh-330px)]"
   >
     <slot />
   </main>
