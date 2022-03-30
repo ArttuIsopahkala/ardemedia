@@ -7,7 +7,7 @@
   import DesignExamples from '$lib/portfolio/DesignExamples.svelte';
   import PortfolioItem from '$lib/portfolio/PortfolioItem.svelte';
   import TechItem from '$lib/portfolio/TechItem.svelte';
-  import Selector,{ SelectorItem } from '$lib/services/Selector.svelte';
+  import Selector, { SelectorItem } from '$lib/services/Selector.svelte';
 
   let selectedValue: string;
   let previousValue: string;
@@ -61,11 +61,11 @@
       sivukartan suunnittelusta ja käyttöliittymäkuvien piirtämisestä. Kun suunnitelma oli suunnilleen valmis, 
       alkoi armoton koodaaminen. Toteutin sivuston Sveltellä, joka on JavaScriptin trendikäs ja kehittäjäystävällinen viitekehys.
         <br/><br/>
-        Ominaisuudet:
-        <br/>&bull; Kuvakaruselli
-        <br/>&bull; Visuaalista ilmettä
+        Ominaisuuksia:
         <br/>&bull; Blogialusta
-        <br/>&bull; Yhteydenottolomake"
+        <br/>&bull; Yhteydenottolomake
+        <br/>&bull; Kuvakaruselli
+        <br/>&bull; Animaatioita"
     logo="logo_black.png"
     github="https://github.com/ArttuIsopahkala/ardemedia"
   >
@@ -93,12 +93,13 @@
   >
     <Carousel
       slot="carousel"
+      type="web"
       images={[
-        { web: 'flappi/flappi2.png' },
-        { web: 'flappi/flappi3.png' },
-        { web: 'flappi/flappi4.png' },
-        { web: 'flappi/flappi5.png' },
-        { web: 'flappi/flappi6.png' }
+        'flappi/flappi2.png',
+        'flappi/flappi3.png',
+        'flappi/flappi4.png',
+        'flappi/flappi5.png',
+        'flappi/flappi6.png'
       ]}
     />
     <TechItem
@@ -152,12 +153,13 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'floorball/floorball1.png' },
-        { phone: 'floorball/floorball2.png' },
-        { phone: 'floorball/floorball3.png' },
-        { phone: 'floorball/floorball4.png' },
-        { phone: 'floorball/floorball5.png' }
+        'floorball/floorball1.png',
+        'floorball/floorball2.png',
+        'floorball/floorball3.png',
+        'floorball/floorball4.png',
+        'floorball/floorball5.png'
       ]}
     />
     <TechItem title="Firebase" desc="Realtime Database, Authentication, Storage">
@@ -183,9 +185,10 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'heratysvalo/heratysvalo1.png' },
-        { phone: 'heratysvalo/heratysvalo2.png' }
+        'heratysvalo/heratysvalo1.png',
+        'heratysvalo/heratysvalo2.png'
       ]}
     />
     <TechItem title="Android" desc="Java">
@@ -207,9 +210,10 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'livelocation/livelocation1.png' },
-        { phone: 'livelocation/livelocation2.png' }
+        'livelocation/livelocation1.png',
+        'livelocation/livelocation2.png'
       ]}
     />
     <TechItem title="Firebase" desc="Realtime Database, Authentication, Storage">
@@ -242,12 +246,13 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'opiskelijalounas/opiskelijalounas1.png' },
-        { phone: 'opiskelijalounas/opiskelijalounas2.png' },
-        { phone: 'opiskelijalounas/opiskelijalounas3.png' },
-        { phone: 'opiskelijalounas/opiskelijalounas5.png' },
-        { phone: 'opiskelijalounas/opiskelijalounas4.png' }
+        'opiskelijalounas/opiskelijalounas1.png',
+        'opiskelijalounas/opiskelijalounas2.png',
+        'opiskelijalounas/opiskelijalounas3.png',
+        'opiskelijalounas/opiskelijalounas5.png',
+        'opiskelijalounas/opiskelijalounas4.png'
       ]}
     />
     <TechItem title="Firebase" desc="Realtime Database">
@@ -280,13 +285,14 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'menomesta/menomesta1.png' },
-        { phone: 'menomesta/menomesta2.png' },
-        { phone: 'menomesta/menomesta3.png' },
-        { phone: 'menomesta/menomesta4.png' },
-        { phone: 'menomesta/menomesta5.png' },
-        { phone: 'menomesta/menomesta6.png' }
+        'menomesta/menomesta1.png',
+        'menomesta/menomesta2.png',
+        'menomesta/menomesta3.png',
+        'menomesta/menomesta4.png',
+        'menomesta/menomesta5.png',
+        'menomesta/menomesta6.png'
       ]}
     />
     <TechItem title="Firebase" desc="Realtime Database, Authentication">
@@ -317,15 +323,16 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'maze/maze1.png' },
-        { phone: 'maze/maze2.png' },
-        { phone: 'maze/maze3.png' },
-        { phone: 'maze/maze4.png' },
-        { phone: 'maze/maze5.png' },
-        { phone: 'maze/maze6.png' },
-        { phone: 'maze/maze7.png' },
-        { phone: 'maze/maze8.png' }
+        'maze/maze1.png',
+        'maze/maze2.png',
+        'maze/maze3.png',
+        'maze/maze4.png',
+        'maze/maze5.png',
+        'maze/maze6.png',
+        'maze/maze7.png',
+        'maze/maze8.png'
       ]}
     />
     <TechItem title="Google API" desc="Games">
@@ -351,11 +358,12 @@
   >
     <Carousel
       slot="carousel"
+      type="phone"
       images={[
-        { phone: 'travelmeter/travelmeter1.png' },
-        { phone: 'travelmeter/travelmeter2.png' },
-        { phone: 'travelmeter/travelmeter3.png' },
-        { phone: 'travelmeter/travelmeter4.png' }
+        'travelmeter/travelmeter1.png',
+        'travelmeter/travelmeter2.png',
+        'travelmeter/travelmeter3.png',
+        'travelmeter/travelmeter4.png'
       ]}
     />
     <TechItem title="Android" desc="Java">

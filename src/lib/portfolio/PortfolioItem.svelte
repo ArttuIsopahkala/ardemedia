@@ -26,7 +26,7 @@
     </div>
     <div>
       <h4>Teknologiat</h4>
-      <div class="flex flex-row items-start py-5">
+      <div class="flex flex-row flex-wrap items-start py-5">
         <slot />
       </div>
       <div class="flex flex-row">

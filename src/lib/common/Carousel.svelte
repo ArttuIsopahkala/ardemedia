@@ -1,17 +1,13 @@
 <script lang="ts" context="module">
-  export interface ImageCombo {
-    web?: string;
-    phone?: string;
-  }
 </script>
 
 <script lang="ts">
   import Button from '$lib/common/Button.svelte';
-  import Phone from '$lib/common/Phone.svelte';
   import clsx from 'clsx';
   import LazyImage from './LazyImage.svelte';
 
-  export let images: ImageCombo[] = [];
+  export let images: string[];
+  export let type: 'phone' | 'web';
 
   let index = 0;
 
@@ -29,31 +25,31 @@
 </script>
 
 {#if images.length > 0}
-  <div class="flex flex-col justify-center items-center">
-    <div class="flex flex-row justify-center items-center">
-      <Button text="<" hideArrow={true} onClick={previous} style="mr-2"/>
-      {#each [images[index]] as combo (index)}
-        <!-- DESKTOP IMAGES -->
-        {#if combo.web}
-          <div class="mockup-window bg-base-300">
-            <div class="flex justify-center bg-white border-2 border-base-300">
-              <div class="min-w-[300px] min-h-[210px]">
-                <LazyImage src={combo.web} alt="työpöytä esikatselu" style={`object-cover`} />
-              </div>
-            </div>
+  <div class="flex flex-col justify-center items-center w-full">
+    <div class="flex flex-row justify-center items-center w-full">
+      <Button text="<" hideArrow={true} onClick={previous} style="mr-2" />
+      <!-- DESKTOP IMAGES -->
+      {#if type === 'web'}
+        <div class="mockup-window bg-base-300 w-full max-w-[500px]">
+          <div
+            class="bg-white border-2 border-base-300 max-w-[500px] max-h-[366px] aspect-[250/183]"
+          >
+            {#each [images[index]] as src (index)}
+              <LazyImage {src} alt="työpöytä esikatselu" />
+            {/each}
           </div>
-        {/if}
-        <!-- PHONE IMAGES -->
-        {#if combo.phone}
-          <Phone>
-            <LazyImage
-              src={combo.phone}
-              alt="mobiili esikatselu"
-              style={`h-[450px] min-h-[450px] w-[250px] min-w-[250px]`}
-            />
-          </Phone>
-        {/if}
-      {/each}
+        </div>
+      {/if}
+      {#if type === 'phone'}
+        <div class="border-textGray border-2 rounded-2xl bg-black p-2 max-w-[250px] w-full">
+          <div class="overflow-hidden rounded-sm max-w-[250px] max-h-[450px] aspect-[9/16]">
+            {#each [images[index]] as src (index)}
+              <!-- PHONE IMAGES -->
+              <LazyImage {src} alt="mobiili esikatselu" />
+            {/each}
+          </div>
+        </div>
+      {/if}
       <Button text=">" hideArrow={true} onClick={next} style="ml-2" />
     </div>
     <!-- DOTS -->

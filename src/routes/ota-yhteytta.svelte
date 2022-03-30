@@ -28,7 +28,7 @@
 <Container>
   <h1 class="py-5">Ennen kuin otat yhteyttä...</h1>
   <h3 class="pb-5">sinun on hyvä tietää nämä jutut:</h3>
-  <div class="flex flex-row flex-wrap justify-between">
+  <div class="grid grid-flow-col grid-rows-3 sm:grid-rows-1 gap-5">
     <NoteItem description="Voin aloittaa seuraavan projektin">
       <Icon slot="icon" type="calendar" />
       <h2
@@ -57,11 +57,11 @@
     >
       <Icon slot="icon" type="clock" />
     </NoteItem>
-    <NoteItem
+<!--     <NoteItem
       description="Toivon, että työpaikalla puhutaan pääsääntöisesti suomea. Tällöin osaan auttaa teitä parhaalla mahdollisella tavalla."
     >
       <Icon slot="icon" type="language" />
-    </NoteItem>
+    </NoteItem> -->
   </div>
   <div id="contactBox" class="bg-card p-5 my-5">
     <div class="flex items-center">

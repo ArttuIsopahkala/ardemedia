@@ -4,7 +4,7 @@
   import Container from '$lib/common/Container.svelte';
   import Spinner from '$lib/common/Spinner.svelte';
   import { onMount } from 'svelte';
-  import { fly } from 'svelte/transition';
+  import { fly, fade } from 'svelte/transition';
   import { posts } from '../../store';
 
   let loaded = false;
@@ -26,6 +26,7 @@
         <span class="text-3xl">&#128226;</span>
         <h1 class="py-5" in:fly={{ x: -100, duration: 600 }}>Oodi koodille</h1>
       </div>
+      <p class="pb-5 italic text-textDark" in:fade={{ duration: 600 }}>Koodari-yrittäjän ajatuksia ohjelmistokehityksestä, suomeksi!</p>
       <div class="grid gap-5">
         {#if $posts.length === 0}
           <Spinner />

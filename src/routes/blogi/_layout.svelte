@@ -93,6 +93,10 @@
     line-height: 62px;
     padding-right: 6px;
   }
+  :global(.blog-content code) {
+    max-width: 150px; /* min width of code block */
+    display: block;
+  }
   :global(.blog-title) {
     text-transform: none;
   }

@@ -35,7 +35,7 @@
     <Values />
     <Divider />
     <div class="flex flex-col justify-center items-center mb-10">
-      <h2 class="mb-10">Lähetä minulle viesti niin laitetaan rattaat pyörimään!</h2>
+      <h2 class="mb-10">Ei voi voittaa, jos ei kehtaa koittaa.</h2>
       <Button
         text="Ota yhteyttä"
         size="sm:btn-lg"

@@ -19,7 +19,7 @@
         Object.entries(import.meta.glob('./blogi/*.md')).map(async ([path, page]) => {
           const { metadata } = await page();
           const slug = path.split('/').pop().split('.').shift();
-          const readingTimeInMinutes = metadata.words ? Math.round(metadata.words / 195) : 0;
+          const readingTimeInMinutes = metadata.words ? Math.round(metadata.words / 161) : 0;
           let likesCount: number = likes[slug] ? likes[slug] : 0;
           return metadataToPost(slug, metadata, readingTimeInMinutes, likesCount);
         })
