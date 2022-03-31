@@ -6,21 +6,21 @@
         pointer-events: none;
     }
     path {
-      -webkit-animation: firstAnimation 0.6s linear forwards;
-      -moz-animation: firstAnimation 0.6s linear forwards;
-      animation: path 2s linear forwards, fade 1s 1s linear forwards;
+      -webkit-animation: pathAnim 1.5s linear forwards, fadeAnim 1s 0.5s linear forwards;
+      -moz-animation: pathAnim 1.5s linear forwards, fadeAnim 1s 0.5s linear forwards;
+      animation: pathAnim 1.5s linear forwards, fadeAnim 1s 0.5s linear forwards;
     }
-    @keyframes path {
+    @keyframes pathAnim {
       to {
           stroke-dashoffset: 0;
       }
     }
-    @-webkit-keyframes path {
+    @-webkit-keyframes pathAnim {
       to {
           stroke-dashoffset: 0;
       }
     }
-    @keyframes fade {
+    @keyframes fadeAnim {
       from {
         stroke-opacity: 0.3;
       }
@@ -28,7 +28,7 @@
           stroke-opacity: 0.05;
       }
     }
-    @-webkit-keyframes fade {
+    @-webkit-keyframes fadeAnim {
       from {
         stroke-opacity: 0.3;
       }

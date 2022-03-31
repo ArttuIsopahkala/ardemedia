@@ -75,6 +75,17 @@
     <TechItem title="Firebase" desc="Firestore, Storage, Hosting, Functions">
       <Icon type="firebase" />
     </TechItem>
+    <Carousel
+      slot="carousel"
+      type="web"
+      images={[
+        'ardemedia/ardemedia1.png',
+        'ardemedia/ardemedia2.png',
+        'ardemedia/ardemedia5.png',
+        'ardemedia/ardemedia3.png',
+        'ardemedia/ardemedia4.png'
+      ]}
+    />
   </PortfolioItem>
   <Divider />
   <PortfolioItem
@@ -186,10 +197,7 @@
     <Carousel
       slot="carousel"
       type="phone"
-      images={[
-        'heratysvalo/heratysvalo1.png',
-        'heratysvalo/heratysvalo2.png'
-      ]}
+      images={['heratysvalo/heratysvalo1.png', 'heratysvalo/heratysvalo2.png']}
     />
     <TechItem title="Android" desc="Java">
       <Icon type="android" />
@@ -211,10 +219,7 @@
     <Carousel
       slot="carousel"
       type="phone"
-      images={[
-        'livelocation/livelocation1.png',
-        'livelocation/livelocation2.png'
-      ]}
+      images={['livelocation/livelocation1.png', 'livelocation/livelocation2.png']}
     />
     <TechItem title="Firebase" desc="Realtime Database, Authentication, Storage">
       <Icon type="firebase" />

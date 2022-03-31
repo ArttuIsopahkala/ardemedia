@@ -74,6 +74,7 @@
     }
     image = 'miettii.png';
   };
+  const arrowSize = 40;
 </script>
 
 <svelte:window bind:innerWidth={windowWith} />
@@ -93,10 +94,34 @@
         in:fade={{ duration: 300 }}
         class={clsx(
           'flex flex-col justify-center items-center text-center my-3 w-10/12',
-          'lg:px-7 lg:w-1/3 lg:order-2'
+          'lg:px-8 lg:w-1/3 lg:order-2'
         )}
       >
-        <img class={clsx('max-h-[500px]')} src={image} alt="muotokuva" />
+        <div class="relative">
+          <div
+            in:fly={{ x: 40, duration: 300 }}
+            class={clsx(
+              'hidden lg:block',
+              'transition-all duration-300',
+              'absolute w-0 h-0',
+              `border-t-transparent border-t-[${arrowSize}px] border-b-transparent border-b-[${arrowSize}px] border-r-[${arrowSize}px] border-r-primary`,
+              `top-[calc(50%-${arrowSize - 10}px)] -ml-[${arrowSize - 10}px]`,
+              toggle === 'right' ? 'lg:opacity-0 lg:translate-x-4' : ''
+            )}
+          />
+          <img class={clsx('max-h-[500px] relative z-10')} src={image} alt="muotokuva" />
+          <div
+            in:fly={{ x: -40, duration: 300 }}
+            class={clsx(
+              'hidden lg:block',
+              'transition-all duration-300',
+              'absolute w-0 h-0',
+              `border-t-transparent border-t-[${arrowSize}px] border-b-transparent border-b-[${arrowSize}px] border-l-[${arrowSize}px] border-l-primary`,
+              `right-0 top-[calc(50%-${arrowSize - 10}px)] -mr-[${arrowSize - 10}px]`,
+              toggle === 'left' ? 'lg:opacity-0 lg:-translate-x-4' : ''
+            )}
+          />
+        </div>
         <h2 class="text-primary mt-4">Arttu Isopahkala</h2>
         <p class="">Freelance Full Stack Developer</p>
       </div>
@@ -110,7 +135,7 @@
             .scrollIntoView({ block: 'start', behavior: 'smooth' })}
         class={clsx(
           'flex flex-col my-3 transition-opacity duration-300 cursor-pointer',
-          'lg:min-h-[350px] lg:w-1/3 lg:order-1',
+          'lg:min-h-[350px] lg:w-1/3 lg:order-1 lg:pr-3',
           toggle === 'right' ? 'lg:opacity-30' : ''
         )}
       >
@@ -141,7 +166,7 @@
           document.getElementById('design').scrollIntoView({ block: 'start', behavior: 'smooth' })}
         class={clsx(
           'flex flex-col justify-start my-3 transition-opacity duration-300 cursor-pointer',
-          'lg:min-h-[350px] lg:w-1/3 lg:order-3',
+          'lg:min-h-[350px] lg:w-1/3 lg:order-3 lg:pl-3',
           toggle === 'left' ? 'lg:opacity-30' : ''
         )}
       >

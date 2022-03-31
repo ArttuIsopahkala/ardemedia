@@ -1,6 +1,3 @@
-<script lang="ts" context="module">
-</script>
-
 <script lang="ts">
   import Button from '$lib/common/Button.svelte';
   import clsx from 'clsx';
