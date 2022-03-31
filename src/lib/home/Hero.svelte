@@ -74,7 +74,6 @@
     }
     image = 'miettii.png';
   };
-  const arrowSize = 40;
 </script>
 
 <svelte:window bind:innerWidth={windowWith} />
@@ -104,8 +103,8 @@
               'hidden lg:block',
               'transition-all duration-300',
               'absolute w-0 h-0',
-              `border-t-transparent border-t-[${arrowSize}px] border-b-transparent border-b-[${arrowSize}px] border-r-[${arrowSize}px] border-r-primary`,
-              `top-[calc(50%-${arrowSize - 10}px)] -ml-[${arrowSize - 10}px]`,
+              `border-t-transparent border-t-[40px] border-b-transparent border-b-[40px] border-r-[40px] border-r-primary`,
+              `top-[calc(50%-30px)] -ml-[30px]`,
               toggle === 'right' ? 'lg:opacity-0 lg:translate-x-4' : ''
             )}
           />
@@ -116,8 +115,8 @@
               'hidden lg:block',
               'transition-all duration-300',
               'absolute w-0 h-0',
-              `border-t-transparent border-t-[${arrowSize}px] border-b-transparent border-b-[${arrowSize}px] border-l-[${arrowSize}px] border-l-primary`,
-              `right-0 top-[calc(50%-${arrowSize - 10}px)] -mr-[${arrowSize - 10}px]`,
+              `border-t-transparent border-t-[40px] border-b-transparent border-b-[40px] border-l-[40px] border-l-primary`,
+              `right-0 top-[calc(50%-30px)] -mr-[30px]`,
               toggle === 'left' ? 'lg:opacity-0 lg:-translate-x-4' : ''
             )}
           />
