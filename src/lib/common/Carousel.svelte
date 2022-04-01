@@ -5,6 +5,14 @@
 
   export let images: string[];
   export let type: 'phone' | 'web';
+  export let width: number;
+  export let height: number;
+
+  const webMaxWidth = 500;
+  const phoneMaxWidth = 250;
+  const defaultMaxWidth = type === 'phone' ? phoneMaxWidth : webMaxWidth;
+  const maxWidth = width < defaultMaxWidth ? width : defaultMaxWidth;
+  const aspectRatio: string = width + '/' + height;
 
   let index = 0;
 
@@ -22,14 +30,17 @@
 </script>
 
 {#if images.length > 0}
-  <div class="flex flex-col justify-center items-center w-full">
+  <div
+    class="flex flex-col justify-center items-center w-full"
+  >
     <div class="flex flex-row justify-center items-center w-full">
       <Button text="<" hideArrow={true} onClick={previous} style="mr-2" />
       <!-- DESKTOP IMAGES -->
       {#if type === 'web'}
-        <div class="mockup-window bg-base-300 w-full max-w-[500px]">
+        <div style="max-width: {maxWidth}px;" class="mockup-window bg-base-300 w-full">
           <div
-            class="bg-white border-2 border-base-300 max-w-[500px] max-h-[366px] aspect-[250/183]"
+            style="max-width: {width}px; max-height: {height}px; aspect-ratio: {aspectRatio};"
+            class="bg-white border-2 border-base-300"
           >
             {#each [images[index]] as src (index)}
               <LazyImage {src} alt="työpöytä esikatselu" />
@@ -37,11 +48,17 @@
           </div>
         </div>
       {/if}
+      <!-- PHONE IMAGES -->
       {#if type === 'phone'}
-        <div class="border-textGray border-2 rounded-2xl bg-black p-2 max-w-[250px] w-full">
-          <div class="overflow-hidden rounded-sm max-w-[250px] max-h-[450px] aspect-[9/16]">
+        <div
+          style="max-width: {maxWidth}px;"
+          class="border-textGray border-2 rounded-2xl bg-black p-2 w-full"
+        >
+          <div
+            style="max-width: {width}px; max-height: {height}px; aspect-ratio: {aspectRatio};"
+            class="overflow-hidden rounded-sm w-full"
+          >
             {#each [images[index]] as src (index)}
-              <!-- PHONE IMAGES -->
               <LazyImage {src} alt="mobiili esikatselu" />
             {/each}
           </div>

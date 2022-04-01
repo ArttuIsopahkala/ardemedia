@@ -98,26 +98,28 @@
       >
         <div class="relative">
           <div
-            in:fly={{ x: 40, duration: 300 }}
+            in:fly={{ x: 40, duration: 600 }}
             class={clsx(
-              'hidden lg:block',
+              'opacity-30 hidden lg:block',
               'transition-all duration-300',
               'absolute w-0 h-0',
               `border-t-transparent border-t-[40px] border-b-transparent border-b-[40px] border-r-[40px] border-r-primary`,
               `top-[calc(50%-30px)] -ml-[30px]`,
-              toggle === 'right' ? 'lg:opacity-0 lg:translate-x-4' : ''
+              toggle === 'right' ? 'lg:opacity-0 lg:translate-x-4' : '',
+              toggle === 'left' ? 'lg:opacity-100' : ''
             )}
           />
           <img class={clsx('max-h-[500px] relative z-10')} src={image} alt="muotokuva" />
           <div
-            in:fly={{ x: -40, duration: 300 }}
+            in:fly={{ x: -40, duration: 600 }}
             class={clsx(
-              'hidden lg:block',
+              'opacity-30 hidden lg:block',
               'transition-all duration-300',
               'absolute w-0 h-0',
               `border-t-transparent border-t-[40px] border-b-transparent border-b-[40px] border-l-[40px] border-l-primary`,
               `right-0 top-[calc(50%-30px)] -mr-[30px]`,
-              toggle === 'left' ? 'lg:opacity-0 lg:-translate-x-4' : ''
+              toggle === 'left' ? 'lg:opacity-0 lg:-translate-x-4' : '',
+              toggle === 'right' ? 'lg:opacity-100' : ''
             )}
           />
         </div>
