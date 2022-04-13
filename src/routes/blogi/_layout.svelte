@@ -97,10 +97,17 @@
     max-width: 150px; /* min width of code block */
     display: block;
   }
+  :global(.blog-content pre) {
+    margin-bottom: 20px !important;
+  }
+  :global(.blog-content .collapse) {
+    margin-bottom: 20px;
+  }
   :global(.blog-title) {
     text-transform: none;
+    margin-bottom: 10px;
   }
-  :global(blockquote) {
+  :global(.blog-content blockquote) {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
@@ -112,12 +119,29 @@
     margin-inline-start: 40px;
     margin-inline-end: 40px;
   }
-  :global(strong) {
-    color: #000000;
-  }
-  :global(mark) {
+  :global(.blog-content mark) {
     padding: 0.2em;
     background-color: #fcf8e3;
+  }
+  :global(.blog-content hr) {
+    color: #f29700;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  :global(.blog-content p) {
+    margin-bottom: 20px;
+  }
+  :global(.blog-content img) {
+    margin: 10px auto;
+  }
+  :global(.blog-content caption) {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+  }
+  :global(.blog-content table, th, td) {
+    border: 1px solid #dee2e6;
+    padding: 10px;
   }
   :global(.list) {
     display: block;

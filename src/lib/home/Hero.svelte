@@ -109,7 +109,7 @@
               toggle === 'left' ? 'lg:opacity-100' : ''
             )}
           />
-          <img class={clsx('max-h-[500px] relative z-10')} src={image} alt="muotokuva" />
+          <img class={clsx('max-h-[400px] relative z-10')} src={image} alt="muotokuva" />
           <div
             in:fly={{ x: -40, duration: 600 }}
             class={clsx(
@@ -124,7 +124,8 @@
           />
         </div>
         <h2 class="text-primary mt-4">Arttu Isopahkala</h2>
-        <p class="">Freelance Full Stack Developer</p>
+        <p>Freelance Full Stack Developer</p>
+        <b class="text-textDark">Web & Android</b>
       </div>
 
       <!-- VASEN PUOLI -->

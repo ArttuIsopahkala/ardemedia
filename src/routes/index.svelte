@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Values from '$lib/about/Values.svelte';
+  import Values from '$lib/home/Values.svelte';
   import Button from '$lib/common/Button.svelte';
   import { goto } from '$app/navigation';
   import Divider from '$lib/common/Divider.svelte';
@@ -35,7 +35,7 @@
     <Values />
     <Divider />
     <div class="flex flex-col justify-center items-center mb-10">
-      <h2 class="mb-10">Ei voi voittaa, jos ei kehtaa koittaa.</h2>
+      <h2 class="mb-10 text-center">Ei voi voittaa, jos ei kehtaa koittaa.</h2>
       <Button
         text="Ota yhteyttä"
         size="sm:btn-lg"

@@ -23,7 +23,7 @@
           </span>
           <p class="">
             Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien
-            työpaikkojen avulla olen kehittynyt Full Stack -koodariksi, joka osaa suunnitella ja
+            työkaverien avulla olen kehittynyt Full Stack -kehittäjäksi, joka osaa suunnitella ja
             toteuttaa erilaisia sovelluksia tarvittaessa täysin itsenäisesti. Ensisijainen
             osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat
             luonnistuu vankan Android-kokemuksen johdosta. Olen aina ollut kiinnostunut

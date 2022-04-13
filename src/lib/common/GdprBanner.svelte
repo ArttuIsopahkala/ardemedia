@@ -92,15 +92,15 @@
         </label>
       </div>
     {/if}
-    <div class="flex flex-row justify-end">
+    <div class="flex justify-end flex-wrap">
       <Button
-        style="mr-3"
+        style="w-full sm:w-fit"
         secondary={true}
         outlined={true}
         text={showSettings ? 'Tallenna ja sulje' : 'Asetukset'}
         onClick={showSettings ? saveAndExit : () => (showSettings = true)}
       />
-      <Button secondary={true} outlined={false} text="Hyväksyn evästeet" onClick={acceptCookies} />
+      <Button style="w-full mt-3 sm:w-fit sm:mt-0 sm:ml-3" secondary={true} outlined={false} text="Hyväksyn evästeet" onClick={acceptCookies} />
     </div>
   </div>
 {/if}

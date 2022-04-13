@@ -30,13 +30,13 @@
     <div class="flex flex-wrap justify-between pt-5">
       <ServiceSection
         title="Web-sovellukset"
-        desc="Sijoita minut tiimiisi lisäkäsiksi tehostamaan kehitystyötänne. Full Stack -koodarina osaan toteuttaa kokonaisia web-sovelluksia itsenäisestikin."
+        desc="Sijoita minut tiimiisi lisäkäsiksi tehostamaan kehitystyötänne. Full Stack -kehittäjänä osaan toteuttaa kokonaisia web-sovelluksia itsenäisestikin."
       >
         <TechSection
           slot="techs"
           title="Teknologioita"
           techs={[
-            { title: 'Käyttöliittymät', techs: 'React / TypeScript / Svelte / GWT' },
+            { title: 'Käyttöliittymät', techs: 'React / Svelte / TypeScript / GWT' },
             { title: 'Taustapalvelut', techs: 'AWS / Firebase / NodeJS / Java EE' }
           ]}
         />

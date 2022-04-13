@@ -8,6 +8,7 @@
   export let url: string = '';
   export let github: string = '';
   export let logo: string = '';
+  export let features: string[] = undefined;
 </script>
 
 <div class="flex flex-row flex-wrap">
@@ -23,9 +24,17 @@
       <p class="py-5">
         {@html description}
       </p>
+      {#if features}
+        <div class="pb-5">
+          <h3 class="pb-2">Ominaisuuksia:</h3>
+          {#each features as feature}
+            <p>&bull; {@html feature}</p>
+          {/each}
+        </div>
+      {/if}
     </div>
     <div>
-      <h4>Teknologiat</h4>
+      <h3>Teknologiat:</h3>
       <div class="flex flex-row flex-wrap items-start py-5">
         <slot />
       </div>
@@ -51,11 +60,5 @@
   </div>
   <div class="w-full lg:w-1/2 flex flex-wrap flex-row justify-center items-center">
     <slot name="carousel" />
-
-    <!-- <div class="mockup-window bg-base-300 sm:w-2/3 p-5">
-      <div class="flex justify-center px-4 py-16 bg-base-200">
-        <img class="max-h-[300px]" src={imgSrc2} alt="preview-desktop" />
-      </div>
-    </div> -->
   </div>
 </div>

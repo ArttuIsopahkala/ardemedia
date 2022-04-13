@@ -15,7 +15,7 @@
       serviceName="Arde kehittää"
       label="Ohjelmistokehitys"
       description="Web- ja mobiilisovellusten kehittämistä lähes 10 vuoden kokemuksella. Voit sijoittaa minut tiimiisi lisäkäsiksi tai erillistä projektia kehittämään. 
-      Full Stack -koodarina osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita täysin itsenäisestikin."
+      Full Stack -kehittäjänä osaan toteuttaa kokonaisia sovelluksia tai muita kehityshankkeita täysin itsenäisestikin."
       href={ROUTES.development}
       id="development"
     >
@@ -23,7 +23,7 @@
         slot="techs"
         title="Käyttämiäni teknologioita"
         techs={[
-          { title: 'Käyttöliittymät', techs: 'React / TypeScript / GWT / Svelte' },
+          { title: 'Käyttöliittymät', techs: 'React / Svelte / TypeScript / GWT' },
           { title: 'Taustapalvelut', techs: 'AWS / Firebase / NodeJS / Java EE' },
           { title: 'Mobiili', techs: 'Java (Android) / PWA' }
         ]}

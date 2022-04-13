@@ -59,13 +59,8 @@
     year="Julkaistu 2022"
     description="Kotisivut yritykselleni, joita katselet parhaillaan! Homma lähti käyntiin 
       sivukartan suunnittelusta ja käyttöliittymäkuvien piirtämisestä. Kun suunnitelma oli suunnilleen valmis, 
-      alkoi armoton koodaaminen. Toteutin sivuston Sveltellä, joka on JavaScriptin trendikäs ja kehittäjäystävällinen viitekehys.
-        <br/><br/>
-        Ominaisuuksia:
-        <br/>&bull; Blogialusta
-        <br/>&bull; Yhteydenottolomake
-        <br/>&bull; Kuvakaruselli
-        <br/>&bull; Animaatioita"
+      alkoi armoton koodaaminen. Toteutin sivuston Sveltellä, joka on JavaScriptin trendikäs ja kehittäjäystävällinen viitekehys."
+    features={['Blogialusta', 'Yhteydenottolomake', 'Kuvakaruselli', 'Animaatioita']}
     logo="logo_black.png"
     github="https://github.com/ArttuIsopahkala/ardemedia"
   >
@@ -95,13 +90,13 @@
     year="Kehityksessä 2020-2021, ei aktiivinen"
     description="Digitaalinen fläppitaulu ja salibandyjoukkueen hallintajärjestelmä. Opin tämän projektin aikana hurjasti Reactia, TypeScriptiä ja AWS:n palveluja. 
       Työstin sovellusta ystävieni kanssa, jotka auttoivat <a rel='noreferrer nofollow noopener' class='link link-primary font-bold' href='https://urn.fi/URN:NBN:fi:amk-2021060815000' target='_blank'>kilpailija-analyysissä</a> ja UI-suunnitelmissa. 
-      Itse hoidin ohjelmoinnin ja projektinhallinnan.
-      <br/><br/>
-      Valmiit ominaisuudet:
-      <br/>&bull; Animoitu fläppitaulu
-      <br/>&bull; Harjoituskirjasto
-      <br/>&bull; Kokoonpanon hallinta
-      <br/>&bull; Kalenteri ja tapahtumat"
+      Itse hoidin ohjelmoinnin ja projektinhallinnan."
+    features={[
+      'Animoitu fläppitaulu',
+      'Harjoituskirjasto',
+      'Kokoonpanon hallinta',
+      'Kalenteri ja tapahtumat'
+    ]}
     logo="flappi/flappi.svg"
   >
     <Carousel
@@ -155,13 +150,13 @@
   <PortfolioItem
     title="Floorball Manager"
     year="Julkaistu 2019"
-    description="Salibandyjoukkueen käyttöön tarkoitettu sovellus, jonka avulla voidaan pitää kirjaa otteluista sekä tarkoista joukkue- ja pelaajatilastoista. Kokoonpanoja voidaan suunnitella kemialaskurin avulla.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Ottelujen ja tilastojen muokkaaminen
-      <br/>&bull; Laukauskartat
-      <br/>&bull; Pelaajien välisen kemian analysointi tilastojen perusteella
-      <br/>&bull; Joukkueiden hallinta ja pelaajien kutsuminen/lisääminen"
+    description="Salibandyjoukkueen käyttöön tarkoitettu sovellus, jonka avulla voidaan pitää kirjaa otteluista sekä tarkoista joukkue- ja pelaajatilastoista. Kokoonpanoja voidaan suunnitella kemialaskurin avulla."
+    features={[
+      'Ottelujen ja tilastojen muokkaaminen',
+      'Laukauskartat',
+      'Pelaajien välisen kemian analysointi tilastojen perusteella',
+      'Joukkueiden hallinta ja pelaajien kutsuminen/lisääminen'
+    ]}
     url="https://play.google.com/store/apps/details?id=com.ardeapps.floorballcoach"
     github="https://github.com/ArttuIsopahkala/FloorballManager"
     logo="floorball/floorball.png"
@@ -190,12 +185,12 @@
   <PortfolioItem
     title="Herätysvalo"
     year="Julkaistu 2018"
-    description="Herätysvalo toimii manuaalisesti tai yhteistyössä laitteen herätyskellon kanssa. Se käynnistyy ensin himmeänä ja kirkastuu aina herätykseen asti.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Puhelimen herätyskelloon integrointi
-      <br/>&bull; Valon säätö (väri, kesto, nopeus)
-      <br/>&bull; Pienoisohjelma kotinäytölle"
+    description="Herätysvalo toimii manuaalisesti tai yhteistyössä laitteen herätyskellon kanssa. Se käynnistyy ensin himmeänä ja kirkastuu aina herätykseen asti."
+    features={[
+      'Puhelimen herätyskelloon integrointi',
+      'Valon säätö (väri, kesto, nopeus)',
+      'Pienoisohjelma kotinäytölle'
+    ]}
     url="https://play.google.com/store/apps/details?id=com.ardeapps.simplewakeuplight"
     github="https://github.com/ArttuIsopahkala/SimpleWakeUpLight"
     logo="heratysvalo/heratysvalo.png"
@@ -215,12 +210,12 @@
   <PortfolioItem
     title="Live Location"
     year="Julkaistu 2017, ei aktiivinen"
-    description="Yksinkertainen sovellus sijainnin jakamiseen kavereiden kesken reaaliaikaisesti. Lisää kaverit, jaa sijaintisi ja näe kartalla missä kaverit liikkuvat.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Kirjautuminen (Facebook / sähköposti)
-      <br/>&bull; Kuvien lataaminen
-      <br/>&bull; Sijainnin jakaminen reaaliaikatietokannan avulla"
+    description="Yksinkertainen sovellus sijainnin jakamiseen kavereiden kesken reaaliaikaisesti. Lisää kaverit, jaa sijaintisi ja näe kartalla missä kaverit liikkuvat."
+    features={[
+      'Kirjautuminen (Facebook / sähköposti)',
+      'Kuvien lataaminen',
+      'Sijainnin jakaminen reaaliaikatietokannan avulla'
+    ]}
     github="https://github.com/ArttuIsopahkala/LiveLocation"
     logo="livelocation/livelocation.png"
   >
@@ -248,13 +243,13 @@
   <PortfolioItem
     title="Opiskelijalounas"
     year="Julkaistu 2017"
-    description="Sovellus näyttää Kelan tukemat opiskelijalounasta tarjoavat ravintolat ja niiden lounaslistat.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Näe lounasravintolat kartalla
-      <br/>&bull; Hakutoiminto kaupungin tai ravintolan mukaan
-      <br/>&bull; Löydä ravintolat lähellä sinua sijaintisi perusteella
-      <br/>&bull; Lataa suosikkiravintoloiden lounaslistat automaattisesti"
+    description="Sovellus näyttää Kelan tukemat opiskelijalounasta tarjoavat ravintolat ja niiden lounaslistat."
+    features={[
+      'Näe lounasravintolat kartalla',
+      'Hakutoiminto kaupungin tai ravintolan mukaan',
+      'Löydä ravintolat lähellä sinua sijaintisi perusteella',
+      'Lataa suosikkiravintoloiden lounaslistat automaattisesti'
+    ]}
     url="https://play.google.com/store/apps/details?id=com.ardeapps.opiskelijalounas"
     github="https://github.com/ArttuIsopahkala/Opiskelijalounas"
     logo="opiskelijalounas/opiskelijalounas.png"
@@ -286,16 +281,16 @@
   <PortfolioItem
     title="Menomesta"
     year="Julkaistu 2016"
-    description="Onko illan menomestan valinta ollut joskus vaikeaa? Ei ole enää! Tämä sovellus näyttää sinulle kätevästi kaupunkisi halvimmat, lähimmät ja suosituimmat baarit. Koska käyttäjät voivat lisätä ja muokata tietoja, teet sovelluksesta entistä hyödyllisemmän omalla aktiivisuudella ja myös sinusta voi tulla kaikkien Janoisten Sankari!
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Yli <b class='mark'>1000</b> lataajaa! 
-      <br/>&bull; Aikanaan Suomen laajin baaritietokanta
-      <br/>&bull; Tietojen hakeminen Facebookista
-      <br/>&bull; Baarien ja tapahtumien muokkaaminen
-      <br/>&bull; Karttatoiminto
-      <br/>&bull; Anonyymi chat
-      <br/>&bull; Seuranhakutoiminto"
+    description="Onko illan menomestan valinta ollut joskus vaikeaa? Ei ole enää! Tämä sovellus näyttää sinulle kätevästi kaupunkisi halvimmat, lähimmät ja suosituimmat baarit. Koska käyttäjät voivat lisätä ja muokata tietoja, teet sovelluksesta entistä hyödyllisemmän omalla aktiivisuudella ja myös sinusta voi tulla kaikkien Janoisten Sankari!"
+    features={[
+      "Yli <span class='mark'>1000</span> lataajaa!",
+      'Oletettavasti Suomen laajin baaritietokanta',
+      'Tietojen hakeminen Facebookista',
+      'Baarien ja tapahtumien muokkaaminen',
+      'Karttatoiminto',
+      'Anonyymi chat',
+      'Seuranhakutoiminto'
+    ]}
     url="https://play.google.com/store/apps/details?id=com.ardeapps.menomesta"
     github="https://github.com/ArttuIsopahkala/Menomesta"
     logo="menomesta/menomesta.png"
@@ -331,11 +326,8 @@
   <PortfolioItem
     title="Maze Speedrun"
     year="Julkaistu 2016"
-    description="Löydä tiesi maaliin mahdollisimman nopeasti, mutta älä koske seiniin! Kilpaile muita pelaajia, kavereitasi, ja itseäsi vastaan. Peli sisältää 30 erilaista sokkeloa erilaisilla vaikeustasoilla, joten pelattavaa riittää tunneiksi.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Google Games tulostaulukot ja saavutukset
-      <br/>&bull; Offline pelaaminen"
+    description="Löydä tiesi maaliin mahdollisimman nopeasti, mutta älä koske seiniin! Kilpaile muita pelaajia, kavereitasi, ja itseäsi vastaan. Peli sisältää 30 erilaista sokkeloa erilaisilla vaikeustasoilla, joten pelattavaa riittää tunneiksi."
+    features={['Google Games tulostaulukot ja saavutukset', 'Offline pelaaminen']}
     logo="maze/maze.png"
     url="https://play.google.com/store/apps/details?id=com.ardeapps.mazespeedrun"
     github="https://github.com/ArttuIsopahkala/MazeSpeedrun"
@@ -367,14 +359,14 @@
   <PortfolioItem
     title="Daily Travel Meter"
     year="Julkaistu 2015, ei aktiivinen"
-    description="Sovellus tutkii sijaintia, laskee nopeuden ja erottelee henkilön kulkeman matkan kolmeen eri kulkutapaan. Kulkutavat ovat kävellen, pyörällä tai autolla. Lisäksi sovellus piirtää kuljetun reitin kartalle. Sovellus tutkii liikkeitäsi taustalla ja tallentaa sijaintia puhelimen muistiin.
-      <br/><br/>
-      Ominaisuudet:
-      <br/>&bull; Päivittäinen matkamittari
-      <br/>&bull; Katso päivittäinen reitti kartalta
-      <br/>&bull; Lista 30 edellisen päivän matkoista
-      <br/>&bull; Parhaat tulokset kategorioittain
-      <br/>&bull; Widgetti päivittäisistä matkoista"
+    description="Sovellus tutkii sijaintia, laskee nopeuden ja erottelee henkilön kulkeman matkan kolmeen eri kulkutapaan. Kulkutavat ovat kävellen, pyörällä tai autolla. Lisäksi sovellus piirtää kuljetun reitin kartalle. Sovellus tutkii liikkeitäsi taustalla ja tallentaa sijaintia puhelimen muistiin."
+    features={[
+      'Päivittäinen matkamittari',
+      'Katso päivittäinen reitti kartalta',
+      'Lista 30 edellisen päivän matkoista',
+      'Parhaat tulokset kategorioittain',
+      'Widgetti päivittäisistä matkoista'
+    ]}
     logo="travelmeter/travelmeter.png"
   >
     <Carousel
