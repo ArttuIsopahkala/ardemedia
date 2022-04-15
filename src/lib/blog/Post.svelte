@@ -73,7 +73,7 @@
           {/each}
         </div>
         <div class="flex flex-col">
-          <p class="text-sm">{post.created.toLocaleDateString('fi-FI')} &#8226; Lukuaika {post.readingTimeInMinuntes} min</p>
+          <p class="text-sm">{post.created.toLocaleDateString('fi-FI')} &#8226; {post.readingTimeInMinuntes} min</p>
         </div>
       </div>
     </div>

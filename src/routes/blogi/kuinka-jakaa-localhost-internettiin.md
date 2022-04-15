@@ -1,9 +1,9 @@
 ---
 title: Kuinka jakaa localhost Internettiin?
 categories:
+  - web-kehitys
   - tutoriaali
   - työkalut
-  - web-kehitys
 created: 2022-03-25
 updated:
 description: "Localhostin jakamisella nettiin on useita käyttötapauksia. Suosituimpia näistä ovat nettisivujen esittely ilman käyttöönottoa ja sivuston parempi testaaminen kehitysvaiheessa. Tässä postauksessa opetan kuinka voit jakaa localhostisi julkiseen verkkoon muutamassa minuutissa."
