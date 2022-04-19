@@ -2,10 +2,9 @@
   import { page } from '$app/stores';
   import Spinner from '$lib/common/Spinner.svelte';
   import { functions } from '$lib/static/firebase';
-  import { getLikes } from '$lib/static/firestore';
   import clsx from 'clsx';
   import { httpsCallable } from 'firebase/functions';
-  import { likesData, likedPosts } from '../../store';
+  import { likedPosts, likesData } from '../../store';
 
   const slug = $page.path.split('/').pop();
 

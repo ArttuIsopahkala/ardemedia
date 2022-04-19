@@ -6,6 +6,7 @@
   import Divider from '$lib/common/Divider.svelte';
   import LazyImage from '$lib/common/LazyImage.svelte';
   import ROUTES from '$lib/static/routes';
+  import { onMount } from 'svelte';
 
   export let title;
   export let categories;
@@ -13,11 +14,34 @@
   export let updated;
   export let thumbnail;
   export let description;
+  let url = ``;
+  let origin = ``;
+  let imagePath = thumbnail ? '/thumbnails/' + thumbnail : '/laptop.jpg';
+
+  onMount(() => {
+    url = window.location.href;
+    origin = window.location.origin;
+  });
 </script>
 
 <svelte:head>
   <title>{title} | Arde Media</title>
   <meta name="description" content={description} />
+
+  <!--  Essential META Tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="article" />
+  <meta name="image" property="og:image" content={origin + imagePath} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content={url} />
+
+  <!--  Non-Essential, But Recommended -->
+  <meta name="author" content="Arttu Isopahkala" />
+  <meta name="publish_date" property="og:publish_date" content={created} />
+  <meta property="article:published_time" content={created} />
+  <meta property="og:description" content={description} />
+  <meta property="og:site_name" content="Arde Media" />
+  <meta name="twitter:image:alt" content="Artikkelin kansikuva" />
 </svelte:head>
 
 <Blog>
@@ -25,8 +49,8 @@
     <div class="bg-base-100 p-5 bg-none shadow-md text-textDark">
       <LazyImage
         style="object-contain max-h-[400px] w-full"
-        src={thumbnail ? '/thumbnails/' + thumbnail : '/laptop.jpg'}
-        alt="blogipostauksen kansikuva"
+        src={imagePath}
+        alt="Artikkelin kansikuva"
       />
       <h1 class="py-5 normal-case text-3xl md:text-4xl">{title}</h1>
       <h4 class="mb-1">

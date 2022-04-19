@@ -11,8 +11,6 @@
   onMount(() => {
     loaded = true;
   });
-
-  /* Categories: 'Tutorials' | 'Web development' | 'Personal' | 'Tools' | 'General' */
 </script>
 
 <svelte:head>
@@ -26,7 +24,9 @@
         <span class="text-3xl">&#128226;</span>
         <h1 class="py-5" in:fly={{ x: -100, duration: 600 }}>Oodi koodille</h1>
       </div>
-      <p class="pb-5 italic text-textDark" in:fade={{ duration: 600 }}>Koodari-yrittäjän ajatuksia devaamisesta ja teknologiasta, suomeksi!</p>
+      <p class="pb-5 italic text-textDark" in:fade={{ duration: 600 }}>
+        Koodari-yrittäjän ajatuksia devaamisesta ja teknologiasta, suomeksi!
+      </p>
       <div class="grid gap-5">
         {#if $posts.length === 0}
           <Spinner />
