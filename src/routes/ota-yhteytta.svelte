@@ -52,16 +52,16 @@
     >
       <Icon slot="icon" type="marker" />
     </NoteItem>
-    <NoteItem
+    <!-- <NoteItem
       description="Pyrin tekemään 6 tunnin työpäiviä, jolloin vireystilani pysyy koko työajan tuottavana. Tällöin myös asiakkaana saat pienemmän laskun. Win-win?"
     >
       <Icon slot="icon" type="clock" />
-    </NoteItem>
-<!--     <NoteItem
+    </NoteItem> -->
+    <NoteItem
       description="Toivon, että työpaikalla puhutaan pääsääntöisesti suomea. Tällöin osaan auttaa teitä parhaalla mahdollisella tavalla."
     >
       <Icon slot="icon" type="language" />
-    </NoteItem> -->
+    </NoteItem>
   </div>
   <div id="contactBox" class="bg-card p-5 my-5">
     <div class="flex items-center">

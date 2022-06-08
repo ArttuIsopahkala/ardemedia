@@ -143,7 +143,6 @@
         price={services.devPriceHigh}
         list={[
           'Alle kuukauden kestävät projektit',
-          'GWT projektit',
           'Normaalia vastuullisempi rooli (esim. Lead)'
         ]}
       />

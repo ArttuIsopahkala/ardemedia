@@ -76,7 +76,7 @@
             ($page.path === ROUTES.development || $page.path === ROUTES.design) && 'text-primary'
           )}
         >
-          Palvelut &#11206;
+          Palvelut +
         </div>
         <div
           tabindex="0"
