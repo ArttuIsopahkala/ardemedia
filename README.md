@@ -36,3 +36,17 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## Deploying
+
+To deploy app, you can just run following command:
+
+```bash
+npm run deploy
+```
+
+If not working, logout and login again to firebase in CLI:
+```bash
+firebase logout
+firebase login
+```

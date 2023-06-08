@@ -39,6 +39,7 @@
   ];
 
   const videos: string[] = [
+    'https://www.youtube-nocookie.com/embed/UBepQ1XuBFk',
     'https://www.youtube-nocookie.com/embed/mKjv8CBQlg0',
     'https://www.youtube-nocookie.com/embed/Igfxeg1wYkQ',
     'https://www.youtube-nocookie.com/embed/kb9qRYYWNzI',
