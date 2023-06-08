@@ -69,6 +69,8 @@
       <Icon type="email" color="text-primary" />
     </div>
     <p class="">Vastaan heti kun se on inhimillisesti mahdollista!</p>
-    <Form />
+    <p class="mt-5 mb-2">Parhaiten saat minut kiinni sähköpostilla:</p>
+    <a href="mailto:arttu.isopahkala@ardemedia.fi" class="hover:text-primary">arttu.isopahkala@ardemedia.fi</a>
+    <!-- <Form /> -->
   </div>
 </Container>
