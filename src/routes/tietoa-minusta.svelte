@@ -22,11 +22,11 @@
             <Icon type="quote" />
           </span>
           <p class="">
-            Olen koodaillut kaikenlaista jo lähes 10 vuotta. Harrasteprojektien sekä hyvien
+            Olen koodaillut kaikenlaista jo vuodesta 2013. Harrasteprojektien sekä hyvien
             työkaverien avulla olen kehittynyt Full Stack -kehittäjäksi, joka osaa suunnitella ja
             toteuttaa erilaisia sovelluksia tarvittaessa täysin itsenäisesti. Ensisijainen
             osaamiseni on web-teknologioiden ja pilvipalvelujen puolella, mutta myös mobiilihommat
-            luonnistuu vankan Android-kokemuksen johdosta. Olen aina ollut kiinnostunut
+            luonnistuvat kymmenien harrasteprojektien johdosta. Olen aina ollut kiinnostunut
             teknologiasta ja tietokoneista, joten seuraan tiiviisti alan trendejä ja uusia
             julkaisuja. Koodailun vastapainoksi vapaa-aikani menee salibandyn, läheisten tai hyvän
             kirjan parissa.

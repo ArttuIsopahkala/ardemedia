@@ -50,12 +50,12 @@
       </ServiceSection>
       <ServiceSection
         title="Mobiilisovellukset"
-        desc="Tilaa minulta monipuolinen Android-sovellus. Myös React Native ja Flutter -projektit kiinnostavat, mutta näissä minut kannattaa sijoittaa tiimiin."
+        desc="Erityisesti Android-sovellukset ovat tuttua kauraa. Hoidan UI-puolen itsenäisesti ja tarvittaessa taustapalvelut Firebasen päälle."
       >
         <TechSection
           slot="techs"
           title="Teknologioita"
-          techs={[{ techs: 'Android (Java) / Firebase' }]}
+          techs={[{ techs: 'React Native (Expo) / Android (Java) / Firebase' }]}
         />
         <Button
           slot="proof"
@@ -68,7 +68,7 @@
     </div>
     <Divider />
     <h2 class="py-5">
-      <span class="mark">Osa-alueita</span>, joissa voin sinua parhaiten auttaa...
+      <span class="mark">Osa-alueita</span>, joissa voin olla avuksi...
     </h2>
   </div>
   <!-- OSA-ALUEET -->
@@ -126,12 +126,12 @@
       <Icon type="recycle" slot="icon" />
     </ServiceSection>
 
-    <ServiceSection
+    <!-- <ServiceSection
       title="Tietoturva"
       desc="Laitetaan web-sovelluksesi tietoturva-asiat lainmukaiseen kuntoon ja tukitaan räikeimmät tietoturva-aukot. Olen käynyt tätä varten kursseja tietoturvan riskien hallintaan, yksityisyyden suojaan sekä tietoturvan perusteisiin liittyen."
     >
       <Icon type="security" slot="icon" />
-    </ServiceSection>
+    </ServiceSection> -->
   </div>
   <Divider />
   <!-- HINNASTO -->

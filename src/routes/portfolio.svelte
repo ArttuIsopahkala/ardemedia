@@ -39,6 +39,7 @@
   ];
 
   const videos: string[] = [
+    'https://www.youtube-nocookie.com/embed/NEuAIx35pLQ',
     'https://www.youtube-nocookie.com/embed/UBepQ1XuBFk',
     'https://www.youtube-nocookie.com/embed/mKjv8CBQlg0',
     'https://www.youtube-nocookie.com/embed/Igfxeg1wYkQ',
@@ -397,8 +398,8 @@
 
   <h1 id="video" class="portfolio-title">Videoeditointi</h1>
   <p class="py-5">
-    Olen tuottanut Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
-    Työkaluina on toiminut lähinnä Sony Vegas PRO ja Adobe After Effects.
+    Olen tehnyt Youtubeen yli 50 videoprojektia. Tässä niistä parhaita ja tuoreimpia paloja.
+    Työkaluina on toiminut lähinnä DaVinci Resolve, Sony Vegas PRO ja Adobe After Effects.
   </p>
   <div class="flex flex-row flex-wrap justify-center gap-5">
     {#each videos as video}

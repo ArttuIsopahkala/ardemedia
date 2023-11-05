@@ -1,10 +1,10 @@
 <script lang="ts">
   let items = [
     { label: 'Alustat', value: 'NodeJS, JVM, Android' },
-    { label: 'Ohjelmointikielet', value: 'JavaScript / TypeScript, Java' },
+    { label: 'Ohjelmointikielet', value: 'TypeScript / JavaScript, Java' },
     {
       label: 'Viitekehykset & Kirjastot',
-      value: 'React, GWT, Svelte, Java EE, Material-UI, TailwindCSS'
+      value: 'React, React Native (Expo), GWT, Svelte, Java EE, Material-UI, TailwindCSS'
     },
     { label: 'Testaus', value: 'Jest, JUnit, AVA, PHPUnit' },
     { label: 'Tietokannat', value: 'MySQL, DynamoDB' },
